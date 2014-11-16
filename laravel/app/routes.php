@@ -16,10 +16,6 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-
-Route::group(['prefix' => 'api', 'after' => 'allowOrigin'], function() {
-	Route::get('/sample/', function ($page) {
-		return Response::json("123");
-	});
-
+Route::group(array('prefix' => 'api'), function() {
+    Route::resource('users', 'UserController');
 });

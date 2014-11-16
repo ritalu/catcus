@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'mysql.cs.mcgill.ca',
-			'database'  => '2014fall307rlu3',
-			'username'  => 'rlu3',
-			'password'  => '260470941',
+			'host'      => '104.236.63.166:22',
+			'database'  => 'laravel',
+			'username'  => 'root',
+			'password'  => 'password',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
