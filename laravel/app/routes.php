@@ -16,6 +16,27 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::group(array('prefix' => 'api'), function() {
+// Route::filter('auth.basic', function()
+// {
+//     return Auth::basic("username");
+// });
+
+Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() {
+    Route::resource('pets', 'PetController');
+});
+
+Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() {
+    Route::resource('objects', 'ObjectController');
+});
+
+Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() {
+    Route::resource('images', 'ImageController');
+});
+
+Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() {
     Route::resource('users', 'UserController');
+});
+
+Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() {
+    Route::resource('pettypes', 'PetTypeController');
 });

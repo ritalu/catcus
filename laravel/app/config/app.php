@@ -78,9 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'IuL6TwR6Zn8elGo85ZYG17OmvIBUycgE',
-
-	'cipher' => MCRYPT_RIJNDAEL_128,
+	'key' => md5('this is one way to get an encryption key set'),
 
 	/*
 	|--------------------------------------------------------------------------

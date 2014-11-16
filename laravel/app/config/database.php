@@ -54,7 +54,11 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '104.236.63.166:22',
+			// 'host'      => 'mysql.cs.mcgill.ca:3306',
+			// 'database'  => '2014fallcomp307rlu3',
+			// 'username'  => 'rlu3',
+			// 'password'  => '260470941',
+			'host'      => '104.236.63.166',
 			'database'  => 'laravel',
 			'username'  => 'root',
 			'password'  => 'password',
