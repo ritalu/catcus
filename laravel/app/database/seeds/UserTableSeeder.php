@@ -10,7 +10,7 @@ class UserTableSeeder extends Seeder {
             'username' => 'ritalu',
             'password' => 'password',
             'email' => 'rita.lu@mail.mcgill.ca',
-            'exp' => '0',
+            'exp' => '2',
             'money' => '2000'
         ));
  
@@ -18,7 +18,7 @@ class UserTableSeeder extends Seeder {
             'username' => 'shanna',
             'password' => 'password',
             'email' => 'shanna.wang@mail.mcgill.ca',
-            'exp' => '0',
+            'exp' => '2',
             'money' => '2000'
         ));
 
@@ -26,7 +26,7 @@ class UserTableSeeder extends Seeder {
             'username' => 'lei',
             'password' => 'password',
             'email' => 'lei.lopez@mail.mcgill.ca',
-            'exp' => '0',
+            'exp' => '2',
             'money' => '2000'
         ));
     }

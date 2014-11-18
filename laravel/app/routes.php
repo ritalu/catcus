@@ -21,22 +21,25 @@ Route::get('/', function()
 //     return Auth::basic("username");
 // });
 
+// Event::listen('illuminate.query', function($query)
+// {
+//     var_dump($query);
+// });
+
 Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() {
+
+	Route::get('/users/getallpets/{username}', 'UserController@GetAllPets');
+	Route::get('/users/getallobjects/{username}', 'UserController@GetAllObjects');
+	Route::get('/pets/buy', 'PetController@Buy');
+	Route::get('/pets/gethappyimage', 'PetController@GetHappyImage');
+	Route::get('/objects/buy', 'ObjectController@Buy');
+	Route::get('/objects/use', 'ObjectController@UserOnPet');
+
+
     Route::resource('pets', 'PetController');
-});
-
-Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() {
     Route::resource('objects', 'ObjectController');
-});
-
-Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() {
     Route::resource('images', 'ImageController');
-});
-
-Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() {
     Route::resource('users', 'UserController');
-});
-
-Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() {
     Route::resource('pettypes', 'PetTypeController');
 });
+

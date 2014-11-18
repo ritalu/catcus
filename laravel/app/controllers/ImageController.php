@@ -39,13 +39,21 @@ class ImageController extends BaseController {
 	// DELETE
 	// ./api/images/[IMAGEID]
 	// deletes a single row
-
 	public function destroy($imageID)
 	{
 
 		DB::table('images')->where('imageID', $imageID)->delete();
 	 
     	return Response::json('success');
+	}
+
+	// GET
+	// ./api/images/gethappyimage/[IMAGEID]
+	// gets one single row
+	public function GetHappyImage($imageID)
+	{
+		$image = DB::table('images')->where('imageID', $imageID)->first();
+		return Response::json($image->happy);
 	}
 
 }

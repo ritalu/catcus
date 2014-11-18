@@ -1,13 +1,13 @@
 <?php
 
 class UserController extends BaseController {
-	
+
 	// GET
 	// ./api/users
 	// gets all rows from table
 	public function index()
 	{
-		$users = DB::table('users')->get();
+		$user = User::where('username', $username)->first();
  
     	return Response::json($users);
 	}
@@ -48,5 +48,25 @@ class UserController extends BaseController {
 		DB::table('users')->where('username', $username)->delete();
 	 
     	return Response::json('success');
+	}
+
+	// GET
+	// ./api/users/getallpets/[USERNAME]
+	// gets all pet objects for the specified user
+	public function GetAllPets($username)
+	{
+		$pets = DB::table('pets')->where('username', $username)->get();
+
+		return Response::json($pets);
+	}
+
+	// GET
+	// ./api/users/getallobjects/[USERNAME]
+	// gets all pet objects for the specified user
+	public function GetAllObjects($username)
+	{
+		$objects = DB::table('objectsowned')->where('username', $username)->get();
+
+		return Response::json($objects);
 	}
 }
