@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder {
 		$this->call('ImageTableSeeder');
 		$this->call('PetTypeTableSeeder');
 		$this->call('PetTableSeeder');
-		//$this->call('ObjectTableSeeder');
-		//$this->call('ObjectForPetTableSeeder');
+		$this->call('ObjectTableSeeder');
+		$this->call('ObjectForPetTableSeeder');
 		$this->call('ObjectsOwnedTableSeeder');
 	}
 

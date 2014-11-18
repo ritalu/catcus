@@ -30,10 +30,13 @@ Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() 
 
 	Route::get('/users/getallpets/{username}', 'UserController@GetAllPets');
 	Route::get('/users/getallobjects/{username}', 'UserController@GetAllObjects');
+
 	Route::get('/pets/buy', 'PetController@Buy');
 	Route::get('/pets/gethappyimage', 'PetController@GetHappyImage');
+
 	Route::get('/objects/buy', 'ObjectController@Buy');
-	Route::get('/objects/use', 'ObjectController@UserOnPet');
+	Route::get('/objects/use', 'ObjectController@UseOnPet');
+	
 
 
     Route::resource('pets', 'PetController');
