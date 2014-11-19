@@ -11,37 +11,37 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home');
-});
+// Route::get('/', function()
+// {
+// 	return View::make('home');
+// });
 
-Route::get('/pet', function()
-{
-	return View::make('pet');
-});
+// Route::get('/pet', function()
+// {
+// 	return View::make('pet');
+// });
 
-Route::get('/petstore', function()
-{
-	return View::make('petstore');
-});
+// Route::get('/petstore', function()
+// {
+// 	return View::make('petstore');
+// });
 
-Route::get('/itemstore', function()
-{
-	return View::make('itemstore');
-});
+// Route::get('/itemstore', function()
+// {
+// 	return View::make('itemstore');
+// });
 
-// TODO: figure out how to pass parameter
-Route::get('/{username}', function()
-{
-	return View::make('user');
-});
+// // TODO: figure out how to pass parameter
+// Route::get('/{username}', function()
+// {
+// 	return View::make('user');
+// });
 
-// TODO: figure out how to pass parameter
-Route::get('/{username}/{petname}', function()
-{
-	return View::make('user');
-});
+// // TODO: figure out how to pass parameter
+// Route::get('/{username}/{petname}', function()
+// {
+// 	return View::make('user');
+// });
 
 
 // Route::filter('auth.basic', function()
