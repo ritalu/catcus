@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => md5('this is one way to get an encryption key set'),
+	//'key' => md5('this is one way to get an encryption key set'),
 
 	/*
 	|--------------------------------------------------------------------------

@@ -11,11 +11,6 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
-
 // Route::filter('auth.basic', function()
 // {
 //     return Auth::basic("username");
