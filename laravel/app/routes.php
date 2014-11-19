@@ -16,10 +16,33 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+// Route::filter('auth.basic', function()
+// {
+//     return Auth::basic("username");
+// });
 
-Route::group(['prefix' => 'api', 'after' => 'allowOrigin'], function() {
-	Route::get('/sample/', function ($page) {
-		return Response::json("123");
-	});
+// Event::listen('illuminate.query', function($query)
+// {
+//     var_dump($query);
+// });
 
+Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() {
+
+	Route::get('/users/getallpets/{username}', 'UserController@GetAllPets');
+	Route::get('/users/getallobjects/{username}', 'UserController@GetAllObjects');
+
+	Route::get('/pets/buy', 'PetController@Buy');
+	Route::get('/pets/gethappyimage', 'PetController@GetHappyImage');
+
+	Route::get('/objects/buy', 'ObjectController@Buy');
+	Route::get('/objects/use', 'ObjectController@UseOnPet');
+	
+
+
+    Route::resource('pets', 'PetController');
+    Route::resource('objects', 'ObjectController');
+    Route::resource('images', 'ImageController');
+    Route::resource('users', 'UserController');
+    Route::resource('pettypes', 'PetTypeController');
 });
+
