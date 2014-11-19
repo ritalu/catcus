@@ -66,11 +66,11 @@ class PetController extends BaseController {
 	    $pet->cleanliness = '60';
 	    $pet->fullness = '60';
 	    $pet->exp = 0;
+	    $pet->creationdate = new DateTime();
 
 	    $pet->save();
 	 
     	return Response::json('success');
-
 	}
 
 	// GET

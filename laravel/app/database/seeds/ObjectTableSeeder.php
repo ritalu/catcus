@@ -12,6 +12,7 @@ class ObjectTableSeeder extends Seeder {
             'rate_of_fulfillment' => '2',
             'price' => '50',
             'uses_available' => '10',
+            'unlock_level' => '1',
             'image' => 'http://tinyurl.com/k5x5m9t'
         ));
 
@@ -21,6 +22,7 @@ class ObjectTableSeeder extends Seeder {
             'rate_of_fulfillment' => '2',
             'price' => '100',
             'uses_available' => '-1',
+            'unlock_level' => '1',
             'image' => 'http://tinyurl.com/k5x5m9t'
         ));
 
@@ -30,6 +32,7 @@ class ObjectTableSeeder extends Seeder {
             'rate_of_fulfillment' => '4',
             'price' => '100',
             'uses_available' => '10',
+            'unlock_level' => '2',
             'image' => 'http://tinyurl.com/k5x5m9t'
         ));
 
@@ -39,6 +42,7 @@ class ObjectTableSeeder extends Seeder {
             'rate_of_fulfillment' => '4',
             'price' => '200',
             'uses_available' => '-1',
+            'unlock_level' => '2',
             'image' => 'http://tinyurl.com/k5x5m9t'
         ));
 
@@ -48,6 +52,7 @@ class ObjectTableSeeder extends Seeder {
             'rate_of_fulfillment' => '8',
             'price' => '150',
             'uses_available' => '10',
+            'unlock_level' => '3',
             'image' => 'http://tinyurl.com/k5x5m9t'
         ));
 
@@ -57,6 +62,7 @@ class ObjectTableSeeder extends Seeder {
             'rate_of_fulfillment' => '8',
             'price' => '250',
             'uses_available' => '-1',
+            'unlock_level' => '3',
             'image' => 'http://tinyurl.com/k5x5m9t'
         ));
 
@@ -66,6 +72,7 @@ class ObjectTableSeeder extends Seeder {
             'rate_of_fulfillment' => '5',
             'price' => '500',
             'uses_available' => '-1',
+            'unlock_level' => '0',
             'image' => 'http://tinyurl.com/k5x5m9t'
         ));
 
@@ -75,6 +82,7 @@ class ObjectTableSeeder extends Seeder {
             'rate_of_fulfillment' => '12',
             'price' => '250',
             'uses_available' => '10',
+            'unlock_level' => '4',
             'image' => 'http://tinyurl.com/k5x5m9t'
         ));
 
@@ -84,6 +92,7 @@ class ObjectTableSeeder extends Seeder {
             'rate_of_fulfillment' => '10',
             'price' => '500',
             'uses_available' => '-1',
+            'unlock_level' => '4',
             'image' => 'http://tinyurl.com/k5x5m9t'
         ));
 
@@ -93,6 +102,7 @@ class ObjectTableSeeder extends Seeder {
             'rate_of_fulfillment' => '25',
             'price' => '250',
             'uses_available' => '10',
+            'unlock_level' => '5',
             'image' => 'http://tinyurl.com/k5x5m9t'
         ));
 
@@ -102,6 +112,7 @@ class ObjectTableSeeder extends Seeder {
             'rate_of_fulfillment' => '25',
             'price' => '500',
             'uses_available' => '10',
+            'unlock_level' => '5',
             'image' => 'http://tinyurl.com/k5x5m9t'
         ));
     }

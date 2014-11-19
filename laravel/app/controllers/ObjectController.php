@@ -81,9 +81,15 @@ class ObjectController extends BaseController {
 		// update the corresponding attribute in the pet
 		$increased_attribute = $object->need_fulfilled;
 		$number = $object->rate_of_fulfillment;
-
 		$pet->$increased_attribute = $pet->$increased_attribute + $number;
 		$new_number = $pet->$increased_attribute;
+		
+		// don't let attribute go above 100
+		if ($new_number > 100)
+		{
+			$new_number = 100;
+		}
+				
 		DB::table('pets')->where('petID', $petID)->update(array($increased_attribute=>$new_number));
 
 

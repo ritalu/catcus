@@ -37,8 +37,6 @@ Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() 
 	Route::get('/objects/buy', 'ObjectController@Buy');
 	Route::get('/objects/use', 'ObjectController@UseOnPet');
 	
-
-
     Route::resource('pets', 'PetController');
     Route::resource('objects', 'ObjectController');
     Route::resource('images', 'ImageController');

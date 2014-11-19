@@ -13,27 +13,30 @@ class PetTableSeeder extends Seeder {
             'happiness' => '60',
             'fullness' => '60',
             'cleanliness' => '60',
-            'exp' => '0'
+            'exp' => '0',
+            'creationdate' => new DateTime()
         ));
 
         Pet::create(array(
             'typeID' => 'cactus',
-            'username' => 'ritalu',
+            'username' => 'shanna',
             'name' => 'Roberto',
             'happiness' => '60',
             'fullness' => '60',
             'cleanliness' => '60',
-            'exp' => '0'
+            'exp' => '0',
+            'creationdate' => new DateTime()
         ));
 
         Pet::create(array(
             'typeID' => 'cactus',
-            'username' => 'ritalu',
+            'username' => 'lei',
             'name' => 'Julio',
             'happiness' => '60',
             'fullness' => '60',
             'cleanliness' => '60',
-            'exp' => '0'
+            'exp' => '0',
+            'creationdate' => new DateTime()
         ));
     }
 }
