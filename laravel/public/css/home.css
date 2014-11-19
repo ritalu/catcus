@@ -1,0 +1,82 @@
+
+.content {
+	display:-webkit-flex;
+	display:flex;
+
+	align-items:center;
+	justify-content:center;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin-top:50px;
+	background-color:rgba(241,241,241,1);
+
+}
+
+.center {
+	width:500px;
+	height:400px;
+	margin:auto;
+	background-color:white;
+
+	-webkit-border-radius: 12px; 
+  	-moz-border-radius: 12px; 
+    border-radius: 12px; 
+    overflow:hidden;
+
+    display:-webkit-flex;
+    display:flex;
+    flex-direction:column;
+}
+
+.content .welcome {
+	background:url('../img/welcome.gif') center center no-repeat;
+	background-size:cover;
+	flex:auto;
+}
+.content .links {
+	display:-webkit-flex;
+	display:flex;
+}
+.content .links a {
+	display:block;
+	text-align:center;
+	padding:40px;
+	font-size:20px;
+	flex:1;
+}
+.content .links a:nth-child(1) {
+	background-color:rgba(241,106,112,1);
+	-webkit-transition:0.3s all ease;
+          transition:0.3s all ease;
+}
+.content .links a:nth-child(1):hover {
+	-webkit-transition:0.3s all ease;
+          transition:0.3s all ease;
+    color:rgba(77,77,77,1);
+    background-color:rgba(241,106,112,0.3);
+}
+.content .links a:nth-child(2) {
+	-webkit-transition:0.3s all ease;
+          transition:0.3s all ease;
+	background-color:rgba(200,222,124,1);
+}
+.content .links a:nth-child(2):hover {
+	-webkit-transition:0.3s all ease;
+          transition:0.3s all ease;
+    color:rgba(77,77,77,1);
+	background-color:rgba(200,222,124,0.3);
+}
+.content .links a:nth-child(3) {
+	-webkit-transition:0.3s all ease;
+          transition:0.3s all ease;
+	background-color:rgba(91,196,191,1);
+}
+.content .links a:nth-child(3):hover {
+	-webkit-transition:0.3s all ease;
+          transition:0.3s all ease;
+    color:rgba(77,77,77,1);
+	background-color:rgba(91,196,191,0.3);
+}

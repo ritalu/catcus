@@ -1,0 +1,161 @@
+
+.content {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin-top:50px;
+	background-color:rgba(241,241,241,1);
+}
+
+.panel {
+	width:800px;
+	margin:30px auto;
+	height:auto;
+		-webkit-border-radius: 12px; 
+  	-moz-border-radius: 12px; 
+    border-radius: 12px; 
+    overflow:hidden;
+}
+
+.top {
+	position:relative;
+	float:left;
+	width:100%;
+	height:auto;
+}
+
+.petlist {
+	position:relative;
+	float:left;
+	width:15%;
+	height:400px;
+	background-color:rgba(77,77,77,1);
+	overflow:auto;
+}
+.petcontainer {
+	cursor:pointer;
+	position:relative;
+	width:80px;
+	height:80px;
+	margin:20px 20px;
+	text-align:center;
+	color:white;
+}
+.petcontainer .name {
+	width:120px;
+	height:40px;
+	line-height:40px;
+	margin-left:-20px;
+	position:absolute;
+	bottom:0px;
+	background-color:rgba(0,0,0,0.3);
+	opacity:0;
+  	filter:alpha(opacity=0);
+  		-webkit-transition:0.3s all ease;
+          transition:0.3s all ease;
+}
+.petcontainer:hover .name {
+	bottom:20px;
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+
+.title {
+	width:100%;
+	background-color:rgba(241,106,112,0.8);
+	text-align:center;
+	color:white;
+	padding:10px 0;
+}
+
+.petpic {
+	position:absolute;
+	top:10px;
+	left:30px;
+}
+
+.petview {
+	position:relative;
+	float:left;
+	width:85%;
+	height:400px;
+	
+}
+
+.petinfo {
+	position:absolute;
+	top:0px;
+	right:0px;
+	height:400px;
+	width:270px;
+	background-color:rgba(0,0,0,0.3);
+
+    overflow:hidden;
+}
+.bar {
+	width:200px;
+	background-color:rgba(50,50,50,1);
+	height:20px;
+}
+.bar .fill {
+	float:left;
+	width:150px;
+	height:20px;
+	background-color:rgba(241,106,112,1);
+ 	-webkit-transition:0.5s all ease;
+      transition:0.5s all ease;
+      overflow:hidden;
+}
+
+.bar .text {
+	color:white;
+	font-size:12px;
+	line-height:12px;
+	text-align:center;
+	width:200px;
+	right:0;
+	position:absolute;
+	margin-top:4px;
+}
+.invent {
+	position:relative;
+	float:left;
+	width:100%;
+	height:auto;
+	background-color:white;
+
+	display:flex;
+	display:-webkit-flex;
+	flex-direction:row;
+	-webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+.itemcontainer {
+	position:relative;
+	margin:0 auto;
+	width:560px;
+}
+.item {
+	position:relative;
+	float:left;
+	width:100px;
+	height:auto;
+	padding:20px;
+	font-size:14px;
+	color:black;
+	text-align:center;
+	opacity:0.5;
+  	filter:alpha(opacity=50);
+
+}
+.item.active {
+	opacity:1;
+  	filter:alpha(opacity=100);
+	cursor:pointer;
+
+}
