@@ -7,7 +7,7 @@ class PetTypeTableSeeder extends Seeder {
         DB::table('pettypes')->delete();
  
         PetType::create(array(
-            'typeID' => 'cactus',
+            'typeID' => 'Cactus',
             'rate_decrease_hap' => '2',
             'rate_decrease_full' => '1',
             'rate_decrease_clean' => '1',
@@ -17,7 +17,7 @@ class PetTypeTableSeeder extends Seeder {
         ));
 
         PetType::create(array(
-            'typeID' => 'fish',
+            'typeID' => 'Fish',
             'rate_decrease_hap' => '4',
             'rate_decrease_full' => '4',
             'rate_decrease_clean' => '2',
@@ -27,7 +27,7 @@ class PetTypeTableSeeder extends Seeder {
         ));
 
         PetType::create(array(
-            'typeID' => 'turtle',
+            'typeID' => 'Turtle',
             'rate_decrease_hap' => '8',
             'rate_decrease_full' => '12',
             'rate_decrease_clean' => '3',
@@ -37,7 +37,7 @@ class PetTypeTableSeeder extends Seeder {
         ));
 
         PetType::create(array(
-            'typeID' => 'cat',
+            'typeID' => 'Cat',
             'rate_decrease_hap' => '5',
             'rate_decrease_full' => '12',
             'rate_decrease_clean' => '4',
@@ -47,7 +47,7 @@ class PetTypeTableSeeder extends Seeder {
         ));
 
         PetType::create(array(
-            'typeID' => 'dog',
+            'typeID' => 'Dog',
             'rate_decrease_hap' => '10',
             'rate_decrease_full' => '18',
             'rate_decrease_clean' => '10',

@@ -8,77 +8,77 @@ class ObjectForPetTableSeeder extends Seeder {
  
         ObjectForPet::create(array(
             'objectID' => '1',
-            'typeID' => 'cactus'
+            'typeID' => 'Cactus'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '2',
-            'typeID' => 'cactus'
+            'typeID' => 'Cactus'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '3',
-            'typeID' => 'fish'
+            'typeID' => 'Fish'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '4',
-            'typeID' => 'fish'
+            'typeID' => 'Fish'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '5',
-            'typeID' => 'turtle'
+            'typeID' => 'Turtle'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '6',
-            'typeID' => 'turtle'
+            'typeID' => 'Turtle'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '7',
-            'typeID' => 'cactus'
+            'typeID' => 'Cactus'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '7',
-            'typeID' => 'fish'
+            'typeID' => 'Fish'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '7',
-            'typeID' => 'turtle'
+            'typeID' => 'Turtle'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '7',
-            'typeID' => 'cat'
+            'typeID' => 'Cat'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '7',
-            'typeID' => 'dog'
+            'typeID' => 'Dog'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '8',
-            'typeID' => 'cat'
+            'typeID' => 'Cat'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '9',
-            'typeID' => 'cat'
+            'typeID' => 'Cat'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '10',
-            'typeID' => 'dog'
+            'typeID' => 'Dog'
         ));
 
         ObjectForPet::create(array(
             'objectID' => '11',
-            'typeID' => 'dog'
+            'typeID' => 'Dog'
         ));
     }
 }

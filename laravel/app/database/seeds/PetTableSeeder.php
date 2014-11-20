@@ -7,7 +7,7 @@ class PetTableSeeder extends Seeder {
         DB::table('pets')->delete();
  
         Pet::create(array(
-            'typeID' => 'cactus',
+            'typeID' => 'Cactus',
             'username' => 'ritalu',
             'name' => 'Pedro',
             'happiness' => '60',
@@ -18,7 +18,7 @@ class PetTableSeeder extends Seeder {
         ));
 
         Pet::create(array(
-            'typeID' => 'cactus',
+            'typeID' => 'Cactus',
             'username' => 'shanna',
             'name' => 'Roberto',
             'happiness' => '60',
@@ -29,7 +29,7 @@ class PetTableSeeder extends Seeder {
         ));
 
         Pet::create(array(
-            'typeID' => 'cactus',
+            'typeID' => 'Cactus',
             'username' => 'lei',
             'name' => 'Julio',
             'happiness' => '60',

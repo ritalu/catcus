@@ -16,7 +16,7 @@ Route::get('/', function()
 	return View::make('home');
 });
 
-Route::get('/pet', function()
+Route::get('/pets', function()
 {
 	return View::make('pet');
 });
