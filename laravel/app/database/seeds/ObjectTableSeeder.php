@@ -13,7 +13,7 @@ class ObjectTableSeeder extends Seeder {
             'price' => '50',
             'uses_available' => '10',
             'unlock_level' => '1',
-            'image' => 'http://tinyurl.com/k5x5m9t'
+            'image' => 'http://catcus.me/img/water.png'
         ));
 
         Object::create(array(
@@ -23,7 +23,7 @@ class ObjectTableSeeder extends Seeder {
             'price' => '100',
             'uses_available' => '-1',
             'unlock_level' => '1',
-            'image' => 'http://tinyurl.com/k5x5m9t'
+            'image' => 'http://catcus.me/img/sombrero.png'
         ));
 
         Object::create(array(
@@ -33,7 +33,7 @@ class ObjectTableSeeder extends Seeder {
             'price' => '100',
             'uses_available' => '10',
             'unlock_level' => '2',
-            'image' => 'http://tinyurl.com/k5x5m9t'
+            'image' => 'http://catcus.me/img/fish_food.png'
         ));
 
         Object::create(array(
@@ -43,7 +43,7 @@ class ObjectTableSeeder extends Seeder {
             'price' => '200',
             'uses_available' => '-1',
             'unlock_level' => '2',
-            'image' => 'http://tinyurl.com/k5x5m9t'
+            'image' => 'http://catcus.me/img/castle_red.png'
         ));
 
         Object::create(array(
@@ -53,7 +53,7 @@ class ObjectTableSeeder extends Seeder {
             'price' => '150',
             'uses_available' => '10',
             'unlock_level' => '3',
-            'image' => 'http://tinyurl.com/k5x5m9t'
+            'image' => 'http://catcus.me/img/turtle_food.png'
         ));
 
         Object::create(array(
@@ -63,7 +63,7 @@ class ObjectTableSeeder extends Seeder {
             'price' => '250',
             'uses_available' => '-1',
             'unlock_level' => '3',
-            'image' => 'http://tinyurl.com/k5x5m9t'
+            'image' => 'http://catcus.me/img/duck.png'
         ));
 
         Object::create(array(
@@ -73,7 +73,7 @@ class ObjectTableSeeder extends Seeder {
             'price' => '500',
             'uses_available' => '-1',
             'unlock_level' => '0',
-            'image' => 'http://tinyurl.com/k5x5m9t'
+            'image' => 'http://catcus.me/img/comb.png'
         ));
 
         Object::create(array(
@@ -83,7 +83,7 @@ class ObjectTableSeeder extends Seeder {
             'price' => '250',
             'uses_available' => '10',
             'unlock_level' => '4',
-            'image' => 'http://tinyurl.com/k5x5m9t'
+            'image' => 'http://catcus.me/img/cat_food.png'
         ));
 
         Object::create(array(
@@ -93,7 +93,7 @@ class ObjectTableSeeder extends Seeder {
             'price' => '500',
             'uses_available' => '-1',
             'unlock_level' => '4',
-            'image' => 'http://tinyurl.com/k5x5m9t'
+            'image' => 'http://catcus.me/img/yarn.png'
         ));
 
         Object::create(array(
@@ -103,7 +103,7 @@ class ObjectTableSeeder extends Seeder {
             'price' => '250',
             'uses_available' => '10',
             'unlock_level' => '5',
-            'image' => 'http://tinyurl.com/k5x5m9t'
+            'image' => 'http://catcus.me/img/dog_food.png'
         ));
 
         Object::create(array(
@@ -113,7 +113,7 @@ class ObjectTableSeeder extends Seeder {
             'price' => '500',
             'uses_available' => '10',
             'unlock_level' => '5',
-            'image' => 'http://tinyurl.com/k5x5m9t'
+            'image' => 'http://catcus.me/img/bone.png'
         ));
     }
 }
