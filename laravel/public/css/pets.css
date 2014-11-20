@@ -64,7 +64,7 @@
 
 .title {
 	width:100%;
-	background-color:rgba(241,106,112,0.8);
+	background-color:rgba(241,106,112,1);
 	text-align:center;
 	color:white;
 	padding:10px 0;
@@ -86,23 +86,40 @@
 
 .petinfo {
 	position:absolute;
-	top:0px;
-	right:0px;
-	height:400px;
-	width:270px;
-	background-color:rgba(0,0,0,0.3);
-
-    overflow:hidden;
+	bottom:10px;
+	right:10px;
+	padding:20px;
+	background-color:rgba(0,0,0,0.5);
+	color:white;
 }
+table {
+	width:100%;
+}
+table tr td.d {
+	width:70px;
+	color:rgba(241,106,112,1);
+}
+.petstats {
+	width:200px;
+	position:absolute;
+	top:10px;
+	right:10px;
+	font-size:14px;
+	line-height:14px;
+	font-weight:500;
+}
+
 .bar {
+	margin:10px 0;
+	margin-top:5px;
 	width:200px;
 	background-color:rgba(50,50,50,1);
-	height:20px;
+	height:25px;
 }
 .bar .fill {
 	float:left;
 	width:150px;
-	height:20px;
+	height:25px;
 	background-color:rgba(241,106,112,1);
  	-webkit-transition:0.5s all ease;
       transition:0.5s all ease;
@@ -117,7 +134,8 @@
 	width:200px;
 	right:0;
 	position:absolute;
-	margin-top:4px;
+	margin-top:6px;
+	font-weight:300;
 }
 .invent {
 	position:relative;

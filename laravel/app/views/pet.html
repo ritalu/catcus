@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:100,300">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:100,300,500">
         <title>Your Pets</title>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <link href="./../../public/css/topbar.css" rel="stylesheet">
-        <link href="./../../public/css/pets.css" rel="stylesheet">
+        <link href="./css/topbar.css" rel="stylesheet">
+        <link href="./css/pets.css" rel="stylesheet">
 
 
     </head>
@@ -20,40 +20,44 @@
                 <div class="top">
                     <div class="petlist">
                         <div class="title">Pets</div>
-                        <div class="petcontainer" style="background:url('../../public/img/dog-happy.png') center center no-repeat;background-size:contain">
+                        <div class="petcontainer" style="background:url('./img/dog-happy.png') center center no-repeat;background-size:contain">
                             <div class="name">Spot</div>
                         </div>
-                        <div class="petcontainer" style="background:url('../../public/img/fish-happy.png') center center no-repeat;background-size:contain">
+                        <div class="petcontainer" style="background:url('./img/fish-happy.png') center center no-repeat;background-size:contain">
                             <div class="name">Go</div>
                         </div>
-                        <div class="petcontainer" style="background:url('../../public/img/cat-happy.png') center center no-repeat;background-size:contain">
+                        <div class="petcontainer" style="background:url('./img/cat-happy.png') center center no-repeat;background-size:contain">
                             <div class="name">Spot</div>
                         </div>
-                        <div class="petcontainer" style="background:url('../../public/img/dog-happy.png') center center no-repeat;background-size:contain">
+                        <div class="petcontainer" style="background:url('./img/dog-happy.png') center center no-repeat;background-size:contain">
                             <div class="name">Spot</div>
                         </div>
                             
                     </div>
-                    <div class="petview" style="background:url('../../public/img/background-fishturtle.png') center center no-repeat;background-size:cover;">
-                        <div class="petpic"><img src="../../public/img/turtle-happy.png"></div>
+                    <div class="petview" style="background:url('./img/background-fishturtle.png') center center no-repeat;background-size:cover;">
+                        <div class="petpic"><img src="./img/turtle-happy.png"></div>
                         <div class="petinfo">
                             <table>
-                                <tr><td>Name:</td><td>Tuddles</td></tr>
-                                <tr><td>Age:</td><td>2 hours</td></tr>
+                                <tr><td class="d">Name:</td><td>Tuddles</td></tr>
+                                <tr><td class="d">Age:</td><td>2 hours</td></tr>
                             </table>
-
+                        </div>
+                        <div class="petstats">
+                            Hunger:
                             <div class="bar">
-                                        <div class="fill"></div>
-                                        <div class="text">EXP: 20/120</div>
-                                    </div>
-                                    <div class="bar">
-                                        <div class="fill"></div>
-                                        <div class="text">EXP: 20/120</div>
-                                    </div>
-                                    <div class="bar">
-                                        <div class="fill"></div>
-                                        <div class="text">EXP: 20/120</div>
-                                    </div>
+                                <div id="full" class="fill"></div>
+                                <div class="text">20/120</div>
+                            </div>
+                            Happiness:
+                            <div class="bar">
+                                <div id="happy" class="fill"></div>
+                                <div class="text">20/120</div>
+                            </div>
+                            Cleanliness:
+                            <div class="bar">
+                                <div id="clean" class="fill"></div>
+                                <div class="text">20/120</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,19 +206,19 @@
                 }
                 else if ((counter % 6) == 2) {
                     $('.petpic').css( "margin-top", "0px" );
-                    $('.petpic').css( "margin-left", "50px" );
+                    $('.petpic').css( "margin-left", "80px" );
                 }
                 else if ((counter % 6) == 3) {
                     $('.petpic').css( "margin-top", "30px" );
-                    $('.petpic').css( "margin-left", "70px" );
+                    $('.petpic').css( "margin-left", "120px" );
                 }
                 else if ((counter % 6) == 4) {
-                    $('.petpic').css( "margin-top", "20px" );
-                    $('.petpic').css( "margin-left", "40px" );
+                    $('.petpic').css( "margin-top", "40px" );
+                    $('.petpic').css( "margin-left", "70px" );
                 }
                 else {
-                    $('.petpic').css( "margin-top", "40px" );
-                    $('.petpic').css( "margin-left", "10px" );
+                    $('.petpic').css( "margin-top", "60px" );
+                    $('.petpic').css( "margin-left", "40px" );
                 }
                 counter++;
             }
