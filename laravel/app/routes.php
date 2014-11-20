@@ -11,20 +11,20 @@
 |
 */
 
-// Route::get('/', function()
-// {
-// 	return View::make('home');
-// });
+Route::get('/', function()
+{
+	return View::make('home');
+});
 
-// Route::get('/pet', function()
-// {
-// 	return View::make('pet');
-// });
+Route::get('/pet', function()
+{
+	return View::make('pet');
+});
 
-// Route::get('/petstore', function()
-// {
-// 	return View::make('petstore');
-// });
+Route::get('/store', function()
+{
+	return View::make('store');
+});
 
 // Route::get('/itemstore', function()
 // {
