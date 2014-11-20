@@ -7,7 +7,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="./css/topbar.css" rel="stylesheet">
         <link href="./css/store.css" rel="stylesheet">
-
+        <script src="./js/loadStore.js"></script>
 
     </head>
 
@@ -22,106 +22,12 @@
                 </div>
                 <div class="stock">
                     <div class="petcontainer">
-                        <div class="pet active">
-                            <div class="petimg" style="background:url('../../public/img/dog-happy.png') center center no-repeat;background-size:contain"></div>
-                            <br><b>Dog</b>
-                            <br>500 coins
-                            <br>Level 1
 
-                        </div>
-                        <div class="pet active">
-                            <div class="petimg" style="background:url('../../public/img/fish-happy.png') center center no-repeat;background-size:contain"></div>
-                            <br><b>Fish</b>
-                            <br>500 coins
-                            <br> Level 1
-                        </div>
-                        <div class="pet active">
-                            <div class="petimg" style="background:url('../../public/img/cactus-happy.png') center center no-repeat;background-size:contain"></div>
-                            <br><b>Cactus</b>
-                            <br>500 coins
-                            <br> Level 1
-                        </div>
-                        <div class="pet active">
-                            <div class="petimg" style="background:url('../../public/img/cat-happy.png') center center no-repeat;background-size:contain"></div>
-                            <br><b>Cat</b>
-                            <br>500 coins
-                            <br>Level 1
-                        </div>
-                        <div class="pet active">
-                            <div class="petimg" style="background:url('../../public/img/turtle-happy.png') center center no-repeat;background-size:contain"></div>
-                            <br><b>Turtle</b>
-                            <br>500 coins
-                            <br>Level 1
-                        </div>
                     </div>
                     <div class="itemcontainer hidden">
-                        
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br><b>Item Name</b>
-                            <br>500 coins
-                            <br>Level 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br><b>Item Name</b>
-                            <br>500 coins
-                            <br>Level 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br><b>Item Name</b>
-                            <br>500 coins
-                            <br>Level 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br><b>Item Name</b>
-                            <br>500 coins
-                            <br>Level 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br><b>Item Name</b>
-                            <br>500 coins
-                            <br>Level 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br><b>Item Name</b>
-                            <br>500 coins
-                            <br>Level 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br><b>Item Name</b>
-                            <br>500 coins
-                            <br>Level 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br><b>Item Name</b>
-                            <br>500 coins
-                            <br>Level 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br><b>Item Name</b>
-                            <br>500 coins
-                            <br>Level 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br><b>Item Name</b>
-                            <br>500 coins
-                            <br>Level 1
-                            
-                        </div>
-    
-
+                    
                     </div>
-                    
-                    
+                                        
                 </div>
             </div>
         </div>
@@ -184,7 +90,9 @@
                     $('.petstore').addClass('inactive');
                     $('.objstore').removeClass('inactive');
 
-                })
+                });
+                loadPets();
+                loadObjects();
                 
              });
 
