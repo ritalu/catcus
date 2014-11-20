@@ -8,36 +8,36 @@ class ImageTableSeeder extends Seeder {
  
         Image::create(array(
             'imageID' => 'default_cactus',
-            'happy' => 'http://tinyurl.com/nwrw45v',
-            'sad' => 'http://tinyurl.com/nwrw45v',
+            'happy' => 'http://catcus.me/img/cactus_happy.png',
+            'sad' => 'http://catcus.me/img/cactus_sad.png',
             'dead' => 'http://tinyurl.com/nwrw45v'
         ));
  
         Image::create(array(
             'imageID' => 'default_fish',
-            'happy' => 'http://tinyurl.com/nwrw45v',
-            'sad' => 'http://tinyurl.com/nwrw45v',
+            'happy' => 'http://catcus.me/img/fish_happy.png',
+            'sad' => 'http://catcus.me/img/fish_sad.png',
             'dead' => 'http://tinyurl.com/nwrw45v'
         ));
 
         Image::create(array(
             'imageID' => 'default_turtle',
-            'happy' => 'http://tinyurl.com/nwrw45v',
-            'sad' => 'http://tinyurl.com/nwrw45v',
+            'happy' => 'http://catcus.me/img/turtle_happy.png',
+            'sad' => 'http://catcus.me/img/turtle_sad.png',
             'dead' => 'http://tinyurl.com/nwrw45v'
         ));
 
         Image::create(array(
             'imageID' => 'default_cat',
-            'happy' => 'http://tinyurl.com/nwrw45v',
-            'sad' => 'http://tinyurl.com/nwrw45v',
+            'happy' => 'http://catcus.me/img/cat_happy.png',
+            'sad' => 'http://catcus.me/img/cat_sad.png',
             'dead' => 'http://tinyurl.com/nwrw45v'
         ));
 
         Image::create(array(
             'imageID' => 'default_dog',
-            'happy' => 'http://tinyurl.com/nwrw45v',
-            'sad' => 'http://tinyurl.com/nwrw45v',
+            'happy' => 'http://catcus.me/img/dog_happy.png',
+            'sad' => 'http://catcus.me/img/dog_sad.png',
             'dead' => 'http://tinyurl.com/nwrw45v'
         ));
     }
