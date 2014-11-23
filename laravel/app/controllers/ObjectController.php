@@ -79,8 +79,9 @@ class ObjectController extends BaseController {
 		}		
 
 		// update the corresponding attribute in the pet
-		$increased_attribute = $object->need_fulfilled;
+		$increased_attribute = strtolower($object->need_fulfilled);
 		$number = $object->rate_of_fulfillment;
+
 		$pet->$increased_attribute = $pet->$increased_attribute + $number;
 		$new_number = $pet->$increased_attribute;
 		
@@ -108,8 +109,21 @@ class ObjectController extends BaseController {
 
 		// give user one exp
 		$original_exp = DB::table('users')->where('username', $pet->username)->first()->exp;
+		$old_level = floor(log($original_exp, 2));
 		$new_exp = $original_exp + 1;
+		$new_level = floor(log($new_exp, 2));
 		DB::table('users')->where('username', $pet->username)->update(array('exp'=>$new_exp));
+
+		//if user advances level, give money
+		//return Response::json(array($old_level => $new_level));
+
+		if ($old_level < $new_level)
+		{
+			$old_money = DB::table('users')->where('username', $pet->username)->first()->money;
+			$new_money = $old_money + $new_level * 1500;
+			DB::table('users')->where('username', $pet->username)->update(array('money'=>$new_money));
+		}
+		
 
 		return Response::json('success');
 	}

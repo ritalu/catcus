@@ -29,7 +29,6 @@
             $hap_query = "UPDATE pets SET happiness = '" . $new_hap . "' WHERE petID = '" . $row['petID'] . "'";
             mysql_query($hap_query);
             echo $hap_query;
-            //echo mysql_error();
         }
         else {
             $hap_query = "UPDATE pets SET happiness = '" . '0' . "' WHERE petID = '" . $row['petID'] . "'";
