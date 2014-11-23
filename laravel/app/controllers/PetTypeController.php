@@ -8,16 +8,25 @@ class PetTypeController extends BaseController {
 	public function index()
 	{
 		$pettypes = DB::table('pettypes')->get();
- 
-    	return Response::json($pettypes);
+		$new_array = Array();
+
+		// add happy image to object
+		foreach ($pettypes as $pt)
+		{
+			$happy = DB::table('images')->where('imageID', $pt->imageID)->first()->happy;
+			$pt = (object) array_merge((array)$pt, array( 'happy' => $happy ));
+			array_push($new_array, $pt);
+		}
+    	return Response::json($new_array);
 	}
 
 	// GET
-	// ./api/pets/[PETID]
+	// ./api/pettypes/[PETID]
 	// gets one single row
 	public function show($typeID)
 	{
 		$pettype = DB::table('pettypes')->where('typeID', $typeID)->first();
+
 		return Response::json($pettype);
 	}
 
