@@ -30,14 +30,15 @@ console.log("rendering");
       break;
     }
     else {
-      console.log(data[i].happy);
       content +=
       '<div class="pet active">' + //TODO
-          '<div class="petimg" style="background:url("' + data[i].happy +'") center center no-repeat;background-size:contain"></div>' +
+          '<div class="petimg" style="background:url(' + data[i].happy +') center center no-repeat;background-size:contain"></div>' +
           '<br><b>'+ data[i].typeID + '</b>' +
           '<br>' + data[i].price +' coins' +
           '<br> Level ' + data[i].unlock_level +
       '</div>';
+      console.log(data[i].happy);
+
   	};
   }
   $('.petcontainer').html(content);
