@@ -136,6 +136,5 @@
   	-moz-border-radius: 8px; 
     border-radius: 8px; 
     margin:0 auto;
-    top:50%;
-    margin-top:-225px;
+    margin-top:200px;
 }
