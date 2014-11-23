@@ -24,6 +24,17 @@ var loadObjects=function() {
     url:"./api/objects",
     success: function(data){
         renderObjects(data);
+        $('.item.active').click(function() {
+          var objID = $(this).children('.objID').val();
+          $.ajax({//initial ajax call 
+            type:"GET",
+            url:"./api/objects/buy",
+            data: {username: 'ritalu', objectID: objID},
+            success: function(data){
+                console.log(data);
+            }
+          });
+        });
     }
   });
 }
@@ -60,6 +71,7 @@ console.log("rendering");
     else {
       content +=
       '<div class="item active">' + //TODO
+        '<input class="objID" type="hidden" value="' + data[i].objectID + '">' + 
       	'<img src=' + data[i].image + '>' +
         '<br><b>' + data[i].name + '</b>'+
         '<br><span class="price">' + data[i].price + '</span> coins' +
