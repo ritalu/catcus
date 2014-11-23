@@ -107,14 +107,7 @@
                     $('.objstore').removeClass('inactive');
 
                 });
-                $('.pet').click(function() {
-                    $('.fullcontainer').fadeIn();
-                    $('.actioncontainer').removeClass('hidden');
-                    var background = $(this).css("background");
-                    var backgroundsize = $(this).css("background-size");
-                    console.log(background);
-                    console.log(backgroundsize);
-                });
+                
                 $('.fullcontainer').click(function() {
                     $('.fullcontainer').fadeOut();
                     $('.actioncontainer').addClass('hidden');

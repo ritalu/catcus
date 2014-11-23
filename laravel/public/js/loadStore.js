@@ -8,8 +8,9 @@ var loadPets=function() {
         $('.pet').click(function() {
             $('.fullcontainer').fadeIn();
             $('.actioncontainer').removeClass('hidden');
-            var background = $(this).css("background");
-            var backgroundsize = $(this).css("background-size");
+            var background = $(this).children('.petimg').css("background");
+            var backgroundsize = $(this).children('.petimg').css("background-size");
+            console.log(this);
             console.log(background);
             console.log(backgroundsize);
         });
