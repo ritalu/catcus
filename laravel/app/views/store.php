@@ -126,7 +126,7 @@
                     $.ajax({//initial ajax call 
                         type:"GET",
                         url:"./api/buy",
-                        data: {"username": 'ritalu', "typeID": typeID , "name": name},
+                        data: {username: 'ritalu', typeID: typeID , name: name},
                         success: function(data){
                             window.location.replace("/pets");
                         }
