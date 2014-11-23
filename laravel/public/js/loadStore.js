@@ -36,7 +36,7 @@ console.log("rendering");
           '<br><b>'+ data[i].typeID + '</b>' +
           '<br>' + data[i].price +' coins' +
           '<br> Level ' + data[i].unlock_level +
-      '</div>'
+      '</div>';
   	};
   }
   $('.petcontainer').html(content);
@@ -52,12 +52,13 @@ console.log("rendering");
     else {
       content +=
       '<div class="item active">' + //TODO
-      	'<img src="' +data[i].image+ '">' +
+      	'<img src=' + data[i].image + '>' +
         '<br><b>' + data[i].name + '</b>'+
         '<br>' + data[i].price + ' coins'
-        '<br>Level '+ data[i].unlock_level +
-        '</div>'	
+        '<br>Level ' + data[i].unlock_level +
+        '</div>';
   	};
   }
+  console.log(content);
   $('.itemcontainer').html(content);
 }

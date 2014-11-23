@@ -27,7 +27,6 @@
                     <div class="itemcontainer" style="display:none">
                     
                     </div>
-                                        
                 </div>
             </div>
         </div>
