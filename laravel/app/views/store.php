@@ -60,7 +60,18 @@
         </div>
 
         <div class="fullcontainer">
-            <div class="actioncontainer"></div>
+            <div class="actioncontainer">
+                <div class="title">Create Pet</div>
+                <div class="buypic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
+                </div>
+                <form class="buyform">
+                    Name:
+                    <input id="petname" required type="text" name="petname" placeholder="Spot" autocomplete="off" >
+                    Cost: 500 coins
+                </form>
+
+
+            </div>
         </div>
 
         <script type="text/javascript">
