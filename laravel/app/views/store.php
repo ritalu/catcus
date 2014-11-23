@@ -134,7 +134,9 @@
                                 console.log(data);
                                 //window.location.replace("/pets");
                             } else {
-                                $('.buyform').append("<span class='error'><br>"+data+"</span>");
+                                if ($('.buyform').children('.error') == null) {
+                                    $('.buyform').append("<span class='error'><br>"+data+"</span>");
+                                }
                             }
                         }
                       });
