@@ -132,9 +132,8 @@
                                 $('.buyform').append("<br><span style='color:red';margin-top:10px>"+data+"</span>");
                             } else {
                                 console.log(data);
-
+                                window.location.replace("/pets");
                             }
-                            //window.location.replace("/pets");
                         }
                       });
                 });
