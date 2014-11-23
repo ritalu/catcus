@@ -28,7 +28,11 @@ var loadObjects=function() {
         $('.item.active').click(function() {
           $('.fullcontainer').fadeIn();
           $('.objactioncontainer').removeClass('hidden');
-
+          var url = $(this).children('img').src();
+          $('.objbuypic').css({"background": "background:url("+url+") center center no-repeat;" ,"background-size":"contain"})
+          $('.objbuyprice').html($(this).children('.price').html());
+          $('.objbuytype').html($(this).children('.type').html());
+          $('.error').remove();
         });
     }
   });
@@ -68,7 +72,7 @@ console.log("rendering");
       '<div class="item active">' + //TODO
         '<input class="objID" type="hidden" value="' + data[i].objectID + '">' + 
       	'<img src=' + data[i].image + '>' +
-        '<br><b>' + data[i].name + '</b>'+
+        '<br><span class="type">' + data[i].name + '</span>'+
         '<br><span class="price">' + data[i].price + '</span> coins' +
         '<br>Level ' + data[i].unlock_level +
         '</div>';

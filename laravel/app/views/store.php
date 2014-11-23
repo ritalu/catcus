@@ -66,7 +66,7 @@
         <div class="objactioncontainer hidden">
             <div class="objpic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
             </div>
-            <div class="objbuyform">
+            <div class="buyform">
                 <div class="objbuytype">Item</div>
                 Cost: 
                 <span class="objbuyprice">500</span> coins
@@ -133,7 +133,7 @@
                 $('.fullcontainer').click(function() {
                     $('.fullcontainer').fadeOut();
                     $('.actioncontainer').addClass('hidden');
-                    $('.objactioncontainer').addClass('hidden)')
+                    $('.objactioncontainer').addClass('hidden');
                 });
                 $('.buybutton').click(function() {
                     var typeID = $('.buytype').html();
