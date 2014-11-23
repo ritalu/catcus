@@ -62,7 +62,15 @@ class UserController extends BaseController {
 		{
 			$imageID = DB::table('pettypes')->where('typeID', $pt->typeID)->first()->imageID;
 			$happy = DB::table('images')->where('imageID', $imageID)->first()->happy;
-			$pt = (object) array_merge((array)$pt, array( 'happy' => $happy ));
+			$sad = DB::table('images')->where('imageID', $imageID)->first()->sad;
+			if ($pt->happiness >= 50 && $pt->cleanliness >=50 && $pt->fullness >= 50)
+			{
+				$pt = (object) array_merge((array)$pt, array( 'happy' => $happy ));
+			}
+			else
+			{
+				$pt = (object) array_merge((array)$pt, array( 'happy' => $sad ));
+			}
 			array_push($new_array, $pt);
 		}
 
@@ -78,4 +86,23 @@ class UserController extends BaseController {
 
 		return Response::json($objects);
 	}
+
+	public function Login()
+	{
+		$username = Input::get('username');
+		$password = Input::get('password');
+		
+		$user = DB::table('users')->where('username', $username)->first();
+
+		if ($user != null)
+		{
+			if ($password == $user->password)
+			{
+				return Response::json("success");
+			}
+		}
+		return Response::json('Login failed.');
+	}
+
+
 }
