@@ -187,6 +187,7 @@
   text-transform:uppercase;
   letter-spacing:2px;
   width:100px;
+  height:16px;
 }
 .buybutton:hover {
 	background-color:rgba(241,106,112,1);
