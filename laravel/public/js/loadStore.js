@@ -33,6 +33,7 @@ var loadObjects=function() {
             data: {username: 'ritalu', objectID: objID},
             success: function(data){
                 console.log(data);
+                loadTopbar();
             }
           });
         });
