@@ -68,7 +68,7 @@
                     Name:
                     <input id="petname" required type="text" name="petname" placeholder="e.g. Spot" autocomplete="off" >
                     Cost: 
-                    <div style="margin:15px">500 coins</div>
+                    <span class="buyprice" style="margin:15px">500 </span>coins
                 </div>
                 <div class="bottomwrap">
                     <div class="buybutton">Create Pet</div>
@@ -107,7 +107,7 @@
                     $('.objstore').removeClass('inactive');
 
                 });
-                
+
                 $('.fullcontainer').click(function() {
                     $('.fullcontainer').fadeOut();
                     $('.actioncontainer').addClass('hidden');
