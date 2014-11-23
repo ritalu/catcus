@@ -106,6 +106,7 @@
   	filter:alpha(opacity=50);
 
 }
+
 .item.active, .pet.active {
 	opacity:1;
   	filter:alpha(opacity=100);

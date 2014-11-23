@@ -34,8 +34,8 @@ console.log("rendering");
       '<div class="pet active">' + //TODO
           '<div class="petimg" style="background:url("' + data[i].imageID +'") center center no-repeat;background-size:contain"></div>' +
           '<br><b>'+ data[i].typeID + '</b>' +
-          '<br>' + data[i].price +'coins' +
-          '<br> Level' + data[i].unlock_level +
+          '<br>' + data[i].price +' coins' +
+          '<br> Level ' + data[i].unlock_level +
       '</div>'
   	};
   }
@@ -54,8 +54,8 @@ console.log("rendering");
       '<div class="item active">' + //TODO
       	'<img src="' +data[i].image+ '">' +
         '<br><b>' + data[i].name + '</b>'+
-        '<br>' + data[i].price + 'coins'
-        '<br>Level'+ data[i].unlock_level +
+        '<br>' + data[i].price + ' coins'
+        '<br>Level '+ data[i].unlock_level +
         '</div>'	
   	};
   }
