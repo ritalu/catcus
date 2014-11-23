@@ -125,7 +125,7 @@
                     var name = $('#petname').val();
                     $.ajax({//initial ajax call 
                         type:"GET",
-                        url:"./api/buy",
+                        url:"./api/pets/buy",
                         data: {username: 'ritalu', typeID: typeID , name: name},
                         success: function(data){
                             window.location.replace("/pets");
