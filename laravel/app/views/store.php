@@ -23,7 +23,7 @@
                 </div>
                 <div class="stock">
                     <div class="petcontainer">
-
+                        
                     </div>
                     <div class="itemcontainer" style="display:none">
                     
@@ -60,21 +60,19 @@
             </div>
         </div>
 
-        <div class="fullcontainer">
-            <div class="actioncontainer">
+        <div class="fullcontainer" style="display:none">
+            <div class="actioncontainer hidden">
                 <div class="buypic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
                 </div>
                 <div class="buyform">
-                    Name your pet:
-                    <input id="petname" required type="text" name="petname" placeholder="Spot" autocomplete="off" >
+                    Name:
+                    <input id="petname" required type="text" name="petname" placeholder="e.g. Spot" autocomplete="off" >
                     Cost: 
                     <div style="margin:15px">500 coins</div>
                 </div>
                 <div class="bottomwrap">
                     <div class="buybutton">Create Pet</div>
                 </div>
-                
-
             </div>
         </div>
 
@@ -109,6 +107,20 @@
                     $('.objstore').removeClass('inactive');
 
                 });
+                $('.pet').click(function() {
+                    $('.fullcontainer').fadeIn();
+                    $('.actioncontainer').removeClass('hidden');
+                    var background = $(this).css("background");
+                    var backgroundsize = $(this).css("background-size");
+                    console.log(background);
+                    console.log(backgroundsize);
+                });
+                $('.fullcontainer').click(function() {
+                    $('.fullcontainer').fadeOut();
+                    $('.actioncontainer').addClass('hidden');
+                });
+                
+
                 loadPets();
                 loadObjects();
                 

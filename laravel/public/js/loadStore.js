@@ -54,7 +54,7 @@ console.log("rendering");
       '<div class="item active">' + //TODO
       	'<img src=' + data[i].image + '>' +
         '<br><b>' + data[i].name + '</b>'+
-        '<br>' + data[i].price + ' coins' +
+        '<br><span class="price">' + data[i].price + '</span> coins' +
         '<br>Level ' + data[i].unlock_level +
         '</div>';
   	};
