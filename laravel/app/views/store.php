@@ -24,10 +24,9 @@
                     <div class="petcontainer">
 
                     </div>
-                    <div class="itemcontainer hidden">
+                    <div class="itemcontainer" style="display:none">
                     
                     </div>
-                                        
                 </div>
             </div>
         </div>

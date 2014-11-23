@@ -32,11 +32,11 @@ console.log("rendering");
     else {
       content +=
       '<div class="pet active">' + //TODO
-          '<div class="petimg" style="background:url("../img/' + data[i].imageID +'.png") center center no-repeat;background-size:contain"></div>' +
+          '<div class="petimg" style="background:url("' + data[i].happy +'") center center no-repeat;background-size:contain"></div>' +
           '<br><b>'+ data[i].typeID + '</b>' +
-          '<br>' + data[i].price +'coins' +
-          '<br> Level' + data[i].unlock_level +
-      '</div>'
+          '<br>' + data[i].price +' coins' +
+          '<br> Level ' + data[i].unlock_level +
+      '</div>';
   	};
   }
   $('.petcontainer').html(content);
@@ -52,11 +52,11 @@ console.log("rendering");
     else {
       content +=
       '<div class="item active">' + //TODO
-      	'<img src="' +data[i].image+ '">' +
+      	'<img src=' + data[i].image + '>' +
         '<br><b>' + data[i].name + '</b>'+
-        '<br>' + data[i].price + 'coins'
-        '<br>Level'+ data[i].unlock_level +
-        '</div>'	
+        '<br>' + data[i].price + ' coins' +
+        '<br>Level ' + data[i].unlock_level +
+        '</div>';
   	};
   }
   $('.itemcontainer').html(content);
