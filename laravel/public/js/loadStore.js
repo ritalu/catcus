@@ -26,16 +26,9 @@ var loadObjects=function() {
     success: function(data){
         renderObjects(data);
         $('.item.active').click(function() {
-          var objID = $(this).children('.objID').val();
-          $.ajax({//initial ajax call 
-            type:"GET",
-            url:"./api/objects/buy",
-            data: {username: 'ritalu', objectID: objID},
-            success: function(data){
-                console.log(data);
-                loadTopbar();
-            }
-          });
+          $('.fullcontainer').fadeIn();
+          $('.objactioncontainer').removeClass('hidden');
+
         });
     }
   });
