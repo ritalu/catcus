@@ -130,7 +130,7 @@
                         url:"./api/pets/buy",
                         data: {username: 'ritalu', typeID: typeID , name: name},
                         success: function(data){
-                            if (data = "success") {
+                            if (data == "success") {
                                 console.log(data);
                                 //window.location.replace("/pets");
                             } else {
