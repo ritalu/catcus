@@ -8,8 +8,17 @@ class PetController extends BaseController {
 	public function index()
 	{
 		$pets = DB::table('pets')->get();
+
+		$new_array = Array();
+		foreach ($pets as $pt)
+		{
+			$imageID = DB::table('pettypes')->where('typeID', $pt->typeID)->first()->imageID;
+			$happy = DB::table('images')->where('imageID', $imageID)->first()->happy;
+			$pt = (object) array_merge((array)$pt, array( 'happy' => $happy ));
+			array_push($new_array, $pt);
+		}
  
-    	return Response::json($pets);
+    	return Response::json($new_array);
 	}
 
 	// GET

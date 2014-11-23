@@ -38,5 +38,16 @@ class PetTableSeeder extends Seeder {
             'exp' => '0',
             'creationdate' => new DateTime()
         ));
+
+        Pet::create(array(
+            'typeID' => 'Cactus',
+            'username' => 'ritalu',
+            'name' => 'Pedro Jr.',
+            'happiness' => '60',
+            'fullness' => '60',
+            'cleanliness' => '60',
+            'exp' => '0',
+            'creationdate' => new DateTime()
+        ));
     }
 }
