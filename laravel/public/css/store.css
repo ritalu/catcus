@@ -197,8 +197,8 @@
 
 input[type="text"] {
   display:block;
-  width:80%;
-  margin:15px auto;
+  width:200px;
+  margin:15px;
   padding:15px;
   border:none;
   outline:none;
