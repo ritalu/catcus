@@ -67,8 +67,8 @@
                 <div class="buyform">
                     Name your pet:
                     <input id="petname" required type="text" name="petname" placeholder="Spot" autocomplete="off" >
-                    Cost: <br>
-                    <span style="margin:15px">500 coins</span>
+                    Cost: 
+                    <div style="margin:15px">500 coins</div>
                 </div>
                 <div class="bottomwrap">
                     <div class="buybutton">Create Pet</div>
