@@ -5,6 +5,14 @@ var loadPets=function() {
     url:"./api/pettypes",
     success: function(data){
         renderPets(data);
+        $('.pet').click(function() {
+            $('.fullcontainer').fadeIn();
+            $('.actioncontainer').removeClass('hidden');
+            var background = $(this).css("background");
+            var backgroundsize = $(this).css("background-size");
+            console.log(background);
+            console.log(backgroundsize);
+        });
     }
   });
 }
