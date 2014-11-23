@@ -47,6 +47,12 @@ class ObjectController extends BaseController {
 			return Response::json('You cannot afford this item.');
 		}
 
+		// make sure user has unlocked it
+		if (log($user->exp, 2) < $object->unlock_level) 
+		{
+			return Response::json('You have not unlocked this item.');
+		}
+
 		// subtract money from user, save
 		$new_money = $user->money - $object->price;
 		DB::table('users')->where('username', $username)->update(array('money'=>$new_money));	
