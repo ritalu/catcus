@@ -7,9 +7,9 @@ class UserController extends BaseController {
 	// gets all rows from table
 	public function index()
 	{
-		$user = User::where('username', $username)->first();
+		$user = DB::table('users')->get();
  
-    	return Response::json($users);
+    	return Response::json($user);
 	}
 
 	// GET

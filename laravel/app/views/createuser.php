@@ -18,11 +18,12 @@
                 
                 <div class="top">
                     <hr>
-                    <h1>Login</h1>
+                    <h1>Create New User</h1>
                     <hr><br>
-                    <form name="login" method="get">
+                    <form name="create" method="get">
                     Username: <input type="text" name="username"><br>
-                    Password: <input type="password" name="password"> <br> <br>
+                    Password: <input type="password" name="password"> <br> 
+                    Email: <input type="text" name="email"> <br> <br>
                     <input type="submit" value="Submit">
                     </form>
                                        
@@ -80,17 +81,22 @@
 
                 $('form').submit(function(){
                     var pass = encrypt();
-                    var user = document.forms["login"]["username"].value;
-                    $.get('./api/users/login?username=' + user + '&password=' + pass, 
-                        function(response) {
-                        console.log(response);
-                        if (response != "success")
+                    var user = document.forms["create"]["username"].value;
+                    var em = document.forms["create"]["email"].value;
+                    $.post('./api/users/', 
+                    {
+                        username : user,
+                        password : pass,
+                        email : em
+                    },
+                    function(response) {
+                        if (response == "success")
                         {
-                            window.location = './login';
+                            window.location = './';
                         }
                         else 
                         {
-                            window.location = './';                       
+                            window.location = './createuser';                       
                         }
 
                     });
@@ -100,7 +106,7 @@
              });
 
             function encrypt() {
-                var password = document.forms["login"]["password"].value;
+                var password = document.forms["create"]["password"].value;
                 
                 var encryptedPass = "";
 
