@@ -129,7 +129,7 @@
                         data: {username: 'ritalu', typeID: typeID , name: name},
                         success: function(data){
                             if (data = "You cannot afford this pet") {
-                                $('.buyform').append("<br><span style='color:red'>"+data+"</span>");
+                                $('.buyform').append("<br><span style='color:red';margin-top:10px>"+data+"</span>");
                             } else {
                                 console.log(data);
 
