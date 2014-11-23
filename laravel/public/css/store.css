@@ -192,7 +192,7 @@
 	float:left;
 	width:100%;
 }
-.buybutton {
+.buybutton, .objbuybutton {
 	position:relative;
    border-radius:3px;
   -webkit-border-radius:3px;
@@ -215,7 +215,7 @@
   width:120px;
   text-align:center;
 }
-.buybutton:hover {
+.buybutton:hover , .objbuybutton:hover{
 	background-color:rgba(241,106,112,1);
 }
 
