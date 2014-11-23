@@ -61,18 +61,18 @@
         </div>
 
         <div class="fullcontainer" style="display:none">
-            <div class="actioncontainer hidden">
-                <div class="buypic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
-                </div>
-                <div class="buyform">
-                    Name:
-                    <input id="petname" required type="text" name="petname" placeholder="e.g. Spot" autocomplete="off" >
-                    Cost: 
-                    <span class="buyprice">500 </span> coins
-                </div>
-                <div class="bottomwrap">
-                    <div class="buybutton">Create Pet</div>
-                </div>
+        </div>
+        <div class="actioncontainer hidden">
+            <div class="buypic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
+            </div>
+            <div class="buyform">
+                Name:
+                <input id="petname" required type="text" name="petname" placeholder="e.g. Spot" autocomplete="off" >
+                Cost: 
+                <span class="buyprice">500 </span> coins
+            </div>
+            <div class="bottomwrap">
+                <div class="buybutton">Create Pet</div>
             </div>
         </div>
 
