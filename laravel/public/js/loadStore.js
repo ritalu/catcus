@@ -28,9 +28,9 @@ var loadObjects=function() {
         $('.item.active').click(function() {
           $('.fullcontainer').fadeIn();
           $('.objactioncontainer').removeClass('hidden');
-          var url = $(this).children('.objimg').attr('src');
+          var url = "url("+$(this).children('.objimg').attr('src') + ") center center no-repeat";
           console.log(url);
-          $('.objpic').css({"background": "url("+url+") center center no-repeat;" ,"background-size":"contain"})
+          $('.objpic').css({"background": url,"background-size":"contain"})
           $('.objbuyprice').html($(this).children('.price').html());
           $('.objbuytype').html($(this).children('.type').html());
           $('.error').remove();
