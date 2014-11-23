@@ -26,16 +26,14 @@ var loadObjects=function() {
     success: function(data){
         renderObjects(data);
         $('.item.active').click(function() {
-          var objID = $(this).children('.objID').val();
-          $.ajax({//initial ajax call 
-            type:"GET",
-            url:"./api/objects/buy",
-            data: {username: 'ritalu', objectID: objID},
-            success: function(data){
-                console.log(data);
-                loadTopbar();
-            }
-          });
+          $('.fullcontainer').fadeIn();
+          $('.objactioncontainer').removeClass('hidden');
+          var url = $(this).children('.objimg').attr('src');
+          console.log(url);
+          $('.objbuypic').css({"background": "background:url("+url+") center center no-repeat;" ,"background-size":"contain"})
+          $('.objbuyprice').html($(this).children('.price').html());
+          $('.objbuytype').html($(this).children('.type').html());
+          $('.error').remove();
         });
     }
   });
@@ -74,8 +72,8 @@ console.log("rendering");
       content +=
       '<div class="item active">' + //TODO
         '<input class="objID" type="hidden" value="' + data[i].objectID + '">' + 
-      	'<img src=' + data[i].image + '>' +
-        '<br><b>' + data[i].name + '</b>'+
+      	'<img class = "objimg" src=' + data[i].image + '>' +
+        '<br><span class="type">' + data[i].name + '</span>'+
         '<br><span class="price">' + data[i].price + '</span> coins' +
         '<br>Level ' + data[i].unlock_level +
         '</div>';

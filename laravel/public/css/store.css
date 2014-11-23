@@ -135,7 +135,7 @@
 	position:fixed;
 	background-color:rgba(0,0,0,0.8);
 }
-.actioncontainer {
+.actioncontainer, .objactioncontainer {
 	position:fixed;
 	height:400px;
 	width:600px;
@@ -151,7 +151,9 @@
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.actioncontainer.hidden {
+.actioncontainer.hidden, .objactioncontainer.hidden {
+	opacity:0;
+
 	margin-top:-200px;
       -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -167,18 +169,18 @@
 	line-height:60px;
 }
 
-.buypic {
+.buypic, .objbuypic {
 	height:200px;
 	width:200px;
 	position:relative;
 	float:left;
 	margin: 50px;
 }
-.buyprice {
+.buyprice, .objbuyprice {
 	margin:15px;
 	margin-right:0px;
 }
-.buyform {
+.buyform, .objbuyform {
 	width:300px;
 	height:200px;
 	position:relative;
@@ -190,7 +192,7 @@
 	float:left;
 	width:100%;
 }
-.buybutton {
+.buybutton, .objbuybutton {
 	position:relative;
    border-radius:3px;
   -webkit-border-radius:3px;
@@ -213,7 +215,7 @@
   width:120px;
   text-align:center;
 }
-.buybutton:hover {
+.buybutton:hover , .objbuybutton:hover{
 	background-color:rgba(241,106,112,1);
 }
 

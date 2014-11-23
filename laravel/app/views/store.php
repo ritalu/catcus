@@ -63,6 +63,18 @@
 
         <div class="fullcontainer" style="display:none">
         </div>
+        <div class="objactioncontainer hidden">
+            <div class="objpic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
+            </div>
+            <div class="buyform">
+                <div class="objbuytype">Item</div>
+                Cost: 
+                <span class="objbuyprice">500</span> coins
+            </div>
+            <div class="bottomwrap">
+                <div class="objbuybutton">Buy Item</div>
+            </div>
+        </div>
         <div class="actioncontainer hidden">
             <div class="buypic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
             </div>
@@ -114,12 +126,14 @@
                     if(e.keyCode === 27) {
                         $('.fullcontainer').fadeOut();
                         $('.actioncontainer').addClass('hidden');
+                        $('.objactioncontainer').addClass('hidden');
                     }
                 });
 
                 $('.fullcontainer').click(function() {
                     $('.fullcontainer').fadeOut();
                     $('.actioncontainer').addClass('hidden');
+                    $('.objactioncontainer').addClass('hidden');
                 });
                 $('.buybutton').click(function() {
                     var typeID = $('.buytype').html();
@@ -140,6 +154,19 @@
                             }
                         }
                       });
+                });
+                $('.objbuybutton').click(function() {
+                    var objID = $('.objbuyprice').html();
+                      $.ajax({//initial ajax call 
+                        type:"GET",
+                        url:"./api/objects/buy",
+                        data: {username: 'ritalu', objectID: objID},
+                        success: function(data){
+                            console.log(data);
+                            loadTopbar();
+                        }
+                      });
+
                 });
                 
                 loadTopbar();
