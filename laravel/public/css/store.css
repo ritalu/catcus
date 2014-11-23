@@ -13,9 +13,9 @@
 	width:800px;
 	margin:30px auto;
 	height:auto;
-		-webkit-border-radius: 12px; 
-  	-moz-border-radius: 12px; 
-    border-radius: 12px; 
+		-webkit-border-radius: 8px; 
+  	-moz-border-radius: 8px; 
+    border-radius: 8px; 
     overflow:hidden;
 }
 
@@ -34,8 +34,8 @@
 	height:250px;
 	background:url('../img/pet_store.png') center center no-repeat rgba(91,196,191,1);
 	background-size:contain;
-	  		-webkit-transition:0.3s all ease;
-          transition:0.3s all ease;
+	  -webkit-transition:0.3s all ease;
+    transition:0.3s all ease;
 }
 .objstore {
 	cursor:pointer;
@@ -122,3 +122,17 @@
 	display:none;
 }
 
+.fullcontainer {
+	height:100%;
+	width:100%;
+	position:fixed;
+	background-color:rgba(0,0,0,0.2);
+}
+.actioncontainer {
+	height:450px;
+	width:600px;
+	background-color:white;
+			-webkit-border-radius: 8px; 
+  	-moz-border-radius: 8px; 
+    border-radius: 8px; 
+}

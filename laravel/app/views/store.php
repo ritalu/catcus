@@ -59,6 +59,10 @@
             </div>
         </div>
 
+        <div class="fullcontainer">
+            <div class="actioncontainer"></div>
+        </div>
+
         <script type="text/javascript">
         //jquery!
             $(function() {
