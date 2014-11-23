@@ -75,7 +75,7 @@
 .petcontainer .type, .itemcontainer .type {
 	font-weight:500;
 }
-.buytype {
+.buytype, .objbuytype {
 	font-weight:500;
 	margin-bottom:20px;
 	text-transform:uppercase;
