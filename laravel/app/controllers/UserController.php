@@ -43,14 +43,25 @@ class UserController extends BaseController {
 	// updates single row
 	public function update()
 	{
-	    $user = new User;
-	    $user->username = Request::get('username');
-	    $user->email = Request::get('email');
-	    $user->password = Request::get('password');
-	    $user->exp = '0';
-	    $user->money = '100';
-	 
-	    $user->save();
+	    $username = Input::get('username');
+		$password = Input::get('password');
+		$email = Input::get('email');
+		$picture = Input::get('picture');
+
+		if ($password != null)
+		{
+			DB::table('users')->where('username', $username)->update(array('password'=>$password));
+		}
+
+		if ($email != null)
+		{
+			DB::table('users')->where('username', $username)->update(array('email'=>$email));
+		}
+
+		if ($picture != null)
+		{
+			DB::table('users')->where('username', $username)->update(array('picture'=>$picture));
+		}
 	 
     	return Response::json('success');
 	}
