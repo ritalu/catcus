@@ -152,6 +152,8 @@
   transition: all 0.3s ease;
 }
 .actioncontainer.hidden, .objactioncontainer.hidden {
+	opacity:0;
+
 	margin-top:-200px;
       -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
