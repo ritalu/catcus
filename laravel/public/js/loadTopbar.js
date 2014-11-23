@@ -24,6 +24,7 @@ var renderTopbar = function (data) {
         '</div></div>'
 
   $('.topbar').html(content);
+  $('.fill').width((data.exp/totalExp) * 200);
   $(".downarrow").click(function() {
     if ($(".downarrow").hasClass("up")) {
         $(".downarrow").removeClass("up");
