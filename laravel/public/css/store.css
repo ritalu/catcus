@@ -107,8 +107,9 @@
 
 }
 .item img {
-	width:80px;
-	height:80px;
+	width:70px;
+	height:70px;
+	padding:15px;
 }
 .item.active, .pet.active {
 	opacity:1;
