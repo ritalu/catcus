@@ -70,9 +70,12 @@
                     <input id="petname" required type="text" name="petname" placeholder="Spot" autocomplete="off" >
                     Cost: 500 coins
                 </div>
-                <div class="buybutton">
-                    Create Pet
+                <div class="bottomwrap">
+                    <div class="buybutton">
+                        Create Pet
+                    </div>
                 </div>
+                
 
             </div>
         </div>
