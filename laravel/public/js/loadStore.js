@@ -32,7 +32,7 @@ console.log("rendering");
     else {
       content +=
       '<div class="pet active">' + //TODO
-          '<div class="petimg" style="background:url("' + data[i].image +'") center center no-repeat;background-size:contain"></div>' +
+          '<div class="petimg" style="background:url("' + data[i].happy +'") center center no-repeat;background-size:contain"></div>' +
           '<br><b>'+ data[i].typeID + '</b>' +
           '<br>' + data[i].price +' coins' +
           '<br> Level ' + data[i].unlock_level +
