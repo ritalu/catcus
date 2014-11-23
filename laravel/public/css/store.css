@@ -75,6 +75,9 @@
 .petcontainer .type, .itemcontainer .type {
 	font-weight:500;
 }
+b {
+	font-weight:500;
+}
 
 .pet {
 	position:relative;
