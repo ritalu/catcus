@@ -12,6 +12,7 @@ var loadPets=function() {
             $('.buypic').css({"background": background ,"background-size":"contain"})
             $('.buyprice').html($(this).children('.price').html());
             $('.buytype').html($(this).children('.type').html());
+            $('.error').remove();
         });
     }
   });

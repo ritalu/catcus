@@ -129,11 +129,11 @@
                         url:"./api/pets/buy",
                         data: {username: 'ritalu', typeID: typeID , name: name},
                         success: function(data){
-                            if (data = "You cannot afford this pet") {
-                                $('.buyform').append("<br><span style='color:red';margin-top:10px>"+data+"</span>");
-                            } else {
+                            if (data = "success") {
                                 console.log(data);
                                 window.location.replace("/pets");
+                            } else {
+                                $('.buyform').append("<span class='error'><br>"+data+"</span>");
                             }
                         }
                       });
