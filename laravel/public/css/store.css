@@ -165,6 +165,10 @@
 	float:left;
 	margin: 50px;
 }
+.buyprice {
+	margin:15px;
+	margin-right:0px;
+}
 .buyform {
 	width:300px;
 	height:200px;
