@@ -151,17 +151,17 @@
 
 .buypic {
 	height:200px;
-	width:100px;
+	width:200px;
 	position:relative;
 	float:left;
-	padding:50px;
+	padding: 50px 0px;
 }
 .buyform {
 	width:200px;
 	height:200px;
 	position:relative;
 	float:left;
-	padding:50px 100px;
+	margin:50px 100px;
 }
 
 input[type="text"] {
