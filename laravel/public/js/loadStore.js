@@ -30,6 +30,7 @@ console.log("rendering");
       break;
     }
     else {
+      console.log(data[i].happy);
       content +=
       '<div class="pet active">' + //TODO
           '<div class="petimg" style="background:url("' + data[i].happy +'") center center no-repeat;background-size:contain"></div>' +
