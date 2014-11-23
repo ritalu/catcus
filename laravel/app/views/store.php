@@ -65,10 +65,10 @@
                 <div class="buypic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
                 </div>
                 <div class="buyform">
-                    Name:
+                    Name your pet:
                     <input id="petname" required type="text" name="petname" placeholder="Spot" autocomplete="off" >
                     Cost: <br>
-                    <span style="margin-left:30px">500 coins</span>
+                    <span style="margin:15px">500 coins</span>
                 </div>
                 <div class="bottomwrap">
                     <div class="buybutton">Create Pet</div>
