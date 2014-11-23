@@ -128,7 +128,8 @@
                         url:"./api/pets/buy",
                         data: {username: 'ritalu', typeID: typeID , name: name},
                         success: function(data){
-                            window.location.replace("/pets");
+                            console.log(data);
+                            //window.location.replace("/pets");
                         }
                       });
                 });
