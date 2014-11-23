@@ -190,6 +190,7 @@
   text-transform:uppercase;
   letter-spacing:2px;
   width:120px;
+  text-align:center;
   height:16px;
 }
 .buybutton:hover {

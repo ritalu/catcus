@@ -62,7 +62,6 @@
 
         <div class="fullcontainer">
             <div class="actioncontainer">
-                <div class="title">Create Pet</div>
                 <div class="buypic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
                 </div>
                 <div class="buyform">
@@ -71,9 +70,7 @@
                     Cost: 500 coins
                 </div>
                 <div class="bottomwrap">
-                    <div class="buybutton">
-                        Create Pet
-                    </div>
+                    <div class="buybutton">Create Pet</div>
                 </div>
                 
 
