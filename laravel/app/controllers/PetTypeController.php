@@ -7,7 +7,7 @@ class PetTypeController extends BaseController {
 	// gets all rows from table
 	public function index()
 	{
-		$pettypes = DB::table('pettypes')->get();
+		$pettypes = DB::table('pettypes')->orderby('unlock_level', 'asc')->get();
 		$new_array = Array();
 
 		// add happy image to object
