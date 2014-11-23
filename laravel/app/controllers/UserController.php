@@ -57,7 +57,16 @@ class UserController extends BaseController {
 	{
 		$pets = DB::table('pets')->where('username', $username)->get();
 
-		return Response::json($pets);
+		$new_array = Array();
+		foreach ($pets as $pt)
+		{
+			$imageID = DB::table('pettypes')->where('typeID', $pt->typeID)->first()->imageID;
+			$happy = DB::table('images')->where('imageID', $imageID)->first()->happy;
+			$pt = (object) array_merge((array)$pt, array( 'happy' => $happy ));
+			array_push($new_array, $pt);
+		}
+
+		return Response::json($new_array);
 	}
 
 	// GET
