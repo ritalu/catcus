@@ -38,6 +38,23 @@ class UserController extends BaseController {
     	return Response::json('success');
 	}
 
+	// POST
+	// ./api/users/update
+	// updates single row
+	public function update()
+	{
+	    $user = new User;
+	    $user->username = Request::get('username');
+	    $user->email = Request::get('email');
+	    $user->password = Request::get('password');
+	    $user->exp = '0';
+	    $user->money = '100';
+	 
+	    $user->save();
+	 
+    	return Response::json('success');
+	}
+
 	// DELETE
 	// ./api/users/[USERNAME]
 	// deletes a single row

@@ -36,6 +36,11 @@ Route::get('/createuser', function()
 	return View::make('createuser');
 });
 
+Route::get('/settings', function()
+{
+	return View::make('settings');
+});
+
 
 // // TODO: figure out how to pass parameter
 // Route::get('/{username}', function()

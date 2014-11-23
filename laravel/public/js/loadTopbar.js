@@ -17,7 +17,8 @@ var renderTopbar = function (data) {
         + data.username + '">' + data.username + 
         '</a> <br><a href="/store">' + data.money + ' coins</a></div><a href="/profile/' +
         data.username + 
-        '"><div class="profile" style="background:url(http://exmoorpet.com/wp-content/uploads/2012/08/cat.png) center center no-repeat white; background-size:cover"></div></a> <div class="level">' 
+        '"><div class="profile" style="background:url(' + data.picture + 
+        ') center center no-repeat white; background-size:cover"></div></a> <div class="level">' 
         + level + 
         '</div><div class="expbar"> <div class="fill"></div><div class="text">EXP: ' 
         + data.exp + '/' + totalExp +

@@ -11,7 +11,8 @@ class UserTableSeeder extends Seeder {
             'password' => 'rcuuyqtf',
             'email' => 'rita.lu@mail.mcgill.ca',
             'exp' => '2',
-            'money' => '2000'
+            'money' => '2000',
+            'picture' => 'http://cdn.flaticon.com/png/256/28314.png'
         ));
  
         User::create(array(
@@ -19,7 +20,8 @@ class UserTableSeeder extends Seeder {
             'password' => 'rcuuyqtf',
             'email' => 'shanna.wang@mail.mcgill.ca',
             'exp' => '2',
-            'money' => '2000'
+            'money' => '2000',
+            'picture' => 'http://cdn.flaticon.com/png/256/28314.png'
         ));
 
         User::create(array(
@@ -27,7 +29,8 @@ class UserTableSeeder extends Seeder {
             'password' => 'rcuuyqtf',
             'email' => 'lei.lopez@mail.mcgill.ca',
             'exp' => '2',
-            'money' => '2000'
+            'money' => '2000',
+            'picture' => 'http://cdn.flaticon.com/png/256/28314.png'
         ));
     }
  

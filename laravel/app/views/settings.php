@@ -19,10 +19,9 @@
                 
                 <div class="top">
                     <hr>
-                    <h1>Create New User</h1>
+                    <h1>Update User Settings</h1>
                     <hr><br>
                     <form name="create" method="get">
-                    Username: <input type="text" name="username"><br>
                     Password: <input type="password" name="password"> <br> 
                     Email: <input type="text" name="email"> <br>
                     Profile Image URL: <input type="text" name="picture"> <br> <br>
@@ -84,17 +83,25 @@
                 })
 
                 $('form').submit(function(){
-                    var pass = encrypt();
-                    var user = document.forms["create"]["username"].value;
-                    var em = document.forms["create"]["email"].value;
-                    var p = document.forms["create"]["picture"].value;
-                    $.post('./api/users/', 
+                    var o = new Object();
+                    if (document.forms["create"]["password"].value != null)
                     {
-                        username : user,
-                        password : pass,
-                        email : em,
-                        picture : p
-                    },
+                        var pass = encrypt();
+                        o.password = pass;                       
+                    }
+                    if (document.forms["create"]["picture"].value != null)
+                    {
+                        var p = document.forms["create"]["picture"].value;
+                        o.picture = p;                       
+                    }
+                    if (document.forms["create"]["email"].value != null)
+                    {
+                        var em = document.forms["create"]["email"].value;
+                        o.email = em;                       
+                    }
+                    o.username = ritalu;
+                    $.post('./api/users/', 
+                        o,
                     function(response) {
                         if (response == "success")
                         {
@@ -102,7 +109,7 @@
                         }
                         else 
                         {
-                            window.location = './createuser';                       
+                            window.location = './settings';                       
                         }
 
                     });
