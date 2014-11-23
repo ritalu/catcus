@@ -8,7 +8,7 @@ class UserTableSeeder extends Seeder {
  
         User::create(array(
             'username' => 'ritalu',
-            'password' => 'password',
+            'password' => 'rcuuyqtf',
             'email' => 'rita.lu@mail.mcgill.ca',
             'exp' => '2',
             'money' => '2000'
@@ -16,7 +16,7 @@ class UserTableSeeder extends Seeder {
  
         User::create(array(
             'username' => 'shanna',
-            'password' => 'password',
+            'password' => 'rcuuyqtf',
             'email' => 'shanna.wang@mail.mcgill.ca',
             'exp' => '2',
             'money' => '2000'
@@ -24,7 +24,7 @@ class UserTableSeeder extends Seeder {
 
         User::create(array(
             'username' => 'lei',
-            'password' => 'password',
+            'password' => 'rcuuyqtf',
             'email' => 'lei.lopez@mail.mcgill.ca',
             'exp' => '2',
             'money' => '2000'
