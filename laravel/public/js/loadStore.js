@@ -37,7 +37,7 @@ console.log("rendering");
           '<br>' + data[i].price +' coins' +
           '<br> Level ' + data[i].unlock_level +
       '</div>';
-      console.log(data[i].happy);
+      console.log("LINK: " + data[i].happy);
 
   	};
   }
