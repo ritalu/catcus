@@ -124,6 +124,7 @@
                 $('.buybutton').click(function() {
                     var typeID = $('.buytype').html();
                     var name = $('#petname').val();
+                    console.log(typeID + " " + name);
                     $.ajax({//initial ajax call 
                         type:"GET",
                         url:"./api/pets/buy",
