@@ -58,7 +58,7 @@ console.log("rendering");
         '<br>Level ' + data[i].unlock_level +
         '</div>';
   	};
+    console.log(content);
   }
-  console.log(content);
   $('.itemcontainer').html(content);
 }
