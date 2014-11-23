@@ -4,7 +4,6 @@ var loadPets=function() {
     type:"GET",
     url:"./api/pettypes",
     success: function(data){
-        console.log(data);
         renderPets(data);
     }
   });
@@ -16,7 +15,6 @@ var loadObjects=function() {
     type:"GET",
     url:"./api/objects",
     success: function(data){
-        console.log(data);
         renderObjects(data);
     }
   });
@@ -26,6 +24,8 @@ var renderPets = function (data) {
 console.log("rendering");
   var content="";
   for (var i = 0; i < data.length; i++) {
+     console.log("LINK: " + data[i].happy);
+
     if (data[i] == null) {
       break;
     }
@@ -37,8 +37,6 @@ console.log("rendering");
           '<br>' + data[i].price +' coins' +
           '<br> Level ' + data[i].unlock_level +
       '</div>';
-      console.log("LINK: " + data[i].happy);
-
   	};
   }
   $('.petcontainer').html(content);
