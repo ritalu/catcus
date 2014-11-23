@@ -66,6 +66,7 @@
             <div class="buypic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
             </div>
             <div class="buyform">
+                <div class="buytype">Dog</div>
                 Name:
                 <input id="petname" required type="text" name="petname" placeholder="e.g. Spot" autocomplete="off" >
                 Cost: 
@@ -118,6 +119,9 @@
                 $('.fullcontainer').click(function() {
                     $('.fullcontainer').fadeOut();
                     $('.actioncontainer').addClass('hidden');
+                });
+                $('.buybutton').click(function() {
+                    createPet()
                 });
                 
 

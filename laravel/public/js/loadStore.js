@@ -6,11 +6,12 @@ var loadPets=function() {
     success: function(data){
         renderPets(data);
         $('.pet').click(function() {
-            $('.fullcontainer').show();
+            $('.fullcontainer').fadeIn();
             $('.actioncontainer').removeClass('hidden');
             var background = $(this).children('.petimg').css("background");
             $('.buypic').css({"background": background ,"background-size":"contain"})
             $('.buyprice').html($(this).children('.price').html());
+            $('.buytype').html($(this).children('.type').html());
         });
     }
   });
@@ -40,7 +41,7 @@ console.log("rendering");
       content +=
       '<div class="pet active">' + //TODO
           '<div class="petimg" style="background:url(' + data[i].happy +') center center no-repeat;background-size:contain"></div>' +
-          '<br><b>'+ data[i].typeID + '</b>' +
+          '<br><span class="type">'+ data[i].typeID + '</span>' +
           '<br><span class="price">' + data[i].price +'</span> coins' +
           '<br> Level ' + data[i].unlock_level +
       '</div>';

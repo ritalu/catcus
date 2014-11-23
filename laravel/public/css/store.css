@@ -72,7 +72,7 @@
 	width:560px;
 	padding-top:30px;
 }
-.petcontainer b, .itemcontainer b {
+.petcontainer .type, .itemcontainer .type {
 	font-weight:500;
 }
 
