@@ -54,11 +54,10 @@ console.log("rendering");
       '<div class="item active">' + //TODO
       	'<img src=' + data[i].image + '>' +
         '<br><b>' + data[i].name + '</b>'+
-        '<br>' + data[i].price + ' coins'
+        '<br>' + data[i].price + ' coins' +
         '<br>Level ' + data[i].unlock_level +
         '</div>';
   	};
-    console.log(content);
   }
   $('.itemcontainer').html(content);
 }
