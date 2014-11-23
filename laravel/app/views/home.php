@@ -1,3 +1,13 @@
+<?php 
+    $user = array(
+        'id' => $id,
+        'name' => $name,
+        'login' => $login,
+    )
+    setcookie("loginCredentials", $user, time() * 7200); // Expiring after 2 hours
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +17,6 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="/css/topbar.css" rel="stylesheet">
         <link href="/css/home.css" rel="stylesheet">
-
 
     </head>
 
