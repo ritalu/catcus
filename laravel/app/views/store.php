@@ -131,7 +131,7 @@
                         success: function(data){
                             if (data = "success") {
                                 console.log(data);
-                                window.location.replace("/pets");
+                                //window.location.replace("/pets");
                             } else {
                                 $('.buyform').append("<span class='error'><br>"+data+"</span>");
                             }
