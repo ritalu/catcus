@@ -30,7 +30,7 @@ var loadObjects=function() {
           $('.objactioncontainer').removeClass('hidden');
           var url = $(this).children('.objimg').attr('src');
           console.log(url);
-          $('.objbuypic').css({"background": "url("+url+") center center no-repeat;" ,"background-size":"contain"})
+          $('.objpic').css({"background": "url("+url+") center center no-repeat;" ,"background-size":"contain"})
           $('.objbuyprice').html($(this).children('.price').html());
           $('.objbuytype').html($(this).children('.type').html());
           $('.error').remove();
