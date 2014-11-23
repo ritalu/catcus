@@ -26,11 +26,6 @@ Route::get('/store', function()
 	return View::make('store');
 });
 
-// Route::get('/itemstore', function()
-// {
-// 	return View::make('itemstore');
-// });
-
 // // TODO: figure out how to pass parameter
 // Route::get('/{username}', function()
 // {
