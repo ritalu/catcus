@@ -129,14 +129,14 @@
 	background-color:rgba(0,0,0,0.8);
 }
 .actioncontainer {
-	height:450px;
+	height:400px;
 	width:600px;
 	background-color:white;
 			-webkit-border-radius: 8px; 
   	-moz-border-radius: 8px; 
     border-radius: 8px; 
     margin:0 auto;
-    margin-top:100px;
+    margin-top:150px;
     overflow:hidden;
 }
 .title {
@@ -174,9 +174,9 @@
   -webkit-border-radius:3px;
   -moz-border-radius:3px;
   -ms-border-radius:3px;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   display:cursor;
   display:block;
   border:0;
