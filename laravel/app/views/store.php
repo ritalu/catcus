@@ -128,7 +128,12 @@
                         url:"./api/pets/buy",
                         data: {username: 'ritalu', typeID: typeID , name: name},
                         success: function(data){
-                            console.log(data);
+                            if (data = "You cannot afford this pet") {
+                                $('.buyform').append(data);
+                            } else {
+                                console.log(data);
+
+                            }
                             //window.location.replace("/pets");
                         }
                       });

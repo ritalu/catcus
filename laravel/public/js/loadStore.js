@@ -5,7 +5,7 @@ var loadPets=function() {
     url:"./api/pettypes",
     success: function(data){
         renderPets(data);
-        $('.pet').click(function() {
+        $('.pet.active').click(function() {
             $('.fullcontainer').fadeIn();
             $('.actioncontainer').removeClass('hidden');
             var background = $(this).children('.petimg').css("background");
