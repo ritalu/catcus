@@ -7,6 +7,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="./css/topbar.css" rel="stylesheet">
         <link href="./css/store.css" rel="stylesheet">
+
         <script src="./js/loadStore.js"></script>
 
     </head>
@@ -56,6 +57,23 @@
             <div class="expbar">
                 <div class="fill"></div>
                 <div class="text">EXP: 20/120</div>
+            </div>
+        </div>
+
+        <div class="fullcontainer">
+            <div class="actioncontainer">
+                <div class="title">Create Pet</div>
+                <div class="buypic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
+                </div>
+                <div class="buyform">
+                    Name:
+                    <input id="petname" required type="text" name="petname" placeholder="Spot" autocomplete="off" >
+                    Cost: 500 coins
+                </div>
+                <div class="buybutton">
+                    Create Pet
+                </div>
+
             </div>
         </div>
 
