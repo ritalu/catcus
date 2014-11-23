@@ -70,6 +70,7 @@ Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() 
 	Route::get('/users/getallpets/{username}', 'UserController@GetAllPets');
 	Route::get('/users/getallobjects/{username}', 'UserController@GetAllObjects');
 	Route::get('/users/login', 'UserController@Login');
+	Route::post('/users/update', 'UserController@update');
 
 	Route::get('/pets/buy', 'PetController@Buy');
 	Route::get('/pets/gethappyimage', 'PetController@GetHappyImage');

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:100,300,500">
-        <title>Create User</title>
+        <title>Settings</title>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="./css/topbar.css" rel="stylesheet">
         <link href="./css/pets.css" rel="stylesheet">
@@ -84,23 +84,23 @@
 
                 $('form').submit(function(){
                     var o = new Object();
-                    if (document.forms["create"]["password"].value != null)
+                    if (document.forms["create"]["password"].value != "")
                     {
                         var pass = encrypt();
                         o.password = pass;                       
                     }
-                    if (document.forms["create"]["picture"].value != null)
+                    if (document.forms["create"]["picture"].value != "")
                     {
                         var p = document.forms["create"]["picture"].value;
                         o.picture = p;                       
                     }
-                    if (document.forms["create"]["email"].value != null)
+                    if (document.forms["create"]["email"].value != "")
                     {
                         var em = document.forms["create"]["email"].value;
                         o.email = em;                       
                     }
-                    o.username = ritalu;
-                    $.post('./api/users/', 
+                    o.username = 'ritalu';
+                    $.post('./api/users/update/', 
                         o,
                     function(response) {
                         if (response == "success")
