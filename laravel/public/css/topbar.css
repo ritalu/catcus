@@ -79,7 +79,6 @@ a:hover {
 }
 .expbar .fill {
 	float:left;
-	width:0px;
 	height:20px;
 	background-color:rgba(241,106,112,1);
  	-webkit-transition:0.5s all ease;
