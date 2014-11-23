@@ -7,7 +7,7 @@ class ObjectController extends BaseController {
 	// gets all rows from table
 	public function index()
 	{
-		$objects = DB::table('objects')->get();
+		$objects = DB::table('objects')->orderby('unlock_level', 'asc')->orderby('name', 'asc')->get();
  
     	return Response::json($objects);
 	}
