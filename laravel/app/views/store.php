@@ -125,10 +125,15 @@
                     var name = $('#petname').val();
                     $.ajax({//initial ajax call 
                         type:"GET",
-                        url:"./api/buy",
-                        data: "{'username':"+ 'ritalu' + " , 'typeID':" + typeID + ", 'name':" + name + "}",
+                        url:"./api/pets/buy",
+                        data: {username: 'ritalu', typeID: typeID , name: name},
                         success: function(data){
-                            window.location.replace("/pets");
+                            if (data = "You cannot afford this pet") {
+                                $('.buyform').append("<br><span style='color:red';margin-top:10px>"+data+"</span>");
+                            } else {
+                                console.log(data);
+                                window.location.replace("/pets");
+                            }
                         }
                       });
                 });
