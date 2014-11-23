@@ -129,21 +129,23 @@
 	background-color:rgba(0,0,0,0.8);
 }
 .actioncontainer {
+	position:fixed;
 	height:400px;
 	width:600px;
 	background-color:white;
 			-webkit-border-radius: 8px; 
   	-moz-border-radius: 8px; 
     border-radius: 8px; 
-    margin:0 auto;
-    margin-top:150px;
+    left:50%;
+    margin-left:-300px;
+    top:150px;
     overflow:hidden;
       -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .actioncontainer.hidden {
-	margin-top:0px;
+	top:0px;
       -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
