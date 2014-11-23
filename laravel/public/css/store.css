@@ -177,7 +177,6 @@
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  display:cursor;
   display:block;
   border:0;
   outline:none;
@@ -191,7 +190,6 @@
   letter-spacing:2px;
   width:120px;
   text-align:center;
-  height:16px;
 }
 .buybutton:hover {
 	background-color:rgba(241,106,112,1);
