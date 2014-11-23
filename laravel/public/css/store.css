@@ -75,6 +75,13 @@
 .petcontainer .type, .itemcontainer .type {
 	font-weight:500;
 }
+.buytype {
+	font-weight:500;
+	margin-bottom:20px;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	font-size:24px;
+}
 
 .pet {
 	position:relative;
