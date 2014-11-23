@@ -126,7 +126,7 @@
 	height:100%;
 	width:100%;
 	position:fixed;
-	background-color:rgba(0,0,0,0.2);
+	background-color:rgba(0,0,0,0.8);
 }
 .actioncontainer {
 	height:450px;
@@ -135,4 +135,7 @@
 			-webkit-border-radius: 8px; 
   	-moz-border-radius: 8px; 
     border-radius: 8px; 
+    margin:0 auto;
+    top:50%;
+    margin-top:-225px;
 }
