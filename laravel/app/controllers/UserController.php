@@ -126,8 +126,9 @@ class UserController extends BaseController {
 		{
 			if ($password == $user->password)
 			{
+				$level = log($user->exp, 2);
 				Cookie::queue('username' , $username, 5);
-				Cookie::queue('level' , $user->level, 5);
+				Cookie::queue('level' , $level, 5);
 
 				return Response::json('success');
 			}
