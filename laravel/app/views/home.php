@@ -4,7 +4,9 @@ $username = "";
 $loggedIn = false;
 
 if (Cookie::get('username') !== null) {
+
     $username = Cookie::get('username');
+    echo $username;
     $loggedIn = true;
 };
 
@@ -66,8 +68,11 @@ if (Cookie::get('username') !== null) {
         </div>
 
         <script type="text/javascript">
+
+
         //jquery!
             $(function() {
+
                 $(".downarrow").click(function() {
                     if ($(".downarrow").hasClass("up")) {
                         $(".downarrow").removeClass("up");
@@ -83,6 +88,8 @@ if (Cookie::get('username') !== null) {
                         $('.menu').addClass("hidden");
                     } 
                 })
+                loadTopbar(<?php echo $username ?>);
+
              });
          </script>
 
