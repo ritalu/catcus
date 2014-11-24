@@ -94,7 +94,7 @@ if (Cookie::get('username') !== null) {
                 <?php
                     }
                 ?>
-                
+
                 $('.petstore').click(function() {
                     $('.itemcontainer').hide();
                     $('.petcontainer').fadeIn();
@@ -156,7 +156,6 @@ if (Cookie::get('username') !== null) {
 
                 });
                 
-                loadTopbar(<?php echo $username ?>);
                 loadPets();
                 loadObjects();
                 
