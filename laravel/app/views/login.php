@@ -90,11 +90,12 @@
                         console.log(response);
                         if (response != "success")
                         {
-                            window.location = './login';
+                            //window.location = './login';
                         }
                         else 
                         {
-                            window.location = './';                       
+                            console.log('loggedin');
+                            //window.location = './';                       
                         }
 
                     });
