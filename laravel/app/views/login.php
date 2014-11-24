@@ -1,3 +1,7 @@
+<?php
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +10,7 @@
         <title>Login</title>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="./css/topbar.css" rel="stylesheet">
-        <link href="./css/pets.css" rel="stylesheet">
+        <script src="./js/loadTopbar.js"></script>
 
     </head>
 
@@ -55,7 +59,7 @@
             <div class="level">17</div>
             <div class="expbar">
                 <div class="fill"></div>
-                <div class="text">EXP: 20/120</div>
+                <div class="text"></div>
             </div>
         </div>
 

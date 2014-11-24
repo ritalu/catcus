@@ -126,11 +126,13 @@ class UserController extends BaseController {
 		{
 			if ($password == $user->password)
 			{
-				return Response::json("success");
+				return Redirect::::route('home')->withCookie(Cookie::forever('username' , $username));
 			}
 		}
 		return Response::json('Login failed.');
 	}
+
+
 
 
 }

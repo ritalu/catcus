@@ -1,11 +1,10 @@
 <?php 
-    $user = array(
-        'id' => $id,
-        'name' => $name,
-        'login' => $login,
-    )
-    setcookie("loginCredentials", $user, time() * 7200); // Expiring after 2 hours
 
+if(isset($_COOKIE['username'] && !empty(isset($_COOKIE['username']))){
+    echo $_COOKIE['username'];
+}else{
+    echo "not logged in"
+}
 ?>
 
 <!DOCTYPE html>
