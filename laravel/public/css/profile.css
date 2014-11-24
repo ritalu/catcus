@@ -50,5 +50,12 @@ h2 {
   position:relative;
   float:left;
   width:120px;
+  height:150px;
   margin:30px;
+  text-align:center;
+  background-color:yellow;
+}
+.pets img {
+  width:100px;
+  padding:10px;
 }
