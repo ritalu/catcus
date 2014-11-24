@@ -9,11 +9,15 @@ var loadUser = function(username) {
 }
 
 var renderUser = function (data) {
-  var content="";
+
   var level = Math.floor(Math.log(data.exp) / Math.log(2));
   var totalExp = Math.pow(level + 1, 2);
-  content += "";
-  // fill boxes here!
-  $('.top').children('h1').html(data.username);
+  
+  $('.panel').children('h1').html(data.username);
+  var bg = "url(" + data.picture + ") center center no-repeat";
+  $('.profpic').css({"background": bg, "background-size":"cover"});
 
+  $('.panel').children('h2').html("Level " + level);
+  
 }
+

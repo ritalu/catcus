@@ -17,7 +17,7 @@ if (Cookie::get('username') !== null) {
         <title>Profile</title>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="../css/topbar.css" rel="stylesheet">
-        <link href="../css/inputs.css" rel="stylesheet">
+        <link href="../css/profile.css" rel="stylesheet">
         <script src="../js/loadTopbar.js"></script>
         <script src="../js/loadUser.js"></script>
     </head>
@@ -28,14 +28,15 @@ if (Cookie::get('username') !== null) {
         <div class="content">
             <div class="panel">
                 
-                <div class="top">
-                    <h1>Profile</h1>
-                    <br>
-                    <div class="innerdiv"></div>
+                <div class="profpic"></div>
+                <h1>USERNAME</h1>
+                <br>
+                <div class="innerdiv">
+                    Date
 
-                                       
                 </div>
 
+                                    
             </div>
         </div>
 
