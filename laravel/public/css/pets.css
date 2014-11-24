@@ -118,7 +118,7 @@ table tr td.d {
 }
 .bar .fill {
 	float:left;
-	width:150px;
+	/*width:150px;*/
 	height:25px;
 	background-color:rgba(241,106,112,1);
  	-webkit-transition:0.5s all ease;

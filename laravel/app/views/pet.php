@@ -7,6 +7,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="./css/topbar.css" rel="stylesheet">
         <link href="./css/pets.css" rel="stylesheet">
+        <script src="./js/loadPets.js"></script>
 
     </head>
 
@@ -18,126 +19,27 @@
                 
                 <div class="top">
                     <div class="petlist">
-                        <div class="title">Pets</div>
-                        <div class="petcontainer" style="background:url('./img/dog-happy.png') center center no-repeat;background-size:contain">
-                            <div class="name">Spot</div>
-                        </div>
-                        <div class="petcontainer" style="background:url('./img/fish-happy.png') center center no-repeat;background-size:contain">
-                            <div class="name">Go</div>
-                        </div>
-                        <div class="petcontainer" style="background:url('./img/cat-happy.png') center center no-repeat;background-size:contain">
-                            <div class="name">Spot</div>
-                        </div>
-                        <div class="petcontainer" style="background:url('./img/dog-happy.png') center center no-repeat;background-size:contain">
-                            <div class="name">Spot</div>
-                        </div>
+                        
                             
                     </div>
-                    <div class="petview" style="background:url('./img/background-fishturtle.png') center center no-repeat;background-size:cover;">
-                        <div class="petpic"><img src="./img/turtle-happy.png"></div>
+                    <div class="petview" style="background:url(http://catcus.me/img/background_cactus.png) center center no-repeat;background-size:cover;">
+                        <div class="petpic"></div>
                         <div class="petinfo">
                             <table>
-                                <tr><td class="d">Name:</td><td>Tuddles</td></tr>
-                                <tr><td class="d">Age:</td><td>2 hours</td></tr>
+                                <tr><td>Name:</td><td class="petname"></td></tr>
+                                <tr><td>Age:</td><td class="petage"></td></tr>
                             </table>
                         </div>
                         <div class="petstats">
-                            Hunger:
-                            <div class="bar">
-                                <div id="full" class="fill"></div>
-                                <div class="text">20/120</div>
-                            </div>
-                            Happiness:
-                            <div class="bar">
-                                <div id="happy" class="fill"></div>
-                                <div class="text">20/120</div>
-                            </div>
-                            Cleanliness:
-                            <div class="bar">
-                                <div id="clean" class="fill"></div>
-                                <div class="text">20/120</div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
                 <div class="invent">
                     <div class="itemcontainer">
                         
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item active">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-                        <div class="item">
-                            <img src="http://images.neopets.com/items/yellow_glitterbrush.gif">
-                            <br>Item Name
-                            <br>Qty: 1
-                        </div>
-
-    
-
                     </div>
-                    
-                    
-
-
                 </div>
-
             </div>
         </div>
 
@@ -186,9 +88,10 @@
                         $(".downarrow").removeClass("up");
                         $('.menu').addClass("hidden");
                     } 
-                })
-
-                
+                });
+                //TODO get from cookies
+                var username = "ritalu";
+                loadPetList(username);
              });
 
             var counter = 0;
@@ -223,7 +126,6 @@
             }
 
             window.setInterval(movePet, 1000);
-
          </script>
 
     </body>
