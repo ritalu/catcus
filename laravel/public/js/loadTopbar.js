@@ -42,3 +42,13 @@ var renderTopbar = function (data) {
     } 
   })
 }
+
+var logout = function() {
+  $.ajax({//initial ajax call 
+    type:"GET",
+    url:"./api/users/logout",
+    success: function(data){
+      window.location("/")
+    }
+  });
+}
