@@ -116,7 +116,7 @@ if (Cookie::get('username') !== null) {
                       });
                 });
 
-                    loadTopbar(<?php echo json_encode($username)?>);
+                    loadTopbar("./api/users/" + <?php echo json_encode($username)?>);
                     loadPetList(<?php echo json_encode($username)?>);
                 <?php
                     } else {

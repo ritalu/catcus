@@ -53,7 +53,7 @@ if (Cookie::get('username') !== null) {
                 <?php
                     if ($loggedIn) {
                 ?>
-                    loadTopbar(<?php echo json_encode($username)?>);
+                    loadTopbar("./api/users/" + <?php echo json_encode($username)?>);
                 <?php
                     }
                 ?>
@@ -62,7 +62,7 @@ if (Cookie::get('username') !== null) {
                     var pass = encrypt();
                     var user = document.forms["create"]["username"].value;
                     var em = document.forms["create"]["email"].value;
-                    $.post('./api/users/', 
+                    $.post('./api/users/save/', 
                     {
                         username : user,
                         password : pass,
@@ -75,7 +75,7 @@ if (Cookie::get('username') !== null) {
                         }
                         else 
                         {
-                            window.location = './createuser';                       
+                            window.location = './signup';                       
                         }
 
                     });

@@ -41,6 +41,11 @@ Route::get('/settings', function()
 	return View::make('settings');
 });
 
+Route::get('/profile/{username}', function()
+{
+	return View::make('profile');
+});
+
 
 // // TODO: figure out how to pass parameter
 // Route::get('/{username}', function()
@@ -71,6 +76,7 @@ Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() 
 	Route::get('/users/getallobjects/{username}', 'UserController@GetAllObjects');
 	Route::get('/users/login', 'UserController@Login');
 	Route::post('/users/update', 'UserController@update');
+	Route::post('/users/save', 'UserController@save');
 
 	Route::get('/pets/buy', 'PetController@Buy');
 	Route::get('/pets/gethappyimage', 'PetController@GetHappyImage');
