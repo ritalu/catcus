@@ -29,7 +29,7 @@ if (Cookie::get('username') !== null) {
         <div class="content">
             <div class="panel">
                 
-                    <h1>Create New User</h1>
+                    <h1>Sign Up</h1>
                     <br>
                     <form name="create" method="get">
                     Username: <input type="text" name="username"><br>
