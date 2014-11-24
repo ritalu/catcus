@@ -52,6 +52,8 @@ console.log("rendering");
       content +=
       '<div class="pet';
       if (level <= data[i].unlock_level) content += ' active';
+      console.log(level);
+      console.log(data[i].unlock_level);
       content +=
        '">' + 
           '<div class="petimg" style="background:url(' + data[i].happy +') center center no-repeat;background-size:contain"></div>' +
@@ -65,7 +67,6 @@ console.log("rendering");
 }
 
 var renderObjects = function (data, level) {
-console.log("rendering");
   var content="";
   for (var i = 0; i < data.length; i++) {
     if (data[i] == null) {
