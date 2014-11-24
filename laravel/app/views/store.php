@@ -10,6 +10,7 @@ if (Cookie::get('username') !== null) {
 };
 if (Cookie::get('level') !== null) {
     $level = Cookie::get('level');
+    echo $level;
 };
 
 ?>
