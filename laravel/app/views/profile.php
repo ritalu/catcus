@@ -32,7 +32,15 @@ if (Cookie::get('username') !== null) {
                 <h2>LEVEL</h2>    
                 <div class="userpets">
                     <div class="pet">
-                        <img class="petimg" src="././img/turtle_happy.png">
+                        <img class="petimg" src="./img/turtle_happy.png">
+                        <br>Name 
+                    </div>
+                    <div class="pet">
+                        <img class="petimg" src="./img/turtle_happy.png">
+                        <br>Name 
+                    </div>
+                    <div class="pet">
+                        <img class="petimg" src="./img/turtle_happy.png">
                         <br>Name 
                     </div>
                 </div>           

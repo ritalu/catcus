@@ -6,3 +6,5 @@ TODO:
 - display error for login
 - level/exp increase in topbar
 - bad routes = error page, not server generated error pg
+- favicon
+- ajax reponse
