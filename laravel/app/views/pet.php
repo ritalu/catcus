@@ -19,6 +19,7 @@ if (Cookie::get('username') !== null) {
         <link href="./css/topbar.css" rel="stylesheet">
         <link href="./css/pets.css" rel="stylesheet">
         <script src="./js/loadPets.js"></script>
+        <script src="./js/loadTopbar.js"></script>
 
     </head>
 
@@ -97,7 +98,7 @@ if (Cookie::get('username') !== null) {
                 <?php
                     }
                 ?>
-                
+
              });
 
             var counter = 0;
