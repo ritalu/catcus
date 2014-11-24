@@ -1,7 +1,7 @@
-<?php
-    
-?>
+<?php 
 
+echo Cookie::get('username');
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>

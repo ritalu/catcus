@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/',  array('as' => 'home', function()
+Route::get('/', function()
 {
 	return View::make('home');
-}));
+});
 
 Route::get('/pets', function()
 {
