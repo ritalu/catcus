@@ -5,21 +5,26 @@ var loadPetList=function(username) {
     url:"./api/users/getallpets/"+username,
     success: function(data){
         renderPetList(data);
-        loadInitialPet();
+        loadActivePet();
         loadObjects(username);
     }
   });
 }
 
-var loadInitialPet=function() {
-  var initialPet = document.getElementById("initialPet").value;  
+var loadActivePet=function() {
+  var activePet = document.getElementById("activePet").value;  
   $.ajax({//initial ajax call 
     type:"GET",
-    url:"./api/pets/"+initialPet,
+    url:"./api/pets/"+activePet,
     success: function(data){
         console.log(data);
         renderPetBackground(data);
-        renderInitialPet(data);
+        renderActivePet(data);
+        $('petcontainer.notactive').click(function(){
+          console.log('New pet selected');
+        //TODO load new background
+        //TODO load new pet
+        });
     }
   });
 }
@@ -44,6 +49,17 @@ loadAllObjects = function (objectsOwned) {
     success: function(data){
         console.log(data);
         renderObjects(data, objectsOwned);
+        $('.item.active').click(function() {
+          $('.fullcontainer').fadeIn();
+          $('.objactioncontainer').removeClass('hidden');
+          var url = "url("+$(this).children('.objimg').attr('src') + ") center center no-repeat";
+          console.log(url);
+          $('.objpic').css({"background": url,"background-size":"contain"})
+          $('.objusetype').html($(this).children('.type').html());
+          $('.objuseneed').html($(this).children('.need').html());
+          $('.objownedID').html($(this).children('#objectsownedID').val());
+          $('.error').remove();
+        });
     }
   });
 }
@@ -52,16 +68,19 @@ var renderPetList = function (data) {
   console.log("rendering");
   var content='<div class="title">Pets</div>';
   //add hidden field for first pet
-  content+='<input id="initialPet" type="text" value="'+data[0].petID+'" style="display:none;">';
-  content+='<input id="initialPetPic" type="text" value="'+data[0].happy+'" style="display:none;">';
-
-  for (var i = 0; i < data.length; i++) {
+  content+='<input id="activePet" type="text" value="'+data[0].petID+'" style="display:none;">';
+  content+='<input id="activePetPic" type="text" value="'+data[0].happy+'" style="display:none;">';
+  content +=
+  '<div class="petcontainer active" style="background:url('+data[0].happy+') center center no-repeat;background-size:contain">' +
+    '<div class="name">'+data[0].name+'</div>' +
+  '</div>'
+  for (var i = 1; i < data.length; i++) {
     if (data[i] == null) {
       break;
     } 
     else {
       content +=
-      '<div class="petcontainer" style="background:url('+data[i].happy+') center center no-repeat;background-size:contain">' +
+      '<div class="petcontainer notactive" style="background:url('+data[i].happy+') center center no-repeat;background-size:contain">' +
         '<div class="name">'+data[i].name+'</div>' +
       '</div>'
   	};
@@ -69,9 +88,9 @@ var renderPetList = function (data) {
   $('.petlist').html(content);
 }
 
-var renderInitialPet = function (data) {
-  var initialPetPic = document.getElementById("initialPetPic").value;
-  $('.petpic').html('<img src="'+initialPetPic+'">');
+var renderActivePet = function (data) {
+  var activePetPic = document.getElementById("activePetPic").value;
+  $('.petpic').html('<img src="'+activePetPic+'">');
 
   var age = Math.floor(calcAge(data.creationdate));
   var petDeets = '<table><tr><td>Name:</td><td class="petname">'+data.name+
@@ -138,8 +157,12 @@ var renderObjects = function(data, objectsOwned)
     };
     content +=
       '<div class="item active">' +
-        '<img src="' +data[i].image+ '">' +
-        '<br><b>' + data[i].name + '</b>'+
+        '<input id="objectsownedID" type="text" value="'+
+        objectsOwned[i].objectsownedID+'" style="display:none;">' +
+        '<img class="objimg" src="' +data[i].image+ '">' +
+        '<br><span class="type">' + data[i].name + '</span>'+
+        '<br><span class="need">' + data[i].need_fulfilled + '</span>'+
+        '<br>+<span class="fullfillment">' + data[i].rate_of_fulfillment + '</span>'+
         '<br>Qty: ' + qty +
         '</div>';
   }

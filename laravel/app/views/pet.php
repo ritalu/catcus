@@ -55,11 +55,25 @@ if (Cookie::get('username') !== null) {
             </div>
         </div>
 
-
-
         <?php
         include 'topbar.php';
         ?>
+
+        <div class="fullcontainer" style="display:none">
+        </div>
+        <div class="objactioncontainer hidden">
+            <div class="objpic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
+            </div>
+            <div class="useform">
+                <div class="objtype">Item</div>
+                Increases:
+                <span class="objuseneed">Fullness</span>
+            </div>
+            <div class="bottomwrap">
+                <div class="objusebutton">Use Item</div>
+                <div class="objownedID" style="display:none">
+            </div>
+        </div>
 
         <script type="text/javascript">
         //jquery!
@@ -67,6 +81,41 @@ if (Cookie::get('username') !== null) {
                  <?php
                     if ($loggedIn) {
                 ?>
+
+                $(document).keyup(function(e){
+
+                    if(e.keyCode === 27) {
+                        $('.fullcontainer').fadeOut();
+                        $('.objactioncontainer').addClass('hidden');
+                    }
+                });
+
+                $('.fullcontainer').click(function() {
+                    $('.fullcontainer').fadeOut();
+                    $('.objactioncontainer').addClass('hidden');
+                });
+                $('.objusebutton').click(function() {
+                    var objectsownedID = $('.objownedID').html();
+                    var petID = $('#activePet').val();
+                    console.log(petID + " " + objectsownedID);
+                    $.ajax({//initial ajax call 
+                        type:"GET",
+                        url:"./api/objects/use",
+                        data: {petID: petID, objectsownedID: objectsownedID},
+                        success: function(data){
+                            if (data == "success") { 
+                                console.log(data);
+                                //loadTopbar();
+                                
+                            } else {
+                                if ($('.useform').children('.error').length == 0) {
+                                    $('.useform').append("<span class='error'><br>"+data+"</span>");
+                                }
+                            }
+                        }
+                      });
+                });
+
                     loadTopbar(<?php echo json_encode($username)?>);
                     loadPetList(<?php echo json_encode($username)?>);
                 <?php
