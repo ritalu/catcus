@@ -29,10 +29,8 @@ if (Cookie::get('username') !== null) {
         <div class="content">
             <div class="panel">
                 
-                <div class="top">
-                    <hr>
                     <h1>Create New User</h1>
-                    <hr><br>
+                    <br>
                     <form name="create" method="get">
                     Username: <input type="text" name="username"><br>
                     Password: <input type="password" name="password"> <br> 
@@ -41,8 +39,6 @@ if (Cookie::get('username') !== null) {
                     <input type="submit" value="Submit">
                     </form>
                                        
-                </div>
-
             </div>
         </div>
 

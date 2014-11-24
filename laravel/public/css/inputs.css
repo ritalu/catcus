@@ -10,14 +10,20 @@
 }
 
 .panel {
-  width:800px;
+  width:600px;
   margin:30px auto;
+  padding:20px;
   height:auto;
     -webkit-border-radius: 8px; 
     -moz-border-radius: 8px; 
     border-radius: 8px; 
     overflow:hidden;
     background-color:white;
+}
+h1 {
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:1px;
 }
 input[type="text"], input[type="password"], input[type="email"] {
   display:block;
