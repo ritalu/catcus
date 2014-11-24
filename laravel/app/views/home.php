@@ -1,6 +1,6 @@
 <?php 
 
-echo Cookie::get('username');
+echo Cookie::get('user');
 ?>
 
 <!DOCTYPE html>
