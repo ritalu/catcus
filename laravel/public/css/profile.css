@@ -13,13 +13,13 @@
   margin:30px auto;
   padding:30px;
   height:auto;
-    -webkit-border-radius: 8px; 
-    -moz-border-radius: 8px; 
-    border-radius: 8px; 
-    overflow:hidden;
-    background-color:white;
+  -webkit-border-radius: 8px; 
+  -moz-border-radius: 8px; 
+  border-radius: 8px; 
+  overflow:hidden;
+  background-color:white;
 }
-h1, h2 {
+h1 {
   text-align:center;
   text-transform:uppercase;
   letter-spacing:1px;
@@ -28,6 +28,8 @@ h1, h2 {
   line-height:30px;
 }
 h2 {
+  text-align:center;
+  letter-spacing:1;
   font-size:18px;
   font-weight:300;
 }
@@ -38,4 +40,15 @@ h2 {
   -moz-border-radius: 75px;
   -webkit-border-radius: 75px;
   border-radius: 75px;
+}
+.userpets {
+  width:100%;
+  margin:30px 0;
+  background-color:rgba(200,222,124,0.9);
+}
+.pets {
+  position:relative;
+  float:left;
+  width:120px;
+  margin:20px;
 }
