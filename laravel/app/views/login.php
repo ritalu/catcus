@@ -18,6 +18,7 @@ if (Cookie::get('username') !== null) {
         <title>Login</title>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="./css/topbar.css" rel="stylesheet">
+        <link href="./css/inputs.css" rel="stylesheet">
         <script src="./js/loadTopbar.js"></script>
 
     </head>
