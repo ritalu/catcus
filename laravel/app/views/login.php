@@ -30,9 +30,8 @@ if (Cookie::get('username') !== null) {
             <div class="panel">
                 
                 <div class="top">
-                    <hr>
                     <h1>Login</h1>
-                    <hr><br>
+                    <br>
                     <form name="login" method="get">
                     Username: <input type="text" name="username"><br>
                     Password: <input type="password" name="password"> <br> <br>

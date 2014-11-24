@@ -29,13 +29,12 @@ if (Cookie::get('username') !== null) {
             <div class="panel">
                 
                 <div class="top">
-                    <hr>
-                    <h1>Update User Settings</h1>
-                    <hr><br>
+                    <h1>Settings</h1>
+                    <br>
                     <form name="create" method="get">
-                    Password: <input type="password" name="password"> <br> 
-                    Email: <input type="text" name="email"> <br>
-                    Profile Image URL: <input type="text" name="picture"> <br> <br>
+                    Change Password: <input type="password" name="password"> <br> 
+                    Change Email: <input type="text" name="email"> <br>
+                    Profile Image (URL): <input type="text" name="picture"> <br> <br>
                     <input type="submit" value="Submit">
                     </form>
                                        
