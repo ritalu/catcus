@@ -59,8 +59,15 @@ console.log("rendering");
           '<div class="petimg" style="background:url(' + data[i].happy +') center center no-repeat;background-size:contain"></div>' +
           '<br><span class="type">'+ data[i].typeID + '</span>' +
           '<br><span class="price">' + data[i].price +'</span> coins' +
-          '<br> Level ' + data[i].unlock_level +
-      '</div>';
+          '<br> <span style="color:';
+        if (level >= parseInt(data[i].unlock_level)) {
+          content += 'green';
+        } else {
+          content += 'red';
+        }
+        content +=
+          '">Level ' + data[i].unlock_level +
+      '</span></div>';
   	};
   }
   $('.petcontainer').html(content);
