@@ -14,6 +14,6 @@ var renderUser = function (data) {
   var totalExp = Math.pow(level + 1, 2);
   content += "";
   // fill boxes here!
-  $('.innerdiv').html(data.username);
+  $('.top').children('h1').html(data.username);
 
 }

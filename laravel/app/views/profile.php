@@ -20,7 +20,6 @@ if (Cookie::get('username') !== null) {
         <link href="../css/inputs.css" rel="stylesheet">
         <script src="../js/loadTopbar.js"></script>
         <script src="../js/loadUser.js"></script>
-
     </head>
 
     <body>
