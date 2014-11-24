@@ -79,7 +79,7 @@ if (Cookie::get('username') !== null) {
                         var em = document.forms["create"]["email"].value;
                         o.email = em;                       
                     }
-                    o.username = 'ritalu';
+                    o.username = <?php echo json_encode($username)?>;
                     $.post('./api/users/update/', 
                         o,
                     function(response) {

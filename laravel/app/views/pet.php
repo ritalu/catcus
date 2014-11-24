@@ -1,3 +1,14 @@
+<?php 
+
+$username = "";
+$loggedIn = false;
+
+if (Cookie::get('username') !== null) {
+    $username = Cookie::get('username');
+    $loggedIn = true;
+};
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -74,24 +85,19 @@
         <script type="text/javascript">
         //jquery!
             $(function() {
-                $(".downarrow").click(function() {
-                    if ($(".downarrow").hasClass("up")) {
-                        $(".downarrow").removeClass("up");
-                        $('.menu').addClass("hidden");
+                 <?php
+                    if ($loggedIn) {
+                ?>
+                    loadTopbar(<?php echo json_encode($username)?>);
+                    loadPetList(<?php echo json_encode($username)?>);
+                <?php
                     } else {
-                        $(".downarrow").addClass("up");
-                        $('.menu').removeClass("hidden");
+                ?>
+                    window.location = "./";
+                <?php
                     }
-                });
-                $(".content").click(function() {
-                    if ($(".downarrow").hasClass("up")) {
-                        $(".downarrow").removeClass("up");
-                        $('.menu').addClass("hidden");
-                    } 
-                });
-                //TODO get from cookies
-                var username = "ritalu";
-                loadPetList(username);
+                ?>
+                
              });
 
             var counter = 0;

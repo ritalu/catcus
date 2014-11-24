@@ -1,3 +1,14 @@
+<?php 
+
+$username = "";
+$loggedIn = false;
+
+if (Cookie::get('username') !== null) {
+    $username = Cookie::get('username');
+    $loggedIn = true;
+};
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,31 +46,9 @@
 
 
 
-        <div class="menu hidden">
-            <a href="/pets">pets</a>
-            <a href="/store">store</a>
-            <a href="/profile">profile</a>
-            <a href="/settings">settings</a>
-        </div>
-        <div class="topbar">
-            <div class="downarrow">
-               <div class="line1"></div>
-               <div class="line2"></div>
-            </div>
-            <div class="userinfo">
-                <a href="/profile/username">username</a>
-                <a href="/store">125 coins</a>
-            </div>
-            <a href="/profile/username">
-                <div class="profile" style="background:url(http://exmoorpet.com/wp-content/uploads/2012/08/cat.png) center center no-repeat white; background-size:cover"></div>
-            </a>
-
-            <div class="level">17</div>
-            <div class="expbar">
-                <div class="fill"></div>
-                <div class="text">EXP: 20/120</div>
-            </div>
-        </div>
+        <?php
+        include 'topbar.php';
+        ?>
 
         <div class="fullcontainer" style="display:none">
         </div>
@@ -93,21 +82,19 @@
         <script type="text/javascript">
         //jquery!
             $(function() {
-                $(".downarrow").click(function() {
-                    if ($(".downarrow").hasClass("up")) {
-                        $(".downarrow").removeClass("up");
-                        $('.menu').addClass("hidden");
+
+                 <?php
+                    if ($loggedIn) {
+                ?>
+                    loadTopbar(<?php echo json_encode($username)?>);
+                <?php
                     } else {
-                        $(".downarrow").addClass("up");
-                        $('.menu').removeClass("hidden");
+                ?>
+                    window.location = "./";
+                <?php
                     }
-                });
-                $(".content").click(function() {
-                    if ($(".downarrow").hasClass("up")) {
-                        $(".downarrow").removeClass("up");
-                        $('.menu').addClass("hidden");
-                    } 
-                });
+                ?>
+                
                 $('.petstore').click(function() {
                     $('.itemcontainer').hide();
                     $('.petcontainer').fadeIn();
@@ -142,7 +129,7 @@
                     $.ajax({//initial ajax call 
                         type:"GET",
                         url:"./api/pets/buy",
-                        data: {username: 'ritalu', typeID: typeID , name: name},
+                        data: {username: <?php echo json_encode($username)?>, typeID: typeID , name: name},
                         success: function(data){
                             if (data == "success") {
                                 console.log(data);
@@ -160,7 +147,7 @@
                       $.ajax({//initial ajax call 
                         type:"GET",
                         url:"./api/objects/buy",
-                        data: {username: 'ritalu', objectID: objID},
+                        data: {username: <?php echo json_encode($username)?>, objectID: objID},
                         success: function(data){
                             console.log(data);
                             loadTopbar();
