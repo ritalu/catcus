@@ -126,9 +126,10 @@ class UserController extends BaseController {
 		{
 			if ($password == $user->password)
 			{
+				//cookies last for 1 day 
 				$level = log($user->exp, 2);
-				Cookie::queue('username' , $username, 5);
-				Cookie::queue('level' , $level, 5);
+				Cookie::queue('username' , $username, 60*24);
+				Cookie::queue('level' , $level, 60*24);
 
 				return Response::json('success');
 			}
