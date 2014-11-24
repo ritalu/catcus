@@ -64,7 +64,7 @@ if (Cookie::get('username') !== null) {
                 <?php
                     if ($loggedIn) {
                 ?>
-                    loadTopbar(<?php echo json_encode($username)?>);
+                    loadTopbar("./api/users/" + <?php echo json_encode($username)?>);
                 <?php
                     }
                 ?>

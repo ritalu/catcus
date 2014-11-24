@@ -1,7 +1,7 @@
 var loadUser = function(username) {
   $.ajax({//initial ajax call 
     type:"GET",
-    url:"./api/users/" + username,
+    url:"../api/users/" + username,
     success: function(data){
         renderUser(data);
     }

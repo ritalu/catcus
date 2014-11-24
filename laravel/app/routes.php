@@ -41,7 +41,7 @@ Route::get('/settings', function()
 	return View::make('settings');
 });
 
-Route::get('/profile', function()
+Route::get('/profile/{username}', function()
 {
 	return View::make('profile');
 });
