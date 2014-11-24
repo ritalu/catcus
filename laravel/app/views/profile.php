@@ -29,13 +29,15 @@ if (Cookie::get('username') !== null) {
             <div class="profpic"></div>
             <div class="panel">        
                 <h1>USERNAME</h1>
-                <h2>LEVEL</h2>               
+                <h2>LEVEL</h2>    
+                <div class="userpets">
+                    <div class="pet">
+                        <img class="petimg" src="././img/turtle_happy.png">
+                        <br>Name 
+                    </div>
+                </div>           
             </div>
-            <div class="userpets">
-                <div class="pet">
-                    pets
-                </div>
-            </div>
+
         </div>
 
 
