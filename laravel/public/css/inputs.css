@@ -40,18 +40,23 @@ input[type="text"], input[type="password"], input[type="email"] {
   background-color:white;
   color:black;
 
-  -webkit-box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.05);
-  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.05);
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.5);
 }
 
 input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover {
-  background-color:rgba(255,255,255,0.9);
+  background-color:rgba(241,106,112,0.1);
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.8);
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.8);
     -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
-  
+    background-color:rgba(241,106,112,0.2);
+
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.8);
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.8);
   border:0;
   outline:none;
   outline-color: transparent;
