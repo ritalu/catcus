@@ -60,6 +60,7 @@ if (Cookie::get('level') !== null) {
             <div class="objpic" style="background:url(./img/dog_happy.png) center center no-repeat;background-size:contain">
             </div>
             <div class="buyform">
+                <input class="objectbuyID" type="hidden" value="7">
                 <div class="objbuytype">Item</div>
                 Cost: 
                 <span class="objbuyprice">500</span> coins
@@ -147,7 +148,7 @@ if (Cookie::get('level') !== null) {
                       });
                 });
                 $('.objbuybutton').click(function() {
-                    var objID = $('.objbuyprice').html();
+                    var objID = $('.objectbuyID').val();
                       $.ajax({//initial ajax call 
                         type:"GET",
                         url:"./api/objects/buy",

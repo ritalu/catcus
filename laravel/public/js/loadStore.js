@@ -33,6 +33,7 @@ var loadObjects=function(level) {
           $('.objpic').css({"background": url,"background-size":"contain"})
           $('.objbuyprice').html($(this).children('.price').html());
           $('.objbuytype').html($(this).children('.type').html());
+          $('.objbuyID').html($(this).children('.objID').html());
           $('.error').remove();
         });
     }
