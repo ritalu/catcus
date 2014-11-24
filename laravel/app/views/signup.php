@@ -62,7 +62,7 @@ if (Cookie::get('username') !== null) {
                     var pass = encrypt();
                     var user = document.forms["create"]["username"].value;
                     var em = document.forms["create"]["email"].value;
-                    $.post('./api/users/', 
+                    $.post('./api/users/save/', 
                     {
                         username : user,
                         password : pass,
