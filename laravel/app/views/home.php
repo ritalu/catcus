@@ -4,9 +4,7 @@ $username = "";
 $loggedIn = false;
 
 if (Cookie::get('username') !== null) {
-
     $username = Cookie::get('username');
-    echo $username;
     $loggedIn = true;
 };
 
@@ -32,15 +30,30 @@ if (Cookie::get('username') !== null) {
             <div class="center">
                 <div class="welcome"></div>
                 <div class="links">
-                    <a href="/pets">Pets</a>
-                    <a href="/store">Store</a>
-                    <a href="/settings">Settings</a>
+                    <?php 
+                        if ($loggedIn) {
+                    ?>
+                            <a href="/pets">Pets</a>
+                            <a href="/store">Store</a>
+                            <a href="/settings">Settings</a>
+
+                    <?php
+                        } else {
+
+                    ?>
+                            <a href="/login">Login</a>
+                    <?php
+                        }
+                    ?>
+                    
                 </div>
             </div>
         </div>
 
 
-
+        <?php 
+            if ($loggedIn) {
+        ?>
         <div class="menu hidden">
             <a href="/pets">pets</a>
             <a href="/store">store</a>
@@ -66,6 +79,12 @@ if (Cookie::get('username') !== null) {
                 <div class="text">EXP: 20/120</div>
             </div>
         </div>
+        ?>
+        <?php 
+            } else {
+                echo "<div class='topbar'></div>";
+            }
+        ?>
 
         <script type="text/javascript">
 
@@ -88,8 +107,11 @@ if (Cookie::get('username') !== null) {
                         $('.menu').addClass("hidden");
                     } 
                 })
-                loadTopbar(<?php echo json_encode($username) ?>);
-
+                <?php
+                    if ($loggedIn) {
+                        echo "loadTopbar($username)";
+                    }
+                ?>
              });
          </script>
 
