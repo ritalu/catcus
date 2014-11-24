@@ -50,7 +50,10 @@ console.log("rendering");
     }
     else {
       content +=
-      '<div class="pet active">' + //TODO
+      '<div class="pet';
+      if (<?php echo json_encode($level) ?> <= data[i].unlock_level) content += ' active';
+      content +=
+       '">' + 
           '<div class="petimg" style="background:url(' + data[i].happy +') center center no-repeat;background-size:contain"></div>' +
           '<br><span class="type">'+ data[i].typeID + '</span>' +
           '<br><span class="price">' + data[i].price +'</span> coins' +
@@ -70,8 +73,10 @@ console.log("rendering");
     }
     else {
       content +=
-      '<div class="item active">' + //TODO
-        '<input class="objID" type="hidden" value="' + data[i].objectID + '">' + 
+      '<div class="item';
+      if (<?php echo json_encode($level) ?> <= data[i].unlock_level) content += ' active';
+      content +=
+       '">' +         '<input class="objID" type="hidden" value="' + data[i].objectID + '">' + 
       	'<img class = "objimg" src=' + data[i].image + '>' +
         '<br><span class="type">' + data[i].name + '</span>'+
         '<br><span class="price">' + data[i].price + '</span> coins' +
