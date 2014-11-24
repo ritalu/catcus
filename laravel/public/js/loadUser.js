@@ -14,10 +14,10 @@ var renderUser = function (data) {
   var totalExp = Math.pow(level + 1, 2);
   
   $('.panel').children('h1').html(data.username);
-  var bg = "url(" + data.picture + ") center center no-repeat";
+  var bg = "url(" + data.picture + ") center center no-repeat white";
   $('.profpic').css({"background": bg, "background-size":"cover"});
 
   $('.panel').children('h2').html("Level " + level);
-  
+
 }
 

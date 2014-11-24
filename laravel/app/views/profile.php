@@ -26,9 +26,10 @@ if (Cookie::get('username') !== null) {
         
 
         <div class="content">
+            <div class="profpic"></div>
+
             <div class="panel">
                 
-                <div class="profpic"></div>
                 <h1>USERNAME</h1>
                 <br>
                 <div class="innerdiv">

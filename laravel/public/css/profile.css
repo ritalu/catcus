@@ -32,4 +32,5 @@ h1 {
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   border-radius: 100px;
+  margin:0 auto;
 }
