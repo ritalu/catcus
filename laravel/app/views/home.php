@@ -109,9 +109,12 @@ if (Cookie::get('username') !== null) {
                 })
                 <?php
                     if ($loggedIn) {
-                        echo "loadTopbar($username)";
+                ?>
+                    loadTopbar(<?php echo json_encode($username)?>);
+                <?php
                     }
                 ?>
+
              });
          </script>
 
