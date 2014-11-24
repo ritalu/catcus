@@ -1,6 +1,13 @@
 <?php 
 
-echo Cookie::get('user');
+$username = "";
+$loggedIn = false;
+
+if (Cookie::get('username') !== null) {
+    $username = Cookie::get('username');
+    $loggedIn = true;
+};
+
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +19,7 @@ echo Cookie::get('user');
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="/css/topbar.css" rel="stylesheet">
         <link href="/css/home.css" rel="stylesheet">
+        <script src="./js/loadTopbar.js"></script>
 
     </head>
 

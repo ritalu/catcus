@@ -169,7 +169,7 @@
 
                 });
                 
-                loadTopbar();
+                loadTopbar(<?php echo $username ?>);
                 loadPets();
                 loadObjects();
                 

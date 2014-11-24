@@ -1,7 +1,7 @@
-var loadTopbar = function() {
+var loadTopbar = function(username) {
   $.ajax({//initial ajax call 
     type:"GET",
-    url:"./api/users/" + "ritalu",
+    url:"./api/users/" + username,
     success: function(data){
         renderTopbar(data);
     }
