@@ -1,6 +1,6 @@
 <?php 
 
-if(isset($_COOKIE['username'] && !empty(isset($_COOKIE['username']))){
+if(isset($_COOKIE['username']) && !empty(isset($_COOKIE['username']))){
     echo $_COOKIE['username'];
 }else{
     echo "not logged in";
