@@ -88,7 +88,7 @@ if (Cookie::get('username') !== null) {
                         $('.menu').addClass("hidden");
                     } 
                 })
-                loadTopbar(<?php echo $username ?>);
+                loadTopbar(<?php echo json_encode($username) ?>);
 
              });
          </script>
