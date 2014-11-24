@@ -48,7 +48,6 @@ var logout = function() {
     type:"GET",
     url:"./api/users/logout",
     success: function(data){
-      window.location("/")
-    }
+      window.location = './login';    
   });
 }
