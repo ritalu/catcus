@@ -52,7 +52,6 @@ console.log("rendering");
       content +=
       '<div class="pet';
       if (level >= parseInt(data[i].unlock_level)) {
-        console.log("yes");
         content += ' active';
       }
       content +=
@@ -76,7 +75,9 @@ var renderObjects = function (data, level) {
     else {
       content +=
       '<div class="item';
-      if (level <= data[i].unlock_level) content += ' active';
+      if (level >= parseInt(data[i].unlock_level)) {
+        content += ' active';
+      }
       content +=
        '">' + '<input class="objID" type="hidden" value="' + data[i].objectID + '">' + 
       	'<img class = "objimg" src=' + data[i].image + '>' +
