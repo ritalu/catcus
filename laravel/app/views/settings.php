@@ -59,6 +59,10 @@ if (Cookie::get('username') !== null) {
                 ?>
                     loadTopbar(<?php echo json_encode($username)?>);
                 <?php
+                    } else {
+                ?>
+                    window.location = "./";
+                <?php
                     }
                 ?>
 
