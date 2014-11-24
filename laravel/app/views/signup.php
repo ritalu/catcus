@@ -14,7 +14,7 @@ if (Cookie::get('username') !== null) {
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:100,300,500">
-        <title>Create User</title>
+        <title>Sign Up</title>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="./css/topbar.css" rel="stylesheet">
         <link href="./css/inputs.css" rel="stylesheet">
@@ -34,8 +34,7 @@ if (Cookie::get('username') !== null) {
                     <form name="create" method="get">
                     Username: <input type="text" name="username"><br>
                     Password: <input type="password" name="password"> <br> 
-                    Email: <input type="text" name="email"> <br>
-                    Profile Image URL: <input type="text" name="picture"> <br> <br>
+                    Email: <input type="text" name="email"> <br><br>
                     <input type="submit" value="Submit">
                     </form>
                                        
