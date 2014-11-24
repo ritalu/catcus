@@ -31,11 +31,7 @@ if (Cookie::get('username') !== null) {
             <div class="panel">
                 
                 <h1>USERNAME</h1>
-                <br>
-                <div class="innerdiv">
-                    Date
-
-                </div>
+                <h2>LEVEL</h2>
 
                                     
             </div>

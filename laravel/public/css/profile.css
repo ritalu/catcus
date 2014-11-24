@@ -19,12 +19,16 @@
     overflow:hidden;
     background-color:white;
 }
-h1 {
+h1, h2 {
   text-align:center;
   text-transform:uppercase;
   letter-spacing:1px;
   font-size:24px;
   font-weight:300;
+  line-height:30px;
+}
+h2 {
+  font-size:20px;
 }
 .profpic {
   height:150px;
