@@ -134,7 +134,7 @@ class UserController extends BaseController {
 
 	public function Logout()
 	{
-		return Response::json('success')->withCookie(Cookie:forget('username'));
+		return Response::json('success')->withCookie(Cookie::forget('username'));
 	}
 
 
