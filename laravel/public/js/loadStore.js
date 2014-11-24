@@ -1,10 +1,10 @@
-var loadPets=function() {
+var loadPets=function(level) {
     console.log("load pets");
   $.ajax({//initial ajax call 
     type:"GET",
     url:"./api/pettypes",
     success: function(data){
-        renderPets(data);
+        renderPets(data, level);
         $('.pet.active').click(function() {
             $('.fullcontainer').fadeIn();
             $('.actioncontainer').removeClass('hidden');
@@ -18,13 +18,13 @@ var loadPets=function() {
   });
 }
 
-var loadObjects=function() {
+var loadObjects=function(level) {
     console.log("load objects");
   $.ajax({//initial ajax call 
     type:"GET",
     url:"./api/objects",
     success: function(data){
-        renderObjects(data);
+        renderObjects(data, level);
         $('.item.active').click(function() {
           $('.fullcontainer').fadeIn();
           $('.objactioncontainer').removeClass('hidden');
@@ -39,7 +39,7 @@ var loadObjects=function() {
   });
 }
 
-var renderPets = function (data) {
+var renderPets = function (data, level) {
 console.log("rendering");
   var content="";
   for (var i = 0; i < data.length; i++) {
@@ -51,7 +51,7 @@ console.log("rendering");
     else {
       content +=
       '<div class="pet';
-      if (<?php echo json_encode($level) ?> <= data[i].unlock_level) content += ' active';
+      if (level <= data[i].unlock_level) content += ' active';
       content +=
        '">' + 
           '<div class="petimg" style="background:url(' + data[i].happy +') center center no-repeat;background-size:contain"></div>' +
@@ -64,7 +64,7 @@ console.log("rendering");
   $('.petcontainer').html(content);
 }
 
-var renderObjects = function (data) {
+var renderObjects = function (data, level) {
 console.log("rendering");
   var content="";
   for (var i = 0; i < data.length; i++) {
@@ -74,9 +74,9 @@ console.log("rendering");
     else {
       content +=
       '<div class="item';
-      if (<?php echo json_encode($level) ?> <= data[i].unlock_level) content += ' active';
+      if (level <= data[i].unlock_level) content += ' active';
       content +=
-       '">' +         '<input class="objID" type="hidden" value="' + data[i].objectID + '">' + 
+       '">' + '<input class="objID" type="hidden" value="' + data[i].objectID + '">' + 
       	'<img class = "objimg" src=' + data[i].image + '>' +
         '<br><span class="type">' + data[i].name + '</span>'+
         '<br><span class="price">' + data[i].price + '</span> coins' +

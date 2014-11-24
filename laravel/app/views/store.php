@@ -160,8 +160,8 @@ if (Cookie::get('level') !== null) {
 
                 });
                 
-                loadPets();
-                loadObjects();
+                loadPets(<?php echo json_encode($level)?>);
+                loadObjects(<?php echo json_encode($level)?>);
                 
              });
 
