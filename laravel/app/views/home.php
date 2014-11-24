@@ -42,6 +42,7 @@ if (Cookie::get('username') !== null) {
 
                     ?>
                             <a href="/login">Login</a>
+                            <a href="/signup">Sign Up</a>
                     <?php
                         }
                     ?>
@@ -59,22 +60,6 @@ if (Cookie::get('username') !== null) {
 
         //jquery!
             $(function() {
-
-                $(".downarrow").click(function() {
-                    if ($(".downarrow").hasClass("up")) {
-                        $(".downarrow").removeClass("up");
-                        $('.menu').addClass("hidden");
-                    } else {
-                        $(".downarrow").addClass("up");
-                        $('.menu').removeClass("hidden");
-                    }
-                });
-                $(".content").click(function() {
-                    if ($(".downarrow").hasClass("up")) {
-                        $(".downarrow").removeClass("up");
-                        $('.menu').addClass("hidden");
-                    } 
-                })
                 <?php
                     if ($loggedIn) {
                 ?>

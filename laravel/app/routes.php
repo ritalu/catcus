@@ -31,9 +31,9 @@ Route::get('/login', function()
 	return View::make('login');
 });
 
-Route::get('/createuser', function()
+Route::get('/signup', function()
 {
-	return View::make('createuser');
+	return View::make('signup');
 });
 
 Route::get('/settings', function()
