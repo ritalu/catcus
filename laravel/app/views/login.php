@@ -1,7 +1,7 @@
 <?php 
 if (Cookie::get('usernam') == null) {
-    echo "oho"
-}
+    echo "oho";
+};
 echo Cookie::get('username');
 ?>
 <!DOCTYPE html>
