@@ -116,6 +116,9 @@ class UserController extends BaseController {
 		return Response::json($objects);
 	}
 
+
+	// GET
+	// ./api/users/login?username=[USERNAME]&password=[PASSWORD]
 	public function Login()
 	{
 		$username = Input::get('username');
@@ -138,10 +141,21 @@ class UserController extends BaseController {
 		return Response::json('Login failed.');
 	}
 
+	// GET
+	// ./api/users/logout
 	public function Logout()
 	{
 		//TODO: doesn't work :(
 		return Response::json('success')->withCookie(Cookie::forget('username'));
+	}
+
+	// GET
+	// ./api/users/search?term=TERM
+	public function Search()
+	{
+		$term = Input::get('term');		
+		$users = User::where('username', 'LIKE', $term)->get();
+		return Response::json($users);
 	}
 
 
