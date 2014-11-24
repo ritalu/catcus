@@ -51,7 +51,10 @@ console.log("rendering");
     else {
       content +=
       '<div class="pet';
-      if (level <= parseInt(data[i].unlock_level)) content += ' active';
+      if (level >= parseInt(data[i].unlock_level)) {
+        console.log("yes");
+        content += ' active';
+      }
       content +=
        '">' + 
           '<div class="petimg" style="background:url(' + data[i].happy +') center center no-repeat;background-size:contain"></div>' +
