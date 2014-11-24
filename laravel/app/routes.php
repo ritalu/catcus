@@ -46,20 +46,6 @@ Route::get('/profile/{username}', function()
 	return View::make('profile');
 });
 
-
-// // TODO: figure out how to pass parameter
-// Route::get('/{username}', function()
-// {
-// 	return View::make('user');
-// });
-
-// // TODO: figure out how to pass parameter
-// Route::get('/{username}/{petname}', function()
-// {
-// 	return View::make('user');
-// });
-
-
 // Route::filter('auth.basic', function()
 // {
 //     return Auth::basic("username");
@@ -92,4 +78,10 @@ Route::group(array('prefix' => 'api'/*, 'before' => 'auth.basic'*/), function() 
     Route::resource('users', 'UserController');
     Route::resource('pettypes', 'PetTypeController');
 });
+
+
+Route::any('{all}', function($uri)
+{
+    return View::make('error');
+})->where('all', '.*');
 
