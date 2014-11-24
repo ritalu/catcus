@@ -83,8 +83,15 @@ var renderObjects = function (data, level) {
       	'<img class = "objimg" src=' + data[i].image + '>' +
         '<br><span class="type">' + data[i].name + '</span>'+
         '<br><span class="price">' + data[i].price + '</span> coins' +
-        '<br>Level ' + data[i].unlock_level +
-        '</div>';
+        '<br><span style="color:';
+        if (level >= parseInt(data[i].unlock_level)) {
+          content += 'green';
+        } else {
+          content += 'red';
+        }
+        content +=
+        '">Level ' + data[i].unlock_level +
+        '</span></div>';
   	};
   }
   $('.itemcontainer').html(content);
