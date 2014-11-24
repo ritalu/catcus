@@ -62,13 +62,11 @@ if (Cookie::get('username') !== null) {
                     var pass = encrypt();
                     var user = document.forms["create"]["username"].value;
                     var em = document.forms["create"]["email"].value;
-                    var p = document.forms["create"]["picture"].value;
                     $.post('./api/users/', 
                     {
                         username : user,
                         password : pass,
-                        email : em,
-                        picture : p
+                        email : em
                     },
                     function(response) {
                         if (response == "success")
