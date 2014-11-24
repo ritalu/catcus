@@ -126,11 +126,10 @@ class UserController extends BaseController {
 		{
 			if ($password == $user->password)
 			{
-				$response = Response::json('success');
-				$response->headers->setCookie(Cookie::make('username' , $username, 5));
-				$response->headers->setCookie(Cookie::make('level' , $user->level, 5));
+				Cookie::queue('username' , $username, 5);
+				Cookie::queue('level' , $user->level, 5);
 
-				return $response;
+				return Response::json('success');
 			}
 		}
 		return Response::json('Login failed.');
