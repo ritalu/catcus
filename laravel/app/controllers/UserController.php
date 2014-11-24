@@ -126,7 +126,8 @@ class UserController extends BaseController {
 		{
 			if ($password == $user->password)
 			{
-				return Response::json('success')->withCookie(Cookie::make('username' , $username, 5));
+				//cookies last for 1 week
+				return Response::json('success')->withCookie(Cookie::make('username' , $username, 60*24*7));
 			}
 		}
 		return Response::json('Login failed.');
@@ -134,6 +135,7 @@ class UserController extends BaseController {
 
 	public function Logout()
 	{
+		//TODO: doesn't work :(
 		return Response::json('success')->withCookie(Cookie::forget('username'));
 	}
 
