@@ -33,6 +33,7 @@ if (Cookie::get('username') !== null) {
             </div>
             <div class="userpets">
                 <div class="pet">
+                    pets
                 </div>
             </div>
         </div>
