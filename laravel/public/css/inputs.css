@@ -17,10 +17,11 @@
     -moz-border-radius: 8px; 
     border-radius: 8px; 
     overflow:hidden;
+    background-color:white;
 }
 input[type="text"], input[type="password"], input[type="email"] {
   display:block;
-  width:80%;
+  width:60%;
   margin:15px auto;
   padding:15px;
   border:none;
