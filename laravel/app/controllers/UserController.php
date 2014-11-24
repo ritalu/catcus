@@ -126,8 +126,11 @@ class UserController extends BaseController {
 		{
 			if ($password == $user->password)
 			{
-				//cookies last for 1 week
-				return Response::json('success')->withCookie(Cookie::make('username' , $username, 60*24*7));
+				$response = Response::json('success');
+				$response->headers->setCookie(Cookie::make('username' , $username, 5));
+				$response->headers->setCookie(Cookie::make('level' , $user->level, 5));
+
+				return $response;
 			}
 		}
 		return Response::json('Login failed.');

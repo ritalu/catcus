@@ -2,10 +2,14 @@
 
 $username = "";
 $loggedIn = false;
+$level = -1;
 
 if (Cookie::get('username') !== null) {
     $username = Cookie::get('username');
     $loggedIn = true;
+};
+if (Cookie::get('level') !== null) {
+    $level = Cookie::get('level');
 };
 
 ?>

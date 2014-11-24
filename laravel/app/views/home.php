@@ -8,6 +8,7 @@ if (Cookie::get('username') !== null) {
     $loggedIn = true;
 };
 
+
 ?>
 
 <!DOCTYPE html>

@@ -63,12 +63,13 @@ if (Cookie::get('username') !== null) {
                         console.log(response);
                         if (response != "success")
                         {
+                            console.log(response);
                             //window.location = './login';
                         }
                         else 
                         {
                             console.log('loggedin');
-                            //window.location = './';                       
+                            window.location = './';                       
                         }
 
                     });
