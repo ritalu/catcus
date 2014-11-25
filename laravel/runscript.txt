@@ -1,2 +1,2 @@
 MAILTO=rita.lu410@gmail.com
-10 * * * * /home/team/comp307project/laravel/foreverdecrease.php
+10 * * * * /home/team/comp307project/laravel/foreverdecrease.php >> /home/team/comp307project/logs/cron.log 2>&1
