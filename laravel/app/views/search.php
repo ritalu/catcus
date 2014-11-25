@@ -31,7 +31,16 @@ if (Cookie::get('username') !== null) {
                 <div class="icon"></div>
             </div>
             <div class="panel">
-                <div class="result"></div>
+                <div class="result">
+                    <div class="profpic">
+                    </div>
+                    Name
+                    <br>
+                    <img src='./img/turtle_happy.png'>
+                    <img src='./img/turtle_happy.png'>
+                    <img src='./img/turtle_happy.png'>
+
+                </div>
             </div>
         </div>
 
@@ -57,12 +66,9 @@ if (Cookie::get('username') !== null) {
                     }
                 ?>
 
-                $('#term').keypress(function (e) {
-                  if (e.which == 13) {
-                    var query = $('#input').val();
+                $('#term').keyup(function (e) {
+                    var query = $('#term').val();
                     getResults(query);
-                    return false;    
-                  }
                 });
             });
 

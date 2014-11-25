@@ -84,3 +84,19 @@ input[type="text"]:focus {
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+
+.result {
+  padding:15px;
+  margin:15px;
+  width:150px;
+  text-align:center;
+  height:300px;
+}
+.profpic {
+  height:100px;
+  width:100px;
+  margin:0 auto;
+}
+.result img {
+  width:20px;
+}
