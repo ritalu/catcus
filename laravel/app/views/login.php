@@ -35,8 +35,11 @@ if (Cookie::get('username') !== null) {
                     <form name="login" method="get">
                     Username: <input type="text" name="username"><br>
                     Password: <input type="password" name="password"> <br> <br>
+                     <div class="error">
+                    </div>
                     <input type="submit" value="Submit">
                     </form>
+
                                        
                 </div>
 
@@ -64,6 +67,7 @@ if (Cookie::get('username') !== null) {
                         if (response != "success")
                         {
                             console.log(response);
+                            $('.error').html(response);
                             //window.location = './login';
                         }
                         else 
