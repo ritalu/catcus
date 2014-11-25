@@ -46,7 +46,7 @@ h2 {
   margin:30px 0;
   background-color:rgba(200,222,124,0.9);
 }
-.pets {
+.pet {
   position:relative;
   float:left;
   width:120px;
@@ -55,7 +55,7 @@ h2 {
   text-align:center;
   background-color:yellow;
 }
-.pets img {
+.petimg {
   width:100px;
   padding:10px;
 }
