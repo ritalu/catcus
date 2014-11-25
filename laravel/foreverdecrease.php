@@ -1,3 +1,5 @@
+#!/usr/bin/php
+
 <?php
 	
 	$con = mysql_connect('104.236.63.166', 'root', 'password') or die("unable to connect");
