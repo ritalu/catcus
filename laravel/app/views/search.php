@@ -59,6 +59,7 @@ if (Cookie::get('username') !== null) {
 
                 $('#term').keyup(function (e) {
                     var query = $('#term').val();
+                    $('.panel').html("");
                     getResults(query);
                 });
             });
