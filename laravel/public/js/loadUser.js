@@ -33,12 +33,14 @@ var loadUserPets = function(username) {
 
 var renderPets = function(data) {
   var content = "";
+  console.log(data.length);
   for (var i = 0; i < data.length; i++) {
-
     if (data[i] == null) {
+      console.log("no");
       break;
     }
     else {
+      console.log(data[i]);
       content += '<div class="pet">' + 
         '<img class="petimg" src="' + data[i].happy + '">' + 
           '<br>' + data[i].name +
