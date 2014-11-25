@@ -3,7 +3,12 @@ var loadUser = function(username) {
     type:"GET",
     url:"../api/users/" + username,
     success: function(data){
-        renderUser(data);
+        if (data.length == 0) {
+          window.location = './error';
+        }
+        else {
+          renderUser(data);
+        }
     }
   });
 }

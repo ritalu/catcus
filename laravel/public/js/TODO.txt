@@ -7,5 +7,4 @@ TODO:
 - level/exp increase in topbar
 - bad routes = error page, not server generated error pg
 - favicon
-- ajax reponse
-- buy item refresh page & topbar refresh
+- exp errors in topbar level 4+
