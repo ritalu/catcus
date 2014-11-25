@@ -99,8 +99,10 @@ input[type="text"]:focus {
 }
 .pets {
   width:75px;
+  line-height:22px;
+  margin:0 auto;
 }
 .pets img {
   width:20px;
-  padding:2px;
+  padding:0 1px;
 }
