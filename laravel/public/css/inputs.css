@@ -101,3 +101,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color:rgb(91,196,191);
 }
+.error {
+  color:red;
+}
