@@ -152,7 +152,7 @@ a:hover {
 }
 
 .menu {
-	position:absolute;
+	position:fixed;
 	right:0;
 	top:50px;
 	width:200px;
