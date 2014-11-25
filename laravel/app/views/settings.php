@@ -83,7 +83,7 @@ if (Cookie::get('username') !== null) {
                         o.email = em;                       
                     }
                     o.username = <?php echo json_encode($username)?>;
-                    $.post('./api/users/update/', 
+                    $.post('./api/users/update', 
                         o,
                     function(response) {
                         if (response == "success")
