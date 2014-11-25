@@ -11,7 +11,6 @@ if (Cookie::get('username') !== null) {
 $user = DB::table('users')->where('username', $username)->first();
 $level = log($user->exp,2);
 
-echo $level;
 ?>
 <!DOCTYPE html>
 <html lang="en">
