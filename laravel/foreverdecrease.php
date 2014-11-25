@@ -1,7 +1,5 @@
 <?php
-	set_time_limit(0);
-// while(true)
-// {
+	
 	$con = mysql_connect('104.236.63.166', 'root', 'password') or die("unable to connect");
 
 	@mysql_select_db('laravel') or die('Could not open the db');
@@ -56,9 +54,6 @@
         }
     }
 
-    //avoid CPU exhaustion, adjust as necessary
-    //usleep(2000);//0.002 seconds
-//}
 
 
 ?>
