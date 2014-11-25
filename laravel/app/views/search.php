@@ -82,7 +82,7 @@ if (Cookie::get('username') !== null) {
                             };
                         }
                     }
-                }
+                });
             }
          </script>
 
