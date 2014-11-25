@@ -3,8 +3,8 @@ TODO:
 - delete pet (/pets)
 - no items message (/pets)
 - use items (/pets)
+
 - display error for login
 - level/exp increase in topbar
-- bad routes = error page, not server generated error pg
 - favicon
 - exp errors in topbar level 4+
