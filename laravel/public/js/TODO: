@@ -8,3 +8,4 @@ TODO:
 - bad routes = error page, not server generated error pg
 - favicon
 - ajax reponse
+- buy item refresh page & topbar refresh
