@@ -106,3 +106,6 @@ input[type="text"]:focus {
   width:20px;
   padding:0 1px;
 }
+.panel a {
+  color:black;
+}
