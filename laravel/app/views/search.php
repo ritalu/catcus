@@ -31,16 +31,7 @@ if (Cookie::get('username') !== null) {
                 <div class="icon"></div>
             </div>
             <div class="panel">
-                <div class="result">
-                    <div class="profpic">
-                    </div>
-                    Name
-                    <br>
-                    <img src='./img/turtle_happy.png'>
-                    <img src='./img/turtle_happy.png'>
-                    <img src='./img/turtle_happy.png'>
-
-                </div>
+                
             </div>
         </div>
 
@@ -84,11 +75,40 @@ if (Cookie::get('username') !== null) {
                               break;
                             }
                             else {
-                              console.log(data[i].username);
+                              var content = 
+                              '<div class="result">' +
+                                '<div class="profpic" style="background:url(' + data[i].picture +') center center no-repeat;background-size:contain">' +
+                                '</div>' +
+                                data[i].username +
+                                '<div class="' + data[i].username + ' pets">'+
+                                '</div>'+
+                            '</div>';
+                                $('.panel').append(content);
+                                getPets(data[i].username);
+
                             };
                         }
                     }
                 });
+            }
+
+            function getPets(username) {
+                $.ajax({//initial ajax call 
+                    type:"GET",
+                    url:"../api/users/getallpets/" + username,
+                    success: function(data){
+                        var content = "";
+                        for (var i = 0; i < data.length; i++) {
+                            if (data[i] == null) {
+                              break;
+                            }
+                            else {
+                                content += "<img src='" + data[i].happy + "'>"
+                            }
+                        }
+                        $('.' + username).html(content);
+                    }
+                  });
             }
          </script>
 
