@@ -152,7 +152,7 @@ $level = log($user->exp,2);
                         success: function(data){
                             console.log(data);
                             closeModal();
-                            loadTopbar();
+                            loadTopbar(<?php echo json_encode($username)?>);
                         }
                       });
 
