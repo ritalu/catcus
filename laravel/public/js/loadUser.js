@@ -13,7 +13,7 @@ var loadUser = function(username) {
 var renderUser = function (data) {
 
   if (data.username == null) {
-    window.location = "http://catcus.me/error";
+    $('.panel').children('h1').html("User not found");
   }
   else {
     var level = Math.floor(Math.log(data.exp) / Math.log(2));

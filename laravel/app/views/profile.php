@@ -28,8 +28,8 @@ if (Cookie::get('username') !== null) {
         <div class="content">
             <div class="profpic"></div>
             <div class="panel">        
-                <h1>USERNAME</h1>
-                <h2>LEVEL</h2>    
+                <h1></h1>
+                <h2></h2>    
                 <div class="userpets">
                     <div class="petwrapper">
                         
