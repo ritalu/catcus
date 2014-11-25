@@ -4,7 +4,3 @@ TODO:
 - no items message (/pets)
 - use items (/pets)
 
-- display error for login
-- level/exp increase in topbar
-- favicon
-- exp errors in topbar level 4+

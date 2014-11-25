@@ -14,7 +14,7 @@ if (Cookie::get('username') !== null) {
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:100,300,500">
-        <title>Settings</title>
+        <title>Search</title>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <link href="./css/topbar.css" rel="stylesheet">
         <link href="./css/search.css" rel="stylesheet">
@@ -81,7 +81,7 @@ if (Cookie::get('username') !== null) {
                             else {
                               var content = 
                               '<a href="/profile/' + data[i].username + '"><div class="result">' +
-                                '<div class="profpic" style="background:url(' + data[i].picture +') center center no-repeat;background-size:contain">' +
+                                '<div class="profpic" style="background:url(' + data[i].picture +') center center no-repeat;background-size:cover">' +
                                 '</div>' +
                                 data[i].username +
                                 '<div class="' + data[i].username + ' pets">'+
