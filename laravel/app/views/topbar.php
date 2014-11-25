@@ -1,4 +1,5 @@
 <div class="menu hidden">
+    <a href="/search">search</a>
     <a href="/pets">pets</a>
     <a href="/store">store</a>
     <script>

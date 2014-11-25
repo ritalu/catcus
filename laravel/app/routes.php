@@ -46,6 +46,11 @@ Route::get('/profile/{username}', function()
 	return View::make('profile');
 });
 
+Route::get('/search', function()
+{
+	return View::make('search');
+});
+
 // Route::filter('auth.basic', function()
 // {
 //     return Auth::basic("username");
