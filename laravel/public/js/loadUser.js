@@ -46,9 +46,9 @@ var renderPets = function(data) {
     };
   }
   content += '<br clear="all" />'
-  if (datalength == 1) {
+  if (data.length == 1) {
     $('.petwrapper').css({"width":"160px"});
-  } else if (datalength == 2) {
+  } else if (data.length == 2) {
     $('.petwrapper').css({"width":"320px"})
   }
   $('.petwrapper').html(content);
