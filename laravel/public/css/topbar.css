@@ -102,7 +102,7 @@ a:hover {
 	display:block;
 	height:50px;
 	width:50px;
-	background:url("../img/cat_happy.png") center center no-repeat rgba(241,106,112,1);
+	background:url("../img/home.png") center center no-repeat rgba(241,106,112,1);
 	background-size:35px auto;
 }
 .downarrow {
