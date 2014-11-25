@@ -68,6 +68,7 @@ if (Cookie::get('username') !== null) {
                     loadTopbar("../api/users/" + <?php echo json_encode($username)?>);
 
                     loadUser(<?php echo json_encode($user)?>);
+                    loadUserPets(<?php echo json_encode($user)?>);
                 <?php
                     } else {
                 ?>

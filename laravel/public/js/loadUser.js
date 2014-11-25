@@ -21,3 +21,35 @@ var renderUser = function (data) {
 
 }
 
+var loadUserPets = function(username) {
+  $.ajax({//initial ajax call 
+    type:"GET",
+    url:"../api/users/getallpets" + username,
+    success: function(data){
+        renderPets(data);
+    }
+  });
+}
+
+var renderPets = function(data) {
+  var content = "";
+  for (var i = 0; i < data.length; i++) {
+
+    if (data[i] == null) {
+      break;
+    }
+    else {
+      content += '<div class="pet">' + 
+        '<img class="petimg" src="' + data[i].happy + '">' + 
+          '<br>' + data[i].name +
+      '</div>';
+    };
+  }
+  content += '<br clear="all" />'
+  if (datalength == 1) {
+    $('.petwrapper').css({"width":"160px"});
+  } else if (datalength == 2) {
+    $('.petwrapper').css({"width":"320px"})
+  }
+  $('.petwrapper').html(content);
+}
