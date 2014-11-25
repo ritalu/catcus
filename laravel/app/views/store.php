@@ -116,17 +116,14 @@ if (Cookie::get('level') !== null) {
                 $(document).keyup(function(e){
 
                     if(e.keyCode === 27) {
-                        $('.fullcontainer').fadeOut();
-                        $('.actioncontainer').addClass('hidden');
-                        $('.objactioncontainer').addClass('hidden');
+                        closeModal()
                     }
                 });
 
                 $('.fullcontainer').click(function() {
-                    $('.fullcontainer').fadeOut();
-                    $('.actioncontainer').addClass('hidden');
-                    $('.objactioncontainer').addClass('hidden');
+                    closeModal();
                 });
+
                 $('.buybutton').click(function() {
                     var typeID = $('.buytype').html();
                     var name = $('#petname').val();
@@ -138,7 +135,7 @@ if (Cookie::get('level') !== null) {
                         success: function(data){
                             if (data == "success") {
                                 console.log(data);
-                                //window.location.replace("/pets");
+                                window.location.replace("/pets");
                             } else {
                                 if ($('.buyform').children('.error').length == 0) {
                                     $('.buyform').append("<span class='error'><br>"+data+"</span>");
@@ -155,6 +152,7 @@ if (Cookie::get('level') !== null) {
                         data: {username: <?php echo json_encode($username)?>, objectID: objID},
                         success: function(data){
                             console.log(data);
+                            closeModal();
                             loadTopbar();
                         }
                       });
@@ -165,6 +163,11 @@ if (Cookie::get('level') !== null) {
                 loadObjects(<?php echo json_encode($level)?>);
                 
              });
+            function closeModal() {
+                $('.fullcontainer').fadeOut();
+                $('.actioncontainer').addClass('hidden');
+                $('.objactioncontainer').addClass('hidden');
+            }
 
          </script>
 

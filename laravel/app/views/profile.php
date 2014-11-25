@@ -32,19 +32,7 @@ if (Cookie::get('username') !== null) {
                 <h2>LEVEL</h2>    
                 <div class="userpets">
                     <div class="petwrapper">
-                        <div class="pet">
-                            <img class="petimg" src="http://catcus.me/img/turtle_happy.png">
-                            <br>Name 
-                        </div>
-                        <div class="pet">
-                            <img class="petimg" src="http://catcus.me/img/turtle_happy.png">
-                            <br>Name 
-                        </div>
-                        <div class="pet">
-                            <img class="petimg" src="http://catcus.me/img/turtle_happy.png">
-                            <br>Name 
-                        </div>
-                        <br clear="all" />
+                        
                     </div>
                 </div>           
             </div>

@@ -53,5 +53,8 @@ var renderPets = function(data) {
   } else if (data.length == 2) {
     $('.petwrapper').css({"width":"320px"})
   }
+  else {
+    $('.petwrapper').css({"width":"480px"})
+  }
   $('.petwrapper').html(content);
 }
