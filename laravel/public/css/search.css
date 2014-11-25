@@ -25,15 +25,15 @@
 }
 .icon {
   position:absolute;
-  top:0;
+  top:8px;
   left:50%;
-  margin-left:-250px;
+  margin-left:-255px;
   background:url('../img/search.png') center center no-repeat;
   background-size:contain;
-  height:50px;
-  width:50px;
-  opacity:0.8;
-  filter:alpha(opacity=80);
+  height:35px;
+  width:35px;
+  opacity:0.4;
+  filter:alpha(opacity=40);
 
 }
 
