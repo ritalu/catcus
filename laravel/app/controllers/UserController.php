@@ -160,8 +160,9 @@ class UserController extends BaseController {
 	// ./api/users/search?term=TERM
 	public function Search()
 	{
-		$term = Input::get('term');		
-		$users = User::where('username', 'LIKE', '%$term%')->get();
+		$term = Input::get('term');	
+		$query = '*'.$term or $term.'*' or '*'.$term.'*';	
+		$users = User::where('username', 'LIKE', $query)->get();
 		return Response::json($users);
 	}
 
