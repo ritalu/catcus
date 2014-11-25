@@ -22,7 +22,6 @@ var loadObjects=function(username) {
     url:"./api/users/getallobjects/"+username,
     success: function(data){
         console.log(data);
-        //loadAllObjects(data);
         renderObjects(data);
         $('.item.active').click(function() {
           $('.fullcontainer').fadeIn();
@@ -120,26 +119,30 @@ renderPetBackground = function(data) {
 var renderObjects = function(data)
 {
   var content="";
-  for (var i = 0; i < data.length; i++) {
-    if (data[i] == null) {
-      break;
+  if(data.length == 0){
+    content+='<div class ="noitems">You have no items :( Go buy some!</div>';
+  }
+  else {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i] == null) {
+        break;
+      }
+      var qty = data[i].uses_remaining;
+      if (data[i].uses_remaining < 0)
+      {
+        qty = 'unlimited';
+      };
+      content +=
+        '<div class="item active">' +
+          '<input id="objectsownedID" type="text" value="'+
+          data[i].objectsownedID+'" style="display:none;">' +
+          '<img class="objimg" src="' +data[i].image+ '">' +
+          '<br><span class="type">' + data[i].name + '</span>'+
+          '<br><span class="need">' + data[i].need_fulfilled + '</span>'+
+          '<br>+<span class="fullfillment">' + data[i].rate_of_fulfillment + '</span>'+
+          '<br>Qty: ' + qty +
+          '</div>';
     }
-
-    var qty = data[i].uses_remaining;
-    if (data[i].uses_remaining < 0)
-    {
-      qty = 'unlimited';
-    };
-    content +=
-      '<div class="item active">' +
-        '<input id="objectsownedID" type="text" value="'+
-        data[i].objectsownedID+'" style="display:none;">' +
-        '<img class="objimg" src="' +data[i].image+ '">' +
-        '<br><span class="type">' + data[i].name + '</span>'+
-        '<br><span class="need">' + data[i].need_fulfilled + '</span>'+
-        '<br>+<span class="fullfillment">' + data[i].rate_of_fulfillment + '</span>'+
-        '<br>Qty: ' + qty +
-        '</div>';
   }
   $('.itemcontainer').html(content);
 }
