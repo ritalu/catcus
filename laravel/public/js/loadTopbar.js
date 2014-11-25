@@ -13,6 +13,7 @@ var renderTopbar = function (data) {
   var level = Math.floor(Math.log(data.exp) / Math.log(2));
   var totalExp = Math.pow(2, level + 1);
   content +=
+        '<a href="/" class="logo"></a>' +
         '<div class="downarrow"><div class="line1"></div> <div class="line2"></div></div> <div class="userinfo"><a href="/profile/'
         + data.username + '">' + data.username + 
         '</a> <br><a href="/store">' + data.money + ' coins</a></div><a href="/profile/' +
@@ -22,7 +23,7 @@ var renderTopbar = function (data) {
         + level + 
         '</div><div class="expbar"> <div class="fill"></div><div class="text">EXP: ' 
         + data.exp + '/' + totalExp +
-        '</div></div>'
+        '</div></div>';
 
   $('.topbar').html(content);
   $('.fill').width((data.exp/totalExp) * 200);
