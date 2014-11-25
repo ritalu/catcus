@@ -89,15 +89,18 @@ input[type="text"]:focus {
   position:relative;
   float:left;
   padding:15px;
-  width:100px;
+  width:130px;
   text-align:center;
-  height:300px;
 }
 .profpic {
   height:100px;
   width:100px;
   margin:0 auto;
 }
+.pets {
+  width:75px;
+}
 .pets img {
-  width:20px;
+  width:25px;
+  padding:5px;
 }
