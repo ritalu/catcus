@@ -11,7 +11,7 @@ var loadTopbar = function(link) {
 var renderTopbar = function (data) {
   var content="";
   var level = Math.floor(Math.log(data.exp) / Math.log(2));
-  var totalExp = Math.pow(level + 1, 2);
+  var totalExp = Math.pow(2, level + 1);
   content +=
         '<div class="downarrow"><div class="line1"></div> <div class="line2"></div></div> <div class="userinfo"><a href="/profile/'
         + data.username + '">' + data.username + 
