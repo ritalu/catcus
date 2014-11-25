@@ -13,7 +13,7 @@ var loadUser = function(username) {
 var renderUser = function (data) {
 
   if (data.username == null) {
-    window.location = "././error";
+    window.location = "http://catcus.me/error";
   }
   else {
     var level = Math.floor(Math.log(data.exp) / Math.log(2));
