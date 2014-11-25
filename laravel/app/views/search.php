@@ -27,7 +27,7 @@ if (Cookie::get('username') !== null) {
 
         <div class="content">
             <div class="bar">
-                <input type="text" id="input" placeholder="Search">
+                <input type="text" id="term" placeholder="Search">
                 <div class="icon"></div>
             </div>
             <div class="panel">
@@ -57,7 +57,7 @@ if (Cookie::get('username') !== null) {
                     }
                 ?>
 
-                $('#input').keypress(function (e) {
+                $('#term').keypress(function (e) {
                   if (e.which == 13) {
                     var query = $('#input').val();
                     getResults(query);
