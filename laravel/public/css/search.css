@@ -96,6 +96,10 @@ input[type="text"]:focus {
   height:100px;
   width:100px;
   margin:0 auto;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  
 }
 .pets {
   width:75px;

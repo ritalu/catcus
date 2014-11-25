@@ -81,7 +81,7 @@ if (Cookie::get('username') !== null) {
                             else {
                               var content = 
                               '<a href="/profile/' + data[i].username + '"><div class="result">' +
-                                '<div class="profpic" style="background:url(' + data[i].picture +') center center no-repeat;background-size:contain">' +
+                                '<div class="profpic" style="background:url(' + data[i].picture +') center center no-repeat;background-size:cover">' +
                                 '</div>' +
                                 data[i].username +
                                 '<div class="' + data[i].username + ' pets">'+
