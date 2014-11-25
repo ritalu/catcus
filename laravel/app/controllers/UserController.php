@@ -111,9 +111,16 @@ class UserController extends BaseController {
 	// gets all pet objects for the specified user
 	public function GetAllObjects($username)
 	{
-		$objects = DB::table('objectsowned')->where('username', $username)->get();
+		$objectowned = DB::table('objectsowned')->where('username', $username)->get();
 
-		return Response::json($objects);
+		$new_array = Array();
+		foreach ($objectowned as $o)
+		{
+			$object = DB::table('objects')->where('objectID', $o->objectID)->first();
+			$new_o = (object) array_merge((array) $object, (array) $o);
+			array_push($new_array, $new_o);
+		}
+		return Response::json($new_array);
 	}
 
 

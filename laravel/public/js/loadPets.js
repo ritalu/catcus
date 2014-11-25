@@ -5,29 +5,15 @@ var loadPetList=function(username) {
     url:"./api/users/getallpets/"+username,
     success: function(data){
         renderPetList(data);
-        loadActivePet();
+        renderPetBackground(data[0]);
+        renderActivePet(data[0]);
         loadObjects(username);
+        //TODO load new background
+        //TODO load new pet
     }
   });
 }
 
-var loadActivePet=function() {
-  var activePet = document.getElementById("activePet").value;  
-  $.ajax({//initial ajax call 
-    type:"GET",
-    url:"./api/pets/"+activePet,
-    success: function(data){
-        console.log(data);
-        renderPetBackground(data);
-        renderActivePet(data);
-        $('petcontainer.notactive').click(function(){
-          console.log('New pet selected');
-        //TODO load new background
-        //TODO load new pet
-        });
-    }
-  });
-}
 
 var loadObjects=function(username) {
     console.log("load objects");
@@ -36,19 +22,7 @@ var loadObjects=function(username) {
     url:"./api/users/getallobjects/"+username,
     success: function(data){
         console.log(data);
-        loadAllObjects(data);
-    }
-  });
-}
-
-loadAllObjects = function (objectsOwned) {
-   console.log("load objects: "+objectsOwned);
-  $.ajax({//initial ajax call 
-    type:"GET",
-    url:"./api/objects",
-    success: function(data){
-        console.log(data);
-        renderObjects(data, objectsOwned);
+        renderObjects(data);
         $('.item.active').click(function() {
           $('.fullcontainer').fadeIn();
           $('.objactioncontainer').removeClass('hidden');
@@ -142,29 +116,33 @@ renderPetBackground = function(data) {
   };
 }
 
-var renderObjects = function(data, objectsOwned)
+var renderObjects = function(data)
 {
   var content="";
-  for (var i = 0; i < objectsOwned.length; i++) {
-    if (objectsOwned[i] == null) {
-      break;
+  if(data.length == 0){
+    content+='<div class ="noitems">You have no items :( Go buy some!</div>';
+  }
+  else {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i] == null) {
+        break;
+      }
+      var qty = data[i].uses_remaining;
+      if (data[i].uses_remaining < 0)
+      {
+        qty = 'unlimited';
+      };
+      content +=
+        '<div class="item active">' +
+          '<input id="objectsownedID" type="text" value="'+
+          data[i].objectsownedID+'" style="display:none;">' +
+          '<img class="objimg" src="' +data[i].image+ '">' +
+          '<br><span class="type">' + data[i].name + '</span>'+
+          '<br><span class="need">' + data[i].need_fulfilled + '</span>'+
+          '<br>+<span class="fullfillment">' + data[i].rate_of_fulfillment + '</span>'+
+          '<br>Qty: ' + qty +
+          '</div>';
     }
-
-    var qty = objectsOwned[i].uses_remaining;
-    if (objectsOwned[i].uses_remaining < 0)
-    {
-      qty = 'unlimited';
-    };
-    content +=
-      '<div class="item active">' +
-        '<input id="objectsownedID" type="text" value="'+
-        objectsOwned[i].objectsownedID+'" style="display:none;">' +
-        '<img class="objimg" src="' +data[i].image+ '">' +
-        '<br><span class="type">' + data[i].name + '</span>'+
-        '<br><span class="need">' + data[i].need_fulfilled + '</span>'+
-        '<br>+<span class="fullfillment">' + data[i].rate_of_fulfillment + '</span>'+
-        '<br>Qty: ' + qty +
-        '</div>';
   }
   $('.itemcontainer').html(content);
 }

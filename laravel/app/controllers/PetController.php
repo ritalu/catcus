@@ -36,8 +36,15 @@ class PetController extends BaseController {
 
 	public function destroy($petID)
 	{
-		DB::table('pets')->where('petID', $petID)->delete();
+		$username = DB::table('pets')->where('petID', $petID)->first()->username;
+		$type = DB::table('pets')->where('petID', $petID)->first()->typeID
 	 
+	 	DB::table('pets')->where('petID', $petID)->delete();
+	 	$old_money = DB::table('users')->where('username', $username)->first()->money;
+	 	$pet_price = DB::table('pettypes')->where('typeID', $type)->first()->price;
+	 	$new_money = $old_money - $pet_price;
+
+	 	DB::table('users')->where('username', $username)->first()->update(array('money'=>$new_money));
     	return Response::json('success');
 	}
 
