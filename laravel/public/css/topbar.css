@@ -160,7 +160,7 @@ a:hover {
           transition:0.5s all ease;
 }
 .menu.hidden {
-	top:-300px;
+	top:-400px;
 }
 .menu a {
 	background-color:rgba(241,106,112,1);

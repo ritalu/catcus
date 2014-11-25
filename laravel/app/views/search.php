@@ -26,8 +26,10 @@ if (Cookie::get('username') !== null) {
         
 
         <div class="content">
-            <input type="text" id="input">
-
+            <div class="bar">
+                <input type="text" id="input" placeholder="Search">
+                <div class="icon"></div>
+            </div>
             <div class="panel">
                 <div class="result"></div>
             </div>
