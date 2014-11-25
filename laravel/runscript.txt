@@ -1,2 +1,2 @@
-MAILTO=grita.lu410@gmail.com
+MAILTO=rita.lu410@gmail.com
 10 * * * * /home/team/comp307project/laravel/foreverdecrease.php
