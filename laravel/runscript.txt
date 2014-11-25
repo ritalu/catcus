@@ -1,2 +1,3 @@
 MAILTO=""
-15 * * * * /home/team/comp307project/laravel/foreverdecrease.php >> /home/team/comp307project/logs/cron.log 2>&1
+sudo chmod 777 /home/team/comp307project/laravel/foreverdecrease.php
+21 * * * * /home/team/comp307project/laravel/foreverdecrease.php >> /home/team/logs/cron.log 2>&1
