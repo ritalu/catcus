@@ -161,8 +161,7 @@ class UserController extends BaseController {
 	public function Search()
 	{
 		$term = Input::get('term');	
-		$query = '*'.$term or $term.'*' or '*'.$term.'*';	
-		$users = User::where('username', 'LIKE', $query)->get();
+		$users = User::where('username', 'LIKE', '*'.$term )->orWhere('username', 'LIKE', $term.'*')->orWhere('username', 'LIKE', '*'.$term.'*')->get();
 		return Response::json($users);
 	}
 
