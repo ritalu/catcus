@@ -8,10 +8,10 @@ if (Cookie::get('username') !== null) {
     $username = Cookie::get('username');
     $loggedIn = true;
 };
-if (Cookie::get('level') !== null) {
-    $level = Cookie::get('level');
-};
+$user = DB::table('users')->where('username', $username)->first();
+$level = log($user->exp,2);
 
+echo $level;
 ?>
 <!DOCTYPE html>
 <html lang="en">
