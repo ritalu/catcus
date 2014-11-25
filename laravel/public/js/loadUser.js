@@ -24,7 +24,7 @@ var renderUser = function (data) {
 var loadUserPets = function(username) {
   $.ajax({//initial ajax call 
     type:"GET",
-    url:"../api/users/getallpets" + username,
+    url:"../api/users/getallpets/" + username,
     success: function(data){
         renderPets(data);
     }
