@@ -56,7 +56,34 @@ if (Cookie::get('username') !== null) {
                 <?php
                     }
                 ?>
+
+                $('#input').keypress(function (e) {
+                  if (e.which == 13) {
+                    var query = $('#input').val();
+                    getResults(query);
+                    return false;    
+                  }
+                });
             });
+
+            function getResults(query) {
+                $.ajax({//initial ajax call 
+                    type:"GET",
+                    url:"./api/users/search",
+                    data: {term : query},
+                    success: function(data){
+                        for (var i = 0; i < data.length; i++) {
+                            if (data[i] == null) {
+                              console.log("no");
+                              break;
+                            }
+                            else {
+                              console.log(data[i].username);
+                            };
+                        }
+                    }
+                }
+            }
          </script>
 
     </body>
