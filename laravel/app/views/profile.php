@@ -43,6 +43,7 @@ if (Cookie::get('username') !== null) {
                         <img class="petimg" src="http://catcus.me/img/turtle_happy.png">
                         <br>Name 
                     </div>
+                    <br clear="all" />
                 </div>           
             </div>
 
