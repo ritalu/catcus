@@ -106,6 +106,7 @@ if (Cookie::get('username') !== null) {
                             if (data == "success") { 
                                 console.log(data);
                                 //loadTopbar();
+                                window.location = "/pets";
                                 
                             } else {
                                 if ($('.useform').children('.error').length == 0) {
