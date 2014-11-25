@@ -31,7 +31,7 @@ if (Cookie::get('username') !== null) {
                 <div class="icon"></div>
             </div>
             <div class="panel">
-                
+                Enter your search query.
             </div>
         </div>
 
@@ -70,6 +70,9 @@ if (Cookie::get('username') !== null) {
                     url:"./api/users/search",
                     data: {term : query},
                     success: function(data){
+                        if (data.length == 0) {
+                            $('.panel').html("No results found.")
+                        }
                         for (var i = 0; i < data.length; i++) {
                             if (data[i] == null) {
                               console.log("no");
