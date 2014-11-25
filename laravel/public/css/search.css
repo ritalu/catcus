@@ -90,9 +90,10 @@ input[type="text"]:focus {
   float:left;
   padding:15px;
   width:130px;
-  height:190px;
+  height:175px;
   overflow:hidden;
   text-align:center;
+  margin-bottom:10px;
 }
 .profpic {
   height:100px;
