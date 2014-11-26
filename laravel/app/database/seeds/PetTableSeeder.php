@@ -43,9 +43,9 @@ class PetTableSeeder extends Seeder {
             'typeID' => 'Cactus',
             'username' => 'ritalu',
             'name' => 'Pedro Jr.',
-            'happiness' => '60',
-            'fullness' => '60',
-            'cleanliness' => '60',
+            'happiness' => '40',
+            'fullness' => '40',
+            'cleanliness' => '40',
             'exp' => '0',
             'creationdate' => new DateTime()
         ));

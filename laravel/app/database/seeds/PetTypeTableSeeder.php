@@ -9,7 +9,7 @@ class PetTypeTableSeeder extends Seeder {
         PetType::create(array(
             'typeID' => 'Cactus',
             'rate_decrease_hap' => '2',
-            'rate_decrease_full' => '1',
+            'rate_decrease_full' => '2',
             'rate_decrease_clean' => '1',
             'unlock_level' => '1',
             'price' => '250',
@@ -29,7 +29,7 @@ class PetTypeTableSeeder extends Seeder {
         PetType::create(array(
             'typeID' => 'Turtle',
             'rate_decrease_hap' => '8',
-            'rate_decrease_full' => '12',
+            'rate_decrease_full' => '8',
             'rate_decrease_clean' => '3',
             'unlock_level' => '3',
             'price' => '1000',
