@@ -94,10 +94,10 @@ if (Cookie::get('username') !== null) {
                     $('.fullcontainer').fadeOut();
                     $('.objactioncontainer').addClass('hidden');
                 });
+                
                 $('.objusebutton').click(function() {
                     var objectsownedID = $('.objownedID').html();
                     var petID = $('#activePet').val();
-                    console.log(petID + " " + objectsownedID);
                     $.ajax({//initial ajax call 
                         type:"GET",
                         url:"./api/objects/use",
@@ -105,8 +105,6 @@ if (Cookie::get('username') !== null) {
                         success: function(data){
                             if (data == "success") { 
                                 console.log(data);
-                                //loadTopbar();
-                                window.location = "/pets";
                                 
                             } else {
                                 if ($('.useform').children('.error').length == 0) {
@@ -115,6 +113,10 @@ if (Cookie::get('username') !== null) {
                             }
                         }
                       });
+                    $('.fullcontainer').fadeOut();
+                    $('.objactioncontainer').addClass('hidden');
+                    loadTopbar("./api/users/" + <?php echo json_encode($username)?>);
+                    
                 });
 
                     loadTopbar("./api/users/" + <?php echo json_encode($username)?>);

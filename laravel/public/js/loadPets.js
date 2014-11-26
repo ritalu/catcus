@@ -8,6 +8,7 @@ var loadPetList=function(username) {
         renderPetBackground(data[0]);
         renderActivePet(data[0]);
         loadObjects(username);
+        
         //TODO load new background
         //TODO load new pet
     }
@@ -74,20 +75,20 @@ var renderActivePet = function (data) {
 
   //TODO pet levels
   var petStats = "";
-  petStats = 'Hunger:'
+  petStats = 'Fullness:'
       +'<div class="bar">'
           +'<div id="full" class="fill"></div>'
-          +'<div class="text">'+ data.fullness +'/100</div>'
+          +'<div id="fulltext" class="text">'+ data.fullness +'/100</div>'
       +'</div>'
       +'Happiness:'
       +'<div class="bar">'
           +'<div id="happy" class="fill"></div>'
-          +'<div class="text">'+data.happiness+'/100</div>'
+          +'<div id="happytext" class="text">'+data.happiness+'/100</div>'
       +'</div>'
       +'Cleanliness:'
       +'<div class="bar">'
           +'<div id="clean" class="fill"></div>'
-          +'<div class="text">'+ data.cleanliness+'/100</div>'
+          +'<div id="cleantext" class="text">'+ data.cleanliness+'/100</div>'
       +'</div></div>'
   $('.petstats').html(petStats);
   $('#full').css('width',2*data.fullness+'px');
