@@ -30,6 +30,17 @@ class UserController extends BaseController {
 	    $user->username = Request::get('username');
 	    $user->email = Request::get('email');
 	    $user->password = Request::get('password');
+
+	    if (DB::table('users')->where('username', $user->username)->get() != null)
+	    {
+	    	return Response::json('The username is taken.');
+	    }
+
+	   	if (DB::table('users')->where('email', $user->email)->get() != null)
+	    {
+	    	return Response::json('The email is taken.');
+	    }
+
 	    $user->picture = 'http://cdn.flaticon.com/png/256/28314.png';
 	    $user->exp = '2';
 	    $user->money = '2000';
