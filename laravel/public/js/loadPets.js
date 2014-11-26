@@ -30,8 +30,10 @@ var loadObjects=function(username) {
           var url = "url("+$(this).children('.objimg').attr('src') + ") center center no-repeat";
           console.log(url);
           $('.objpic').css({"background": url,"background-size":"contain"})
-          $('.objusetype').html($(this).children('.type').html());
+          $('.objtype').html($(this).children('.type').html());
           $('.objuseneed').html($(this).children('.need').html());
+          $('.objfulfillment').html($(this).children('.fullfillment').html());
+          $('.objqty').html("Qty: "+$(this).children('.quantity').html());
           $('.objownedID').html($(this).children('#objectsownedID').val());
           $('.error').remove();
         });
@@ -77,23 +79,23 @@ var renderActivePet = function (data) {
   var petStats = "";
   petStats = 'Fullness:'
       +'<div class="bar">'
-          +'<div id="full" class="fill"></div>'
+          +'<div class="full"></div>'
           +'<div id="fulltext" class="text">'+ data.fullness +'/100</div>'
       +'</div>'
       +'Happiness:'
       +'<div class="bar">'
-          +'<div id="happy" class="fill"></div>'
+          +'<div class="happy"></div>'
           +'<div id="happytext" class="text">'+data.happiness+'/100</div>'
       +'</div>'
       +'Cleanliness:'
       +'<div class="bar">'
-          +'<div id="clean" class="fill"></div>'
+          +'<div class="clean"></div>'
           +'<div id="cleantext" class="text">'+ data.cleanliness+'/100</div>'
       +'</div></div>'
   $('.petstats').html(petStats);
-  $('#full').css('width',2*data.fullness+'px');
-  $('#happy').css('width',2*data.happiness+'px');
-  $('#clean').css('width',2*data.cleanliness+'px');
+  $('.full').css('width',2*data.fullness+'px');
+  $('.happy').css('width',2*data.happiness+'px');
+  $('.clean').css('width',2*data.cleanliness+'px');
 }
 
 function calcAge(creationdate) {
@@ -141,7 +143,7 @@ var renderObjects = function(data)
           '<br><span class="type">' + data[i].name + '</span>'+
           '<br><span class="need">' + data[i].need_fulfilled + '</span>'+
           '<br>+<span class="fullfillment">' + data[i].rate_of_fulfillment + '</span>'+
-          '<br>Qty: ' + qty +
+          '<br>Qty: <span class="quantity">'+ qty +'</span>'+ 
           '</div>';
     }
   }

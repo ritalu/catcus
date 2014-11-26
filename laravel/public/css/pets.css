@@ -116,7 +116,7 @@ table tr td.d {
 	background-color:rgba(50,50,50,1);
 	height:25px;
 }
-.bar .fill {
+.bar .full, .bar .happy, .bar .clean {
 	float:left;
 	/*width:150px;*/
 	height:25px;
