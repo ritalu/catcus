@@ -4,13 +4,10 @@ var loadPetList=function(username) {
     type:"GET",
     url:"./api/users/getallpets/"+username,
     success: function(data){
-        renderPetList(data);
-        renderPetBackground(data[0]);
-        renderActivePet(data[0]);
+        renderPetList(data,1);
+        renderPetBackground(data[1]);
+        renderActivePet(data[1]);
         loadObjects(username);
-        
-        //TODO load new background
-        //TODO load new pet
     }
   });
 }
@@ -41,28 +38,41 @@ var loadObjects=function(username) {
   });
 }
 
-var renderPetList = function (data) {
+var renderPetList = function (data, petNum) {
   console.log("rendering");
   var content='<div class="title">Pets</div>';
-  //add hidden field for first pet
-  content+='<input id="activePet" type="text" value="'+data[0].petID+'" style="display:none;">';
-  content+='<input id="activePetPic" type="text" value="'+data[0].happy+'" style="display:none;">';
-  content +=
-  '<div class="petcontainer active" style="background:url('+data[0].happy+') center center no-repeat;background-size:contain">' +
-    '<div class="name">'+data[0].name+'</div>' +
-  '</div>'
-  for (var i = 1; i < data.length; i++) {
-    if (data[i] == null) {
-      break;
-    } 
-    else {
+  for (var i = 0; i < data.length; i++) {
+    if(i != petNum){
+      if (data[i] == null) {
+        break;
+      } 
+      else {
+        content +=
+        '<div class="petcontainer notactive" style="background:url('+data[i].happy+') center center no-repeat;background-size:contain">' +
+          '<div class="name">'+data[i].name+'</div>'
+          +'<input class="petPos" type="text" value="'+i+'" style="display:none;">'
+        +'</div>';
+    	};
+    }
+    else{
+      //add hidden field for first pet
+      content+='<input id="activePetID" type="text" value="'+data[i].petID+'" style="display:none;">';
+      content+='<input id="activePetPic" type="text" value="'+data[i].happy+'" style="display:none;">';
       content +=
-      '<div class="petcontainer notactive" style="background:url('+data[i].happy+') center center no-repeat;background-size:contain">' +
+      '<div class="petcontainer active" style="background:url('+data[i].happy+') center center no-repeat;background-size:contain">' +
         '<div class="name">'+data[i].name+'</div>' +
-      '</div>'
-  	};
+        '<input class="petPos" type="text" value="'+i+'" style="display:none;">'+
+      '</div>';
+    }
   }
   $('.petlist').html(content);
+  $('.petcontainer').on('click',function(){
+      console.log($(this).children('.petPos').val());
+      var petPos = $(this).children('.petPos').val();
+      renderPetList(data,petPos);
+      renderPetBackground(data[petPos]);
+      renderActivePet(data[petPos]);
+  });
 }
 
 var renderActivePet = function (data) {

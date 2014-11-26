@@ -98,15 +98,15 @@ if (Cookie::get('username') !== null) {
                 
                 $('.objusebutton').click(function() {
                     var objectsownedID = $('.objownedID').html();
-                    var petID = $('#activePet').val();
+                    var petID = $('#activePetID').val();
                     $.ajax({//initial ajax call 
                         type:"GET",
                         url:"./api/objects/use",
                         data: {petID: petID, objectsownedID: objectsownedID},
                         success: function(data){
+                            console.log("OBJ USED? "+data);
                             if (data == "success") { 
-                                console.log(data);
-                                
+                                //console.log(data);
                             } else {
                                 if ($('.useform').children('.error').length == 0) {
                                     $('.useform').append("<span class='error'><br>"+data+"</span>");
