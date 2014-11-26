@@ -35,6 +35,8 @@ if (Cookie::get('username') !== null) {
                     Username: <input type="text" name="username"><br>
                     Password: <input type="password" name="password"> <br> 
                     Email: <input type="text" name="email"> <br><br>
+                      <div class="error">
+                    </div>
                     <input type="submit" value="Submit">
                     </form>
                                        
@@ -71,11 +73,15 @@ if (Cookie::get('username') !== null) {
                     function(response) {
                         if (response == "success")
                         {
-                            window.location = './';
+                            window.location = './login';
                         }
                         else 
                         {
-                            window.location = './signup';                       
+
+                            document.forms["create"]["username"].value = "";
+                            document.forms["create"]["password"].value = "";
+                            document.forms["create"]["email"].value = "";
+                            $('.error').html(response);
                         }
 
                     });
