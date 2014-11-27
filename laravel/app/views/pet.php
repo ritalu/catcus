@@ -99,6 +99,7 @@ if (Cookie::get('username') !== null) {
                 $('.objusebutton').click(function() {
                     var objectsownedID = $('.objownedID').html();
                     var petID = $('#activePetID').val();
+                    console.log("USE OBJ "+ objectsownedID + " "+petID)
                     $.ajax({//initial ajax call 
                         type:"GET",
                         url:"./api/objects/use",
@@ -107,64 +108,64 @@ if (Cookie::get('username') !== null) {
                             console.log("OBJ USED? "+data);
                             if (data == "success") { 
                                 //console.log(data);
-                            } else {
+                                //update bar
+                                $('.fullcontainer').fadeOut();
+                                $('.objactioncontainer').addClass('hidden');
+                                if($('.objuseneed').text() == 'Fullness'){
+                                    console.log("NEED: FULLNESS");
+                                    if($('.full').width() + 2*($('.objfulfillment').text()) >= 200) {
+                                        $('.full').width(200);
+                                        $('#fulltext').html('100/100');
+                                    }
+                                    else{
+                                        var inc = 2*($('.full').width() + $('.objfulfillment').text());
+                                        $('.full').width(inc);
+                                        $('#fulltext').html(inc/2 + '/100');
+                                    }
+                                }
+                                else if($('.objuseneed').text() == 'Cleanliness'){
+                                    console.log("NEED: CLEANLINESS");
+                                    if($('.clean').width() + 2*($('.objfulfillment').text()) >= 200){
+                                        $('.clean').width(200);
+                                        $('#cleantext').html('100/100');
+                                    }
+                                    else{
+                                        var inc = parseInt($('.clean').width()) + 2*parseInt($('.objfulfillment').text());
+                                        console.log(inc);
+                                        $('.clean').width(inc);
+                                        $('#cleantext').html(inc/2 + '/100');
+                                    }
+                                }
+                                else {
+                                    console.log("NEED: HAPPINESS");
+                                    if($('.happy').width() + 2*($('.objfulfillment').text()) >= 200){
+                                        $('.happy').width(200);
+                                        $('#happytext').html('100/100');
+                                    }
+                                    else{
+                                        var inc = parseInt($('.happy').width()) + 2*parseInt($('.objfulfillment').text());
+                                        $('.happy').width(inc);
+                                        $('#happytext').html(parseInt(inc)/2 + '/100');
+                                    }
+                                }
+
+                                //update objects
+                                if($('.quantity').html == 'unlimited'){
+                                    //deals with string case
+                                }
+                                else{
+                                    loadObjects(<?php echo json_encode($username)?>);
+                                }
+
+                                loadTopbar("./api/users/" + <?php echo json_encode($username)?>);
+                            } 
+                            else {
                                 if ($('.useform').children('.error').length == 0) {
                                     $('.useform').append("<span class='error'><br>"+data+"</span>");
                                 }
                             }
                         }
                       });
-                    //update bar
-                    $('.fullcontainer').fadeOut();
-                    $('.objactioncontainer').addClass('hidden');
-                    if($('.objuseneed').text() == 'Fullness'){
-                        console.log("NEED: FULLNESS");
-                        if($('.full').width() + 2*($('.objfulfillment').text()) >= 200) {
-                            $('.full').width(200);
-                            $('#fulltext').html('100/100');
-                        }
-                        else{
-                            var inc = 2*($('.full').width() + $('.objfulfillment').text());
-                            $('.full').width(inc);
-                            $('#fulltext').html(inc/2 + '/100');
-                        }
-                    }
-                    else if($('.objuseneed').text() == 'Cleanliness'){
-                        console.log("NEED: CLEANLINESS");
-                        if($('.clean').width() + 2*($('.objfulfillment').text()) >= 200){
-                            $('.clean').width(200);
-                            $('#cleantext').html('100/100');
-                        }
-                        else{
-                            var inc = parseInt($('.clean').width()) + 2*parseInt($('.objfulfillment').text());
-                            console.log(inc);
-                            $('.clean').width(inc);
-                            $('#cleantext').html(inc/2 + '/100');
-                        }
-                    }
-                    else {
-                        console.log("NEED: HAPPINESS");
-                        if($('.happy').width() + 2*($('.objfulfillment').text()) >= 200){
-                            $('.happy').width(200);
-                            $('#happytext').html('100/100');
-                        }
-                        else{
-                            var inc = parseInt($('.happy').width()) + 2*parseInt($('.objfulfillment').text());
-                            $('.happy').width(inc);
-                            $('#happytext').html(parseInt(inc)/2 + '/100');
-                        }
-                    }
-
-                    //update objects
-                    if($('.quantity').html == 'unlimited'){
-                        //deals with string case
-                    }
-                    else{
-                        loadObjects(<?php echo json_encode($username)?>);
-                    }
-
-                    loadTopbar("./api/users/" + <?php echo json_encode($username)?>);
-                    
                 });
 
                     loadTopbar("./api/users/" + <?php echo json_encode($username)?>);
