@@ -4,10 +4,11 @@ var loadPetList=function(username) {
     type:"GET",
     url:"./api/users/getallpets/"+username,
     success: function(data){
-        renderPetList(data,1);
-        renderPetBackground(data[1]);
-        renderActivePet(data[1]);
+        renderPetList(data,0);
+        renderPetBackground(data[0]);
+        renderActivePet(data[0]);
         loadObjects(username);
+        // dsdddddddddddddddddddddd
     }
   });
 }
