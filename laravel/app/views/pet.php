@@ -99,45 +99,42 @@ if (Cookie::get('username') !== null) {
                 $('.objusebutton').click(function() {
                     var objectsownedID = $('.objownedID').html();
                     var petID = $('#activePetID').val();
-                    console.log("USE OBJ "+ objectsownedID + " "+petID)
                     $.ajax({//initial ajax call 
                         type:"GET",
                         url:"./api/objects/use",
                         data: {petID: petID, objectsownedID: objectsownedID},
                         success: function(data){
-                            console.log("OBJ USED? "+data);
                             if (data == "success") { 
                                 //console.log(data);
                                 //update bar
                                 $('.fullcontainer').fadeOut();
                                 $('.objactioncontainer').addClass('hidden');
                                 if($('.objuseneed').text() == 'Fullness'){
-                                    console.log("NEED: FULLNESS");
+                                    //console.log("NEED: FULLNESS");
                                     if($('.full').width() + 2*($('.objfulfillment').text()) >= 200) {
                                         $('.full').width(200);
                                         $('#fulltext').html('100/100');
                                     }
                                     else{
-                                        var inc = 2*($('.full').width() + $('.objfulfillment').text());
+                                        var inc = parseInt($('.full').width()) + 2*parseInt($('.objfulfillment').text());
                                         $('.full').width(inc);
                                         $('#fulltext').html(inc/2 + '/100');
                                     }
                                 }
                                 else if($('.objuseneed').text() == 'Cleanliness'){
-                                    console.log("NEED: CLEANLINESS");
+                                    //console.log("NEED: CLEANLINESS");
                                     if($('.clean').width() + 2*($('.objfulfillment').text()) >= 200){
                                         $('.clean').width(200);
                                         $('#cleantext').html('100/100');
                                     }
                                     else{
                                         var inc = parseInt($('.clean').width()) + 2*parseInt($('.objfulfillment').text());
-                                        console.log(inc);
                                         $('.clean').width(inc);
                                         $('#cleantext').html(inc/2 + '/100');
                                     }
                                 }
                                 else {
-                                    console.log("NEED: HAPPINESS");
+                                    //console.log("NEED: HAPPINESS");
                                     if($('.happy').width() + 2*($('.objfulfillment').text()) >= 200){
                                         $('.happy').width(200);
                                         $('#happytext').html('100/100');
@@ -145,15 +142,11 @@ if (Cookie::get('username') !== null) {
                                     else{
                                         var inc = parseInt($('.happy').width()) + 2*parseInt($('.objfulfillment').text());
                                         $('.happy').width(inc);
-                                        $('#happytext').html(parseInt(inc)/2 + '/100');
+                                        $('#happytext').html(inc/2 + '/100');
                                     }
                                 }
-
                                 //update objects
-                                if($('.quantity').html == 'unlimited'){
-                                    //deals with string case
-                                }
-                                else{
+                                if($('.quantity').html != 'unlimited'){
                                     loadObjects(<?php echo json_encode($username)?>);
                                 }
 
@@ -182,7 +175,7 @@ if (Cookie::get('username') !== null) {
 
             var counter = 0;
             function movePet() {
-                console.log("called");
+                //console.log("called");
                 //change algorithm eventually
                 if ((counter % 6) == 0) {
                     $('.petpic').css( "margin-top", "10px" );

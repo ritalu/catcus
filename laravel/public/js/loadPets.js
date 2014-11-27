@@ -1,5 +1,5 @@
 var loadPetList=function(username) {
-    console.log("load pets");
+  //console.log("load pets");
   $.ajax({//initial ajax call 
     type:"GET",
     url:"./api/users/getallpets/"+username,
@@ -14,18 +14,18 @@ var loadPetList=function(username) {
 
 
 var loadObjects=function(username) {
-    console.log("load objects");
+    //console.log("load objects");
   $.ajax({//initial ajax call 
     type:"GET",
     url:"./api/users/getallobjects/"+username,
     success: function(data){
-        console.log(data);
+        //console.log(data);
         renderObjects(data);
         $('.item.active').click(function() {
           $('.fullcontainer').fadeIn();
           $('.objactioncontainer').removeClass('hidden');
           var url = "url("+$(this).children('.objimg').attr('src') + ") center center no-repeat";
-          console.log(url);
+          //console.log(url);
           $('.objpic').css({"background": url,"background-size":"contain"})
           $('.objtype').html($(this).children('.type').html());
           $('.objuseneed').html($(this).children('.need').html());
@@ -39,7 +39,7 @@ var loadObjects=function(username) {
 }
 
 var renderPetList = function (data, petNum) {
-  console.log("rendering");
+  //console.log("rendering pet list");
   var content='<div class="title">Pets</div>';
   for (var i = 0; i < data.length; i++) {
     if(i != petNum){
@@ -67,7 +67,7 @@ var renderPetList = function (data, petNum) {
   }
   $('.petlist').html(content);
   $('.petcontainer').on('click',function(){
-      console.log($(this).children('.petPos').val());
+      //console.log($(this).children('.petPos').val());
       var petPos = $(this).children('.petPos').val();
       renderPetList(data,petPos);
       renderPetBackground(data[petPos]);
@@ -116,7 +116,7 @@ function calcAge(creationdate) {
 }
 
 renderPetBackground = function(data) {
-  console.log("rendering");
+  //console.log("background");
     //set background to match pet
   if (data.typeID == "Cactus") {
     $('.petview').css('background','url(http://catcus.me/img/background_cactus.png) center center no-repeat');
