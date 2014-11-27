@@ -162,7 +162,7 @@ table tr td.d {
 	position:relative;
 	float:left;
 	width:100px;
-	height:auto;
+	height:230px;
 	padding:20px;
 	font-size:14px;
 	color:black;
@@ -223,6 +223,7 @@ table tr td.d {
 .objtype {
 	margin:15px;
 	margin-right:0px;
+	font-weight:500;
 }
 .useform {
 	width:300px;
