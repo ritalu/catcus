@@ -78,8 +78,9 @@ class ObjectController extends BaseController {
 		$object = DB::table('objects')->where('objectID', $object_owned->objectID)->first();
 
 		// check if the item is right for the pet
-		$for_pet_type = DB::table('objectforpet')->where('objectID', $object->objectID)->first()->typeID;
-		if ($for_pet_type != $pet->typeID)
+		$for_pet_types = DB::table('objectforpet')->where('objectID', $object->objectID)->where("typeID", $pet->typeID)->get();
+
+		if ($for_pet_types == null)
 		{
 			return Response::json('You cannot use this item on this type of pet.');
 		}		
