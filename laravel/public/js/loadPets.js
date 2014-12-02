@@ -81,6 +81,9 @@ var renderActivePet = function (data) {
   $('.petpic').html('<img src="'+activePetPic+'">');
 
   var age = Math.floor(calcAge(data.creationdate));
+  if(age==-1){
+    age = 0;
+  }
   var petDeets = '<table><tr><td>Name:</td><td class="petname">'+data.name+
   '</td></tr><tr><td>Age:</td><td class="petage">'+ age+
   ' days</td></tr></table>';
@@ -159,4 +162,26 @@ var renderObjects = function(data)
     }
   }
   $('.itemcontainer').html(content);
+}
+
+var loadPetImage=function(username, petID) {
+  console.log("load pet image");
+  $.ajax({//initial ajax call 
+    type:"GET",
+    url:"./api/users/getallpets/"+username,
+    success: function(data){
+      console.log(data);
+      for (var i = 0; i < data.length; i++) {
+        if (data[i] == null) {
+          break;
+        } 
+        else {
+          if(data[i].petID == petID){
+            console.log("changing pet image: " + data[i].happy);
+            $('.petpic img').attr('src',data[i].happy);
+          }
+        }
+      }
+    }
+  });
 }

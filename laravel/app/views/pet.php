@@ -145,7 +145,9 @@ if (Cookie::get('username') !== null) {
                                         $('#happytext').html(inc/2 + '/100');
                                     }
                                 }
-                                //update objects
+                                
+                                loadPetImage(<?php echo json_encode($username)?>, petID);
+                                                 
                                 if($('.quantity').html != 'unlimited'){
                                     loadObjects(<?php echo json_encode($username)?>);
                                 }
