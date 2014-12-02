@@ -67,7 +67,7 @@ var renderPetList = function (data, petNum) {
     }
   }
   $('.petlist').html(content);
-  $('.petcontainer').on('click',function(){
+  $('.notactive').on('click',function(){
       //console.log($(this).children('.petPos').val());
       var petPos = $(this).children('.petPos').val();
       renderPetList(data,petPos);
