@@ -68,16 +68,19 @@ if (Cookie::get('username') !== null) {
                     if (pass.length == 0)
                     {
                         $('.error').html("Password cannot be empty.");
+                        return;
                     }
                     if (user.length == 0)
                     {
                         $('.error').html("Username cannot be empty.");
+                        return;
                     }
                     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
                     var emailIsValid = regex.test(email);
-                    if (emailIsValid)
+                    if (!emailIsValid)
                     {
                         $('.error').html("Invalid email format.");
+                        return;
                     }
                     $.post('./api/users/save', 
                     {
