@@ -60,7 +60,7 @@ if (Cookie::get('username') !== null) {
                     }
                 ?>
 
-                $('form').submit(function(){
+                $('form').submit(function(e){
                     var pass = encrypt();
                     var user = document.forms["create"]["username"].value;
                     var em = document.forms["create"]["email"].value;
@@ -68,17 +68,20 @@ if (Cookie::get('username') !== null) {
                     if (pass.length == 0)
                     {
                         $('.error').html("Password cannot be empty.");
+                        e.preventDefault();
                         return;
                     }
                     if (user.length == 0)
                     {
                         $('.error').html("Username cannot be empty.");
+                        e.preventDefault(); 
                         return;
                     }
                     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
                     var emailIsValid = regex.test(email);
                     if (!emailIsValid)
                     {
+                        e.preventDefault(); 
                         $('.error').html("Invalid email format.");
                         return;
                     }
