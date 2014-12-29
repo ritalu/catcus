@@ -78,7 +78,7 @@ if (Cookie::get('username') !== null) {
                         return;
                     }
                     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                    var emailIsValid = regex.test(email);
+                    var emailIsValid = regex.test(em);
                     if (!emailIsValid)
                     {
                         e.preventDefault(); 
