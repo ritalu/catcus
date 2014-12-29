@@ -1,0 +1,17 @@
+package finalstudy;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+ 
+
+public class NumberIncrementerQuestion {
+
+	Lock aLock = new ReentrantLock();
+	Condition aCondition = aLock.newCondition();
+	
+	private int i = 0;
+	
+	public void increment() {
+		
+	}
+}
