@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;finalstudy.NumberIncrementerQuestion.java&apos; to &apos;NumberBox.java&apos;&#x0D;&#x0A;- Original project: &apos;finalstudy&apos;&#x0D;&#x0A;- Original element: &apos;finalstudy.NumberIncrementerQuestion.java&apos;&#x0D;&#x0A;- Renamed element: &apos;finalstudy.NumberBox.java&apos;" description="Rename compilation unit &apos;NumberIncrementerQuestion.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;finalstudy{NumberIncrementerQuestion.java" name="NumberBox.java" references="false" stamp="1418582515603" version="1.0"/>
-</session>
